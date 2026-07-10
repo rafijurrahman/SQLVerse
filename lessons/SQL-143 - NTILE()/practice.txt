@@ -1,0 +1,21 @@
+Lesson: SQL-143 — NTILE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to divide all sales into 3 equal buckets by revenue:
+NTILE(3) OVER (ORDER BY revenue) AS bucket.
+
+Question 2:
+Write a query to label the buckets: 1 = 'Low', 2 = 'Medium', 3 = 'High' using CASE around NTILE(3):
+CASE NTILE(3) OVER (ORDER BY revenue) WHEN 1 THEN 'Low' WHEN 2 THEN 'Medium' ELSE 'High' END.
+
+Question 3:
+The analytics team wants to segment sales into quartiles (4 equal groups) for performance analysis:
+NTILE(4) OVER (ORDER BY revenue DESC) AS quartile.
+Label Q1 = 'Top 25%', Q4 = 'Bottom 25%'.
+
+Question 4:
+Write a query using NTILE partitioned by category: divide sales within each category into 2 groups (high and low performers):
+NTILE(2) OVER (PARTITION BY category ORDER BY revenue DESC) AS performance_tier.

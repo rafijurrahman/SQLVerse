@@ -1,0 +1,22 @@
+Lesson: SQL-138 — PARTITION BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using PARTITION BY region to calculate total revenue per region for each row:
+SELECT region, sale_id, revenue, SUM(revenue) OVER (PARTITION BY region) AS region_total FROM sales.
+
+Question 2:
+Use PARTITION BY category to show each sale's category average:
+AVG(revenue) OVER (PARTITION BY category) AS category_avg.
+
+Question 3:
+The analyst wants each sale shown with its region's total and the overall total for comparison:
+SELECT region, product, revenue,
+       SUM(revenue) OVER (PARTITION BY region) AS region_total,
+       SUM(revenue) OVER () AS grand_total FROM sales.
+
+Question 4:
+Write a query with PARTITION BY to calculate the percentage of each sale within its region:
+revenue / SUM(revenue) OVER (PARTITION BY region) * 100 AS "Region Share %". Round to 2 decimal places. Sort by region, revenue desc.

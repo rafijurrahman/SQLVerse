@@ -1,0 +1,23 @@
+Lesson: SQL-152 — Percent of Total
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate each sale as a percentage of total revenue:
+ROUND(revenue / SUM(revenue) OVER () * 100, 2) AS "Pct of Total".
+
+Question 2:
+Write a query to calculate each sale as a percentage of its region's total:
+ROUND(revenue / SUM(revenue) OVER (PARTITION BY region) * 100, 2) AS "Pct of Region".
+
+Question 3:
+The analytics dashboard needs contribution analysis. Display each sale with:
+- Percent of category total: revenue / SUM(revenue) OVER (PARTITION BY category) * 100
+- Percent of grand total: revenue / SUM(revenue) OVER () * 100
+Round both to 2 decimal places.
+
+Question 4:
+Write a query showing all percentage breakdowns:
+(A) Pct of category, (B) Pct of region, (C) Pct of grand total.
+Display: product, category, region, revenue, and all three percentages.

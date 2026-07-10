@@ -1,0 +1,19 @@
+Lesson: SQL-137 — OVER()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using OVER() with no arguments to apply the function over ALL rows:
+SELECT sale_id, revenue, SUM(revenue) OVER () AS total FROM sales.
+
+Question 2:
+Write a query using OVER() to calculate what percentage each sale contributes to total revenue:
+SELECT product, revenue, ROUND(revenue / SUM(revenue) OVER () * 100, 2) AS "Pct Total" FROM sales.
+
+Question 3:
+Management wants to see each sale alongside company-wide statistics. Display: sale_id, product, revenue, AVG(revenue) OVER () as avg_revenue, MAX(revenue) OVER () as max_revenue, MIN(revenue) OVER () as min_revenue.
+
+Question 4:
+Write a query to show each sale and its deviation from the mean:
+revenue - AVG(revenue) OVER () AS deviation_from_avg. Sort by deviation descending. Positive = above average.

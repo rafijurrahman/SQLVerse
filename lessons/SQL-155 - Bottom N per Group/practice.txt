@@ -1,0 +1,22 @@
+Lesson: SQL-155 — Bottom N per Group
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the bottom 3 sales by revenue using ROW_NUMBER sorted ascending:
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY revenue ASC) AS rn FROM sales) AS r WHERE rn <= 3.
+
+Question 2:
+Write a query to find the bottom 2 per category:
+ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue ASC) <= 2.
+
+Question 3:
+Management wants to investigate underperforming stores. Find the bottom store per region by revenue:
+ROW_NUMBER() OVER (PARTITION BY region ORDER BY SUM(revenue) ASC) = 1 (on store aggregates).
+Write the full query using a CTE.
+
+Question 4:
+Write a single query that shows BOTH top and bottom sales in each category using CASE:
+CASE WHEN ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue DESC) <= 2 THEN 'Top 2'
+     WHEN ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue ASC) <= 2 THEN 'Bottom 2' END AS tier.

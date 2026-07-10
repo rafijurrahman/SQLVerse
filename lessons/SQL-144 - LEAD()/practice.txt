@@ -1,0 +1,21 @@
+Lesson: SQL-144 — LEAD()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using LEAD() to show the next sale's revenue:
+SELECT sale_date, product, revenue, LEAD(revenue) OVER (ORDER BY sale_date) AS next_revenue FROM sales.
+
+Question 2:
+Write a query to calculate the difference between current and next revenue:
+revenue - LEAD(revenue) OVER (ORDER BY sale_date) AS revenue_change.
+
+Question 3:
+The analyst wants to compare each day's revenue with the following day's revenue to predict trends.
+Display: sale_date, product, revenue, LEAD(revenue) OVER (ORDER BY sale_date) as "Next Sale Revenue", and the difference.
+
+Question 4:
+Write a query using LEAD with PARTITION BY region to show the next sale within the same region:
+LEAD(revenue) OVER (PARTITION BY region ORDER BY sale_date) AS next_in_region.
+Display region, sale_date, revenue, and next_in_region. Sort by region, sale_date.

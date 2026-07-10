@@ -1,0 +1,20 @@
+Lesson: SQL-141 — RANK()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using RANK() to rank all sales by revenue descending:
+RANK() OVER (ORDER BY revenue DESC) AS rank_pos.
+
+Question 2:
+Write a query using RANK() partitioned by category to rank sales within each category by revenue:
+RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS cat_rank.
+
+Question 3:
+The analytics team wants to see how each sale ranks in its category. Display: category, product, revenue, and RANK() OVER (PARTITION BY category ORDER BY revenue DESC) as "Category Rank".
+
+Question 4:
+Write a query to find all sales that are ranked 1 or 2 within their category:
+SELECT * FROM (SELECT *, RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS rnk FROM sales) AS r
+WHERE rnk <= 2.

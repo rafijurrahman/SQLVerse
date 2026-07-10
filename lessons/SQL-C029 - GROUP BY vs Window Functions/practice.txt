@@ -1,0 +1,22 @@
+Lesson: SQL-C029 — GROUP BY vs Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write both:
+(A) GROUP BY: SELECT region, SUM(revenue) FROM sales GROUP BY region -- 3 rows.
+(B) Window: SELECT region, revenue, SUM(revenue) OVER (PARTITION BY region) -- 15 rows with regional total.
+Count the rows from each.
+
+Question 2:
+GROUP BY collapses rows. Window functions preserve rows.
+Write a query that needs BOTH: GROUP BY to get monthly totals, THEN window function on those totals.
+
+Question 3:
+Management needs each sale alongside category totals for comparison.
+GROUP BY cannot do this (it collapses rows). Window function can:
+SELECT product, revenue, category, SUM(revenue) OVER (PARTITION BY category) AS cat_total FROM sales.
+
+Question 4:
+Write a query demonstrating when GROUP BY is better (just need totals) and when window is better (need row-level detail + totals). Show both outputs for the same business question.

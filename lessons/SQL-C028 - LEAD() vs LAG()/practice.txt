@@ -1,0 +1,22 @@
+Lesson: SQL-C028 — LEAD() vs LAG()
+================================
+
+Practice Questions
+
+Question 1:
+Write one query showing both LEAD and LAG side by side:
+LAG(revenue) OVER (ORDER BY sale_date) AS prev_revenue,
+LEAD(revenue) OVER (ORDER BY sale_date) AS next_revenue.
+
+Question 2:
+Write a query to calculate growth rate using LEAD and LAG:
+(revenue - LAG(revenue) OVER (ORDER BY sale_date)) / LAG(revenue) OVER (ORDER BY sale_date) * 100 AS growth_pct.
+
+Question 3:
+The trend analysis dashboard shows each sale with previous, current, and next values.
+Display: sale_date, LAG(revenue) as "Previous", revenue as "Current", LEAD(revenue) as "Next".
+
+Question 4:
+Write a query using LAG(2) to look back 2 periods and LEAD(2) to look forward 2 periods:
+LAG(revenue, 2) OVER (ORDER BY sale_date) AS two_periods_ago,
+LEAD(revenue, 2) OVER (ORDER BY sale_date) AS two_periods_ahead.

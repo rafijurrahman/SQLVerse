@@ -1,0 +1,21 @@
+Lesson: SQL-156 — Latest Record per Group
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the latest (most recent) sale per region:
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY region ORDER BY sale_date DESC) AS rn FROM sales) AS r WHERE rn = 1.
+
+Question 2:
+Write a query to find the latest sale per product:
+ROW_NUMBER() OVER (PARTITION BY product ORDER BY sale_date DESC) = 1.
+Display product, sale_date, revenue for the most recent sale of each product.
+
+Question 3:
+The inventory system needs the last recorded revenue for each product to set a reference price.
+Use LAST_VALUE or ROW_NUMBER to find the most recent sale per product. Display: product, latest sale date, and latest revenue.
+
+Question 4:
+Write a query to find the most recent sale for each category, then compare it to the first sale in that category:
+Use FIRST_VALUE and ROW_NUMBER together. Display: category, first_sale_date, first_revenue, latest_date, latest_revenue.

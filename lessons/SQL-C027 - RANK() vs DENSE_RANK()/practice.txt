@@ -1,0 +1,25 @@
+Lesson: SQL-C027 — RANK() vs DENSE_RANK()
+================================
+
+Practice Questions
+
+Question 1:
+Demonstrate the difference using category totals:
+WITH cat_totals AS (SELECT category, SUM(revenue) AS total FROM sales GROUP BY category)
+SELECT category, total, RANK() OVER (ORDER BY total DESC) AS rnk, DENSE_RANK() OVER (ORDER BY total DESC) AS dense_rnk
+FROM cat_totals.
+
+Question 2:
+When two sales have the exact same revenue:
+RANK() gives them the same rank but skips the next number.
+DENSE_RANK() gives them the same rank but does NOT skip.
+Find sales with equal revenues (if none, explain the concept using a UNION to add a duplicate).
+
+Question 3:
+The leaderboard uses DENSE_RANK so no rank numbers are skipped. Write a store leaderboard:
+WITH store_rev AS (SELECT store, SUM(revenue) AS total FROM sales GROUP BY store)
+SELECT store, total, DENSE_RANK() OVER (ORDER BY total DESC) AS "Position" FROM store_rev.
+
+Question 4:
+Write a query using RANK, DENSE_RANK, and ROW_NUMBER() all three side by side:
+Compare all three for sales ranked by revenue. Observe: ROW_NUMBER always unique, RANK skips after ties, DENSE_RANK never skips.

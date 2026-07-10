@@ -1,0 +1,21 @@
+Lesson: SQL-147 — LAST_VALUE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using LAST_VALUE() with ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING to get the last value correctly:
+LAST_VALUE(revenue) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS last_revenue.
+
+Question 2:
+Write a query to show the last sale in each region using LAST_VALUE partitioned by region:
+LAST_VALUE(revenue) OVER (PARTITION BY region ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING).
+
+Question 3:
+The operations team wants to compare each sale to the most recent sale as a benchmark.
+Display: sale_date, product, revenue, LAST_VALUE(revenue) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) as "Latest Revenue".
+
+Question 4:
+Write a query using both FIRST_VALUE and LAST_VALUE to show the revenue range span:
+LAST_VALUE(revenue) OVER (PARTITION BY region ORDER BY revenue ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) -
+FIRST_VALUE(revenue) OVER (PARTITION BY region ORDER BY revenue) AS "Revenue Spread" per region.

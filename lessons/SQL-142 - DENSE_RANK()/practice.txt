@@ -1,0 +1,21 @@
+Lesson: SQL-142 — DENSE_RANK()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using DENSE_RANK() to rank sales by revenue. Note: DENSE_RANK does not skip numbers after ties.
+DENSE_RANK() OVER (ORDER BY revenue DESC) AS dense_rnk.
+
+Question 2:
+Write a query comparing RANK() and DENSE_RANK() side by side. Add two rows with the same revenue to see the difference: in the data, sale 1 (1700.00) and sale 3 (1200.00) and sale 4 (2500.00) show no ties, so observe with existing data.
+
+Question 3:
+Rank stores by total revenue using DENSE_RANK so tied stores share the same rank without gaps:
+WITH store_rev AS (SELECT store, SUM(revenue) AS total FROM sales GROUP BY store)
+SELECT store, total, DENSE_RANK() OVER (ORDER BY total DESC) AS rank FROM store_rev.
+
+Question 4:
+Write a query to show RANK() vs DENSE_RANK() for categories (grouped by category):
+WITH cat_sum AS (SELECT category, SUM(revenue) AS total FROM sales GROUP BY category)
+SELECT category, total, RANK() OVER (ORDER BY total DESC) AS rnk, DENSE_RANK() OVER (ORDER BY total DESC) AS dense_rnk FROM cat_sum.

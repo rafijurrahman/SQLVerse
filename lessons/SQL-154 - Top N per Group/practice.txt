@@ -1,0 +1,21 @@
+Lesson: SQL-154 — Top N per Group
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the top 3 sales overall by revenue using ROW_NUMBER:
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY revenue DESC) AS rn FROM sales) AS r WHERE rn <= 3.
+
+Question 2:
+Write a query to find the top 2 sales per category using ROW_NUMBER with PARTITION BY:
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY category ORDER BY revenue DESC) AS rn FROM sales) AS r WHERE rn <= 2.
+
+Question 3:
+The sales director wants the top-performing sale from each region. Write a query to find the #1 sale per region by revenue.
+Use: ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) = 1.
+
+Question 4:
+Write a query to find the top 3 stores by revenue using RANK() instead of ROW_NUMBER. Use RANK in case of ties:
+WITH store_rev AS (SELECT store, SUM(revenue) AS total FROM sales GROUP BY store)
+SELECT store, total, RANK() OVER (ORDER BY total DESC) AS rnk FROM store_rev WHERE RANK() <= 3. (Note: use a subquery.)

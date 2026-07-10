@@ -1,0 +1,22 @@
+Lesson: SQL-136 — Introduction to Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using SUM() as a window function (not GROUP BY) to show each sale alongside the total revenue:
+SELECT sale_id, product, revenue, SUM(revenue) OVER () AS grand_total FROM sales.
+
+Question 2:
+Write a query showing each sale's revenue and the percentage of grand total:
+revenue / SUM(revenue) OVER () * 100 AS pct_of_total.
+
+Question 3:
+The analytics team wants to see each individual sale alongside the overall company revenue.
+Display: sale_id, region, product, revenue, and SUM(revenue) OVER () as "Total Company Revenue". This preserves all rows unlike GROUP BY.
+
+Question 4:
+Compare GROUP BY vs Window Function:
+(A) GROUP BY: SELECT category, SUM(revenue) FROM sales GROUP BY category -- reduces to 3 rows.
+(B) Window: SELECT category, revenue, SUM(revenue) OVER (PARTITION BY category) -- keeps all 15 rows with category total.
+Write both and observe the difference.

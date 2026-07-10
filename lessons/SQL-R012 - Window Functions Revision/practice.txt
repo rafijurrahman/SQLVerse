@@ -1,0 +1,31 @@
+Lesson: SQL-R012 — Window Functions Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using all four ranking functions:
+ROW_NUMBER() OVER (ORDER BY revenue DESC) AS row_num,
+RANK() OVER (ORDER BY revenue DESC) AS rnk,
+DENSE_RANK() OVER (ORDER BY revenue DESC) AS dense_rnk,
+NTILE(4) OVER (ORDER BY revenue DESC) AS quartile.
+
+Question 2:
+Write a query with three analytical functions:
+LAG(revenue) OVER (ORDER BY sale_date) AS prev_rev,
+LEAD(revenue) OVER (ORDER BY sale_date) AS next_rev,
+revenue - LAG(revenue) OVER (ORDER BY sale_date) AS change.
+
+Question 3:
+Complete analytics dashboard -- for each sale, show:
+(A) Running total of revenue.
+(B) 3-period moving average.
+(C) Percent of category total.
+(D) Rank within region.
+All in one query.
+
+Question 4:
+Write a comprehensive window function analysis using two CTEs:
+CTE 1: monthly revenue aggregation.
+CTE 2: apply window functions: running total, month-over-month growth, and rank.
+Final SELECT: display complete monthly performance report.

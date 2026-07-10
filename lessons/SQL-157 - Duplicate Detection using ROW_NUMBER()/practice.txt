@@ -1,0 +1,21 @@
+Lesson: SQL-157 — Duplicate Detection using ROW_NUMBER()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using ROW_NUMBER to detect duplicate sales (same product, same date, same revenue):
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY product, sale_date, revenue ORDER BY sale_id) AS rn FROM sales) AS r WHERE rn > 1.
+
+Question 2:
+Write a query to find all rows where the same product appears more than once in the same region:
+ROW_NUMBER() OVER (PARTITION BY product, region ORDER BY sale_date) AS occurrence.
+Show occurrences > 1.
+
+Question 3:
+Data quality check: find any duplicate entries in the sales table where the same product was entered twice on the same date:
+Use PARTITION BY product, sale_date and ROW_NUMBER. Flag rows where rn > 1 as duplicates.
+
+Question 4:
+Write a query to deduplicate: keep only the first occurrence of each product per region (lowest sale_id):
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY product, region ORDER BY sale_id) AS rn FROM sales) AS r WHERE rn = 1.

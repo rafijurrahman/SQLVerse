@@ -1,0 +1,21 @@
+Lesson: SQL-148 — Running Total
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate a running total of revenue ordered by sale_date:
+SUM(revenue) OVER (ORDER BY sale_date) AS running_total.
+
+Question 2:
+Write a query for running total per region:
+SUM(revenue) OVER (PARTITION BY region ORDER BY sale_date) AS regional_running_total.
+
+Question 3:
+Finance tracks cumulative revenue month by month. Write:
+WITH monthly AS (SELECT MONTH(sale_date) AS month, SUM(revenue) AS monthly_rev FROM sales GROUP BY MONTH(sale_date))
+SELECT month, monthly_rev, SUM(monthly_rev) OVER (ORDER BY month) AS cumulative_revenue FROM monthly.
+
+Question 4:
+Write a running total with a threshold: show the running total and flag when it crosses 10000:
+CASE WHEN SUM(revenue) OVER (ORDER BY sale_date) > 10000 THEN 'Over 10K' ELSE 'Under 10K' END AS milestone.

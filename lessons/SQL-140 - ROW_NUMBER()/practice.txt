@@ -1,0 +1,20 @@
+Lesson: SQL-140 — ROW_NUMBER()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to assign a sequential row number to each sale ordered by revenue descending:
+SELECT sale_id, product, revenue, ROW_NUMBER() OVER (ORDER BY revenue DESC) AS row_num FROM sales.
+
+Question 2:
+Write a query to assign ROW_NUMBER within each region, ordered by revenue descending:
+ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) AS regional_rank.
+
+Question 3:
+The operations team wants to number orders chronologically. Use ROW_NUMBER() OVER (ORDER BY sale_date) to assign each sale a sequence number. Display sale_id, product, sale_date, and row_num.
+
+Question 4:
+Write a query to find the top-1 sale per region using ROW_NUMBER:
+SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) AS rn FROM sales) AS ranked
+WHERE rn = 1.

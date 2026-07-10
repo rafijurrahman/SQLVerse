@@ -1,0 +1,27 @@
+Lesson: SQL-C030 — Aggregate Functions vs Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write:
+(A) Regular aggregate: SELECT SUM(revenue) FROM sales -- single value.
+(B) Window aggregate: SELECT SUM(revenue) OVER () FROM sales -- same value in every row.
+
+Question 2:
+Regular aggregate: AVG(revenue) returns one number.
+Window aggregate: AVG(revenue) OVER (PARTITION BY category) returns the category average in each row.
+Write both and observe.
+
+Question 3:
+The dashboard needs each sale with three aggregates visible:
+- Individual sale: revenue.
+- Category total: SUM(revenue) OVER (PARTITION BY category).
+- Company total: SUM(revenue) OVER ().
+Write using window functions -- you cannot do this with GROUP BY alone.
+
+Question 4:
+Write a query showing all aggregate comparisons for each sale:
+- revenue vs AVG(revenue) OVER () (vs company avg)
+- revenue vs AVG(revenue) OVER (PARTITION BY region) (vs region avg)
+- revenue vs AVG(revenue) OVER (PARTITION BY category) (vs category avg)

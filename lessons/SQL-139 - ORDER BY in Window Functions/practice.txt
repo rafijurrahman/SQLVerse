@@ -1,0 +1,20 @@
+Lesson: SQL-139 — ORDER BY in Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using ORDER BY in OVER to create a running total:
+SELECT sale_id, sale_date, revenue, SUM(revenue) OVER (ORDER BY sale_date) AS running_total FROM sales.
+
+Question 2:
+Use ORDER BY sale_date in OVER to get a running count:
+COUNT(*) OVER (ORDER BY sale_date) AS running_count.
+
+Question 3:
+The finance team wants to track cumulative revenue day by day. Write a query with ORDER BY sale_date in the window function. Display: sale_date, product, revenue, and SUM(revenue) OVER (ORDER BY sale_date) as "Cumulative Revenue".
+
+Question 4:
+Write a query with PARTITION BY region and ORDER BY sale_date to get a running total PER REGION:
+SUM(revenue) OVER (PARTITION BY region ORDER BY sale_date) AS region_running_total.
+Display region, sale_date, revenue, and the running total per region.

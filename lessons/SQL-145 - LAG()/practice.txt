@@ -1,0 +1,23 @@
+Lesson: SQL-145 — LAG()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using LAG() to show the previous sale's revenue:
+SELECT sale_date, product, revenue, LAG(revenue) OVER (ORDER BY sale_date) AS prev_revenue FROM sales.
+
+Question 2:
+Write a query to calculate the change from the previous sale:
+revenue - LAG(revenue, 1, 0) OVER (ORDER BY sale_date) AS revenue_change.
+(LAG with a default of 0 for the first row.)
+
+Question 3:
+Finance wants month-over-month comparison. Group by month first, then use LAG on the monthly total:
+WITH monthly AS (SELECT MONTH(sale_date) AS month, SUM(revenue) AS monthly_rev FROM sales GROUP BY MONTH(sale_date))
+SELECT month, monthly_rev, LAG(monthly_rev) OVER (ORDER BY month) AS prev_month_rev FROM monthly.
+
+Question 4:
+Write a query using LAG partitioned by region: show each sale with the previous sale's revenue in the same region:
+LAG(revenue) OVER (PARTITION BY region ORDER BY sale_date) AS prev_region_revenue.
+Calculate the change: revenue - LAG(revenue) OVER (PARTITION BY region ORDER BY sale_date).

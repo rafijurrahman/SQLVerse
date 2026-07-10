@@ -1,0 +1,22 @@
+Lesson: SQL-151 — Running Difference
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate the difference between each sale's revenue and the previous sale's revenue using LAG:
+revenue - LAG(revenue) OVER (ORDER BY sale_date) AS running_diff.
+
+Question 2:
+Write a query to show the difference from the running average:
+revenue - AVG(revenue) OVER (ORDER BY sale_date) AS diff_from_running_avg.
+
+Question 3:
+Track revenue momentum: is each sale higher or lower than the previous?
+Display: sale_date, product, revenue, LAG(revenue) as "Previous", revenue - LAG(revenue) OVER (ORDER BY sale_date) as "Change",
+CASE WHEN revenue > LAG(revenue) OVER (ORDER BY sale_date) THEN 'Up' ELSE 'Down' END as "Trend".
+
+Question 4:
+Write a cumulative sum of differences (which equals current - first value):
+SUM(revenue - LAG(revenue, 1, revenue) OVER (ORDER BY sale_date)) OVER (ORDER BY sale_date) as "Cumulative Change".
+This traces total change from the starting point.

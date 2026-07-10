@@ -1,0 +1,26 @@
+Lesson: SQL-W008 — Window Function Execution Order
+================================
+
+Practice Questions
+
+Question 1:
+Write a simple window function query and trace the execution:
+(1) FROM sales -- load all rows.
+(2) WHERE (if any).
+(3) Window function calculated AFTER other clauses but BEFORE final SELECT output.
+(4) SELECT with window function result.
+
+Question 2:
+Write a query with WHERE + window function. Trace: WHERE filters rows first, then window operates on filtered set:
+SELECT *, SUM(revenue) OVER () AS total FROM sales WHERE category = 'Electronics'.
+(Note: total is now sum of Electronics only, not all sales.)
+
+Question 3:
+Write a query demonstrating window function ordering within OVER:
+PARTITION BY region ORDER BY sale_date -- partitions into regional windows, then orders within each partition.
+Show running totals per region.
+
+Question 4:
+Write a complete execution trace query with 5 window functions applied in one SELECT:
+ROW_NUMBER, RANK, SUM running total, AVG running avg, LAG.
+All in one query. Trace each function's window definition.

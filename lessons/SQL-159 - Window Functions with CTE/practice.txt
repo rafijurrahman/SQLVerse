@@ -1,0 +1,27 @@
+Lesson: SQL-159 — Window Functions with CTE
+================================
+
+Practice Questions
+
+Question 1:
+Write a CTE to calculate revenue per store, then apply ROW_NUMBER in the outer query:
+WITH store_rev AS (SELECT store, SUM(revenue) AS total FROM sales GROUP BY store)
+SELECT store, total, ROW_NUMBER() OVER (ORDER BY total DESC) AS rank FROM store_rev.
+
+Question 2:
+Write a CTE for monthly revenue, then apply running total window:
+WITH monthly AS (SELECT MONTH(sale_date) AS month, SUM(revenue) AS monthly_rev FROM sales GROUP BY MONTH(sale_date))
+SELECT month, monthly_rev, SUM(monthly_rev) OVER (ORDER BY month) AS running_total FROM monthly.
+
+Question 3:
+Analytics pipeline using CTEs with window functions:
+CTE 1: category-level revenue aggregation.
+CTE 2: apply RANK() OVER to rank categories.
+Final SELECT: show top 2 categories with their ranks.
+
+Question 4:
+Write a three-level CTE + window function pipeline:
+CTE 1: sales with profit = revenue - cost.
+CTE 2: region-level profit aggregation.
+CTE 3: apply RANK and running total.
+Final: show all ranked regions with cumulative profit.
