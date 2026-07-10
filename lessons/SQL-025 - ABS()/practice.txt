@@ -1,0 +1,16 @@
+Lesson: SQL-025 — ABS()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate the absolute profit per unit: ABS(unit_price - cost_price). Display product_name and "Profit Per Unit".
+
+Question 2:
+Write a query to calculate the total profit for each line item: (unit_price - cost_price) * quantity. Apply ABS() and label it "Total Profit". Sort by total profit descending.
+
+Question 3:
+The finance team wants to identify items where the profit margin (unit_price - cost_price) is less than 100. Use ABS() to handle any sign differences and find items with ABS(unit_price - cost_price) < 100.
+
+Question 4:
+Write a query to calculate the profit margin percentage: ABS((unit_price - cost_price) / unit_price * 100) and round to 2 decimal places. Display product_name, unit_price, cost_price, and "Profit Margin %". Sort descending.

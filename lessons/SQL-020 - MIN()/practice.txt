@@ -1,0 +1,16 @@
+Lesson: SQL-020 — MIN()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the lowest price in the products table using MIN(price).
+
+Question 2:
+Write a query to find the lowest price in each category using MIN(price) and GROUP BY category.
+
+Question 3:
+The purchasing team wants to know the cheapest product in each category for budget planning. Write a query to display category and its minimum price, sorted by min_price ascending.
+
+Question 4:
+Write a query to find the product with the lowest price. Use a subquery: WHERE price = (SELECT MIN(price) FROM products). Display product_name, brand, category, and price.

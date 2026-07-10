@@ -1,0 +1,16 @@
+Lesson: SQL-022 — ROUND()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each item's unit_price rounded to 1 decimal place.
+
+Question 2:
+Write a query to calculate the discounted price per unit: unit_price * (1 - discount_pct/100). Round the result to 2 decimal places and label it as "Discounted Price".
+
+Question 3:
+Finance needs a rounded revenue report. For each order_id, calculate total revenue (SUM of quantity * unit_price) and round to 2 decimal places. Label it "Total Revenue". Group by order_id.
+
+Question 4:
+Write a query to calculate the net payable amount for each item: quantity * unit_price * (1 - discount_pct/100). Round to 2 decimal places. Display product_name, quantity, unit_price, discount_pct, and "Net Amount".

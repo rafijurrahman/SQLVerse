@@ -1,0 +1,21 @@
+Lesson: SQL-C004 — SUM() vs AVG()
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries:
+(A) SUM(quantity * unit_price) — total revenue from all items.
+(B) AVG(quantity * unit_price) — average revenue per line item.
+
+Question 2:
+Write a query to calculate both SUM and AVG of unit_price per category. Use GROUP BY category.
+
+Question 3:
+Finance needs a category report. For each category, display:
+- Total Revenue: SUM(quantity * unit_price)
+- Average Item Value: AVG(unit_price)
+Sort by total revenue descending.
+
+Question 4:
+Write a query to find categories where the total revenue (SUM) is greater than 5000 AND the average unit price (AVG) is greater than 500. Use HAVING with both conditions.

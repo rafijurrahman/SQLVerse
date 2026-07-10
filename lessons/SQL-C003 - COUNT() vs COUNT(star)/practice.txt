@@ -1,0 +1,21 @@
+Lesson: SQL-C003 — COUNT() vs COUNT(star)
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries:
+(A) SELECT COUNT(*) FROM orders;
+(B) SELECT COUNT(promo_code) FROM orders;
+Observe and explain why the numbers differ.
+
+Question 2:
+Write a query to count the number of orders per status using COUNT(*) and GROUP BY status.
+
+Question 3:
+The marketing team wants to know how many orders used a promo code vs total orders. Write two queries:
+(A) Total orders: COUNT(*)
+(B) Orders with promo: COUNT(promo_code)
+
+Question 4:
+Write a query that shows, for each status: total order count using COUNT(*), and orders with promo code using COUNT(promo_code). Group by status.

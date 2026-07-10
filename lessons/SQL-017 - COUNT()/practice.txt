@@ -1,0 +1,19 @@
+Lesson: SQL-017 — COUNT()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to count the total number of orders in the orders table using COUNT(*).
+
+Question 2:
+Write a query to count how many orders have a promo_code (promo_code IS NOT NULL) using COUNT(promo_code).
+
+Question 3:
+The sales manager wants to know how many orders were placed with status 'Completed'. Write a query using COUNT(*) with a WHERE clause.
+
+Question 4:
+Write two queries and compare the results:
+(A) COUNT(*) — counts all rows.
+(B) COUNT(promo_code) — counts only rows where promo_code is not NULL.
+Explain in a comment why the results differ.

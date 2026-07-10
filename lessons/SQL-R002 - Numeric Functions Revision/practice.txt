@@ -1,0 +1,24 @@
+Lesson: SQL-R002 — Numeric Functions Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate for each item:
+- Total Revenue: quantity * unit_price
+- Total Cost: quantity * cost_price
+- Gross Profit: quantity * (unit_price - cost_price)
+
+Question 2:
+Write a query to get summary statistics per category:
+- COUNT(*) as item_count
+- SUM(quantity * unit_price) as total_revenue
+- AVG(unit_price) as avg_price
+- MIN(unit_price) as min_price
+- MAX(unit_price) as max_price
+
+Question 3:
+Calculate the net amount after discount for each item: ROUND(quantity * unit_price * (1 - discount_pct/100), 2) as "Net Amount". Also calculate ABS(unit_price - cost_price) as "Profit Per Unit". Sort by net amount descending.
+
+Question 4:
+Write a query to calculate total revenue by category, then use ROUND() to round to 0 decimal places. Only include categories with total revenue > 2000. Sort by revenue descending.

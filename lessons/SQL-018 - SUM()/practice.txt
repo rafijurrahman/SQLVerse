@@ -1,0 +1,18 @@
+Lesson: SQL-018 — SUM()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate the total revenue from all order items: SUM(quantity * unit_price).
+
+Question 2:
+Write a query to calculate total revenue by category using SUM(quantity * unit_price) and GROUP BY category.
+
+Question 3:
+The finance team needs the total cost and total revenue for all items sold. Write a query to calculate:
+- Total Revenue: SUM(quantity * unit_price)
+- Total Cost: SUM(quantity * cost_price)
+
+Question 4:
+Write a query to find the total revenue per order (group by order_id). Then filter using HAVING to show only orders where total revenue exceeds 2000.

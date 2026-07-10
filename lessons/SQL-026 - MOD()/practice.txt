@@ -1,0 +1,16 @@
+Lesson: SQL-026 — MOD()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate MOD(quantity, box_size) for each item. This tells us how many leftover units remain after filling complete boxes. Label it "Leftover Units".
+
+Question 2:
+Write a query to find all order items where there is NO remainder when quantity is divided by box_size (MOD = 0). These are perfectly packed orders.
+
+Question 3:
+The warehouse team needs to know how many units are left over after packing products into boxes. Write a query to display product_name, quantity, box_size, and MOD(quantity, box_size) as "Remainder". Filter to show only items with a remainder greater than 0.
+
+Question 4:
+Write a query to find all items where the order_id is even (MOD(order_id, 2) = 0). Display item_id, order_id, product_name, and quantity.

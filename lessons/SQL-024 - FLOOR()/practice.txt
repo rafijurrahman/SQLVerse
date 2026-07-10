@@ -1,0 +1,16 @@
+Lesson: SQL-024 — FLOOR()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each product's price rounded DOWN to the nearest integer using FLOOR(price).
+
+Question 2:
+Write a query to calculate the tax amount per product (price * tax_pct / 100) and apply FLOOR() to round it down. Label it "Floor Tax Amount".
+
+Question 3:
+The warehouse system uses floor values for package quantity calculations. Write a query to display product_name, price, and FLOOR(price / 100) as "Hundred Units", which represents how many 100-unit value blocks the price occupies.
+
+Question 4:
+Write a query to calculate the price after tax: price + (price * tax_pct / 100). Apply FLOOR() to the result. Display product_name, price, tax_pct, and "Price After Tax (Floored)". Sort by result descending.

@@ -1,0 +1,16 @@
+Lesson: SQL-021 — MAX()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the highest price in the products table using MAX(price).
+
+Question 2:
+Write a query to find the most expensive product in each category using MAX(price) and GROUP BY.
+
+Question 3:
+The sales team wants to promote the most expensive product in each category. Write a query to display category and the maximum price, ordered by max_price descending.
+
+Question 4:
+Write a query to find the product name and brand of the most expensive Electronics product. Use a subquery: WHERE category = 'Electronics' AND price = (SELECT MAX(price) FROM products WHERE category = 'Electronics').

@@ -1,0 +1,16 @@
+Lesson: SQL-023 — CEILING()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each product's price rounded UP to the nearest integer using CEILING(price).
+
+Question 2:
+Write a query to calculate the discounted price (price * (1 - discount_pct/100)) and then apply CEILING() to round it up to the nearest integer. Label it "Ceiling Price".
+
+Question 3:
+The billing system always rounds up to the nearest whole number to avoid fractional amounts. Write a query to display product_name, brand, price, and CEILING(price) as "Billable Price".
+
+Question 4:
+Write a query to calculate the ceiling of the discounted price: CEILING(price * (1 - discount_pct/100)). Display product_name, price, discount_pct, and the ceiling discounted price. Sort by ceiling discounted price ascending.

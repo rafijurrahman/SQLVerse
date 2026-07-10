@@ -1,0 +1,16 @@
+Lesson: SQL-019 — AVG()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate the average unit_price across all order items.
+
+Question 2:
+Write a query to calculate the average unit_price per category using GROUP BY.
+
+Question 3:
+The pricing team wants to know the average revenue per item sold in each category. Calculate AVG(quantity * unit_price) grouped by category.
+
+Question 4:
+Write a query to find categories where the average unit_price is above 500. Use GROUP BY and HAVING.
