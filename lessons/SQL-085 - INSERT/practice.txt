@@ -1,0 +1,18 @@
+Lesson: SQL-085 — INSERT
+================================
+
+Practice Questions
+
+Question 1:
+Write an INSERT statement to add a new student: student_code='STD-005', first_name='Milon', last_name='Ahmed', email='milon@uni.edu', phone='01711-005', enrollment_status='Active', gpa=3.55.
+
+Question 2:
+Write INSERT statements to add two new courses:
+(104, 'CS104', 'Advanced SQL', 3)
+(105, 'CS105', 'Data Warehousing', 3)
+
+Question 3:
+New semester registrations: Insert 3 new students at once using a single INSERT with multiple VALUE rows. Use realistic student data with proper codes (STD-006 through STD-008).
+
+Question 4:
+Write an INSERT INTO enrollments that enrolls an existing student in a new course for 'Fall 2024'. Make sure the student_id and course_id exist in their respective tables. Then verify with SELECT.

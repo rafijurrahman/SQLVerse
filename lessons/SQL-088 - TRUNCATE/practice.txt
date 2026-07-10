@@ -1,0 +1,19 @@
+Lesson: SQL-088 — TRUNCATE
+================================
+
+Practice Questions
+
+Question 1:
+Write TRUNCATE TABLE enrollments to remove all enrollment records at once.
+
+Question 2:
+Explain using SELECT COUNT(*) queries before and after TRUNCATE: show that TRUNCATE removes all rows.
+
+Question 3:
+At the start of a new academic year, all enrollment records need to be cleared before re-enrollment. Write TRUNCATE TABLE enrollments. Contrast with DELETE FROM enrollments (which is slower for large tables).
+
+Question 4:
+Write the difference between DELETE and TRUNCATE:
+(A) DELETE FROM enrollments WHERE semester = 'Spring 2024'; — selective deletion.
+(B) TRUNCATE TABLE enrollments; — removes all, resets AUTO_INCREMENT.
+Write both and explain in a comment when to use each.

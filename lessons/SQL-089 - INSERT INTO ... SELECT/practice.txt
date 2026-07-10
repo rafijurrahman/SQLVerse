@@ -1,0 +1,16 @@
+Lesson: SQL-089 — INSERT INTO ... SELECT
+================================
+
+Practice Questions
+
+Question 1:
+Write CREATE TABLE enrollments_archive (same structure as enrollments). Then INSERT INTO enrollments_archive SELECT * FROM enrollments WHERE grade IS NOT NULL.
+
+Question 2:
+Write INSERT INTO SELECT to copy all Active students into a new table student_backup: CREATE TABLE student_backup LIKE students; INSERT INTO student_backup SELECT * FROM students WHERE enrollment_status = 'Active'.
+
+Question 3:
+End of semester archiving: Copy all graded enrollments from Spring 2024 into an archive table. Write: CREATE TABLE spring_2024_archive LIKE enrollments; Then INSERT INTO spring_2024_archive SELECT from enrollments WHERE semester = 'Spring 2024'.
+
+Question 4:
+Write an INSERT INTO SELECT that transforms data: INSERT INTO a summary table (student_id, course_count, avg_calculated) by selecting student_id, COUNT(course_id), AVG(gpa) FROM students JOIN enrollments... GROUP BY student_id.

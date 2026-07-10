@@ -1,0 +1,20 @@
+Lesson: SQL-087 — DELETE
+================================
+
+Practice Questions
+
+Question 1:
+Write a DELETE statement to remove the student with student_id = 3 from the students table. (First remove their enrollments.)
+
+Question 2:
+Write a DELETE to remove all enrollments where grade IS NULL (ungraded enrollments from incomplete students).
+
+Question 3:
+The university is purging graduated students older than 2023. Write DELETE FROM students WHERE enrollment_status = 'Graduated'. Note: first DELETE their enrollments to avoid FK violations.
+
+Question 4:
+Write a safe DELETE workflow:
+Step 1: SELECT to verify which rows will be deleted: SELECT * FROM enrollments WHERE student_id = 3.
+Step 2: DELETE those enrollment rows.
+Step 3: DELETE the student.
+Step 4: Verify with SELECT COUNT(*).

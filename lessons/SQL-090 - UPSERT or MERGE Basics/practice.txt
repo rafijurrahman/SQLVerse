@@ -1,0 +1,16 @@
+Lesson: SQL-090 — UPSERT or MERGE Basics
+================================
+
+Practice Questions
+
+Question 1:
+MySQL uses INSERT ... ON DUPLICATE KEY UPDATE for upsert. Write an INSERT for a student that already exists: INSERT INTO students (student_id, student_code, first_name, last_name, email, enrollment_status) VALUES (1,'STD-001','Rahim','Uddin','rahim@uni.edu','Graduated') ON DUPLICATE KEY UPDATE enrollment_status = 'Graduated'.
+
+Question 2:
+Write an UPSERT to insert a new enrollment or update grade if the enrollment already exists (based on student_id + course_id combination).
+
+Question 3:
+The grade upload system needs to insert grades for new enrollments and update grades for existing ones. Write INSERT INTO enrollments (...) VALUES (...) ON DUPLICATE KEY UPDATE grade = VALUES(grade).
+
+Question 4:
+Write a complete UPSERT scenario: A student's phone number must be added if missing, or updated if changed. Use INSERT ... ON DUPLICATE KEY UPDATE phone = VALUES(phone) for student_id = 1 with new phone '01799-999'.

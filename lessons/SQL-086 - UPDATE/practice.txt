@@ -1,0 +1,16 @@
+Lesson: SQL-086 — UPDATE
+================================
+
+Practice Questions
+
+Question 1:
+Write an UPDATE statement to change student_id 3's enrollment_status from 'Inactive' to 'Active'.
+
+Question 2:
+Write an UPDATE to set gpa = 3.50 for all students where gpa IS NULL AND enrollment_status = 'Active'.
+
+Question 3:
+End of semester: Update grades for enrollments. Set grade = 'A' for enrollment_id = 3 (Fatema's CS101). Then update grade = 'B' for any enrollment where grade IS NULL.
+
+Question 4:
+Write an UPDATE to increase GPA by 0.10 for all Active students with GPA below 3.50, but ensure the result doesn't exceed 4.00: UPDATE students SET gpa = LEAST(gpa + 0.10, 4.00) WHERE enrollment_status = 'Active' AND gpa < 3.50.
