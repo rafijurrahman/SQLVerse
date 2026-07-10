@@ -1,0 +1,16 @@
+Lesson: SQL-078 — DROP TABLE
+================================
+
+Practice Questions
+
+Question 1:
+Write a CREATE TABLE statement for a temporary table called students_backup, then write DROP TABLE students_backup to remove it.
+
+Question 2:
+Write DROP TABLE IF EXISTS temp_results to safely drop a table that may or may not exist.
+
+Question 3:
+The IT team runs cleanup scripts. Write a script that: (1) Creates temp_student_export table, (2) Shows how you would DROP TABLE temp_student_export after the export is done. Demonstrate DROP TABLE IF EXISTS for safety.
+
+Question 4:
+Explain in a SQL comment why we use DROP TABLE IF EXISTS instead of DROP TABLE. Write both versions and demonstrate the safe pattern. Also show how DROP TABLE differs from TRUNCATE TABLE.

@@ -1,0 +1,27 @@
+Lesson: SQL-R007 — Table & Constraints Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write three SELECT queries to explore the students table:
+(A) Display all active students.
+(B) Display students with GPA above 3.5.
+(C) Display students with missing phone numbers (IS NULL).
+
+Question 2:
+Write a query to summarize the students table:
+- Total students per enrollment_status using GROUP BY.
+- Average GPA per status.
+
+Question 3:
+The registrar needs a report:
+(A) Top 3 students by GPA (only Active students).
+(B) Students missing GPA (gpa IS NULL) — these need to be graded.
+Write both queries.
+
+Question 4:
+Write a query to verify data quality:
+- No duplicate emails: SELECT email, COUNT(*) FROM students GROUP BY email HAVING COUNT(*) > 1.
+- All GPA values are in valid range: SELECT * FROM students WHERE gpa NOT BETWEEN 0 AND 4.
+- Both should return 0 rows if data is clean.

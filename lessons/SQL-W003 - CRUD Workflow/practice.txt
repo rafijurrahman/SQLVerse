@@ -1,0 +1,30 @@
+Lesson: SQL-W003 — CRUD Workflow
+================================
+
+Practice Questions
+
+Question 1:
+Write all four CRUD operations:
+(C) INSERT a new student into the students table.
+(R) SELECT the student you just inserted.
+(U) UPDATE their enrollment_status to 'Inactive'.
+(D) DELETE the student you inserted.
+
+Question 2:
+Write a workflow to update GPA:
+(R) First read the current GPA: SELECT gpa FROM students WHERE student_id = 1.
+(U) Then update: UPDATE students SET gpa = 3.90 WHERE student_id = 1.
+(R) Verify: SELECT gpa FROM students WHERE student_id = 1.
+
+Question 3:
+A new student enrolled mid-semester:
+(C) INSERT the student with all required fields.
+(R) SELECT to confirm insertion.
+(U) UPDATE phone number after correction.
+(R) Final verification SELECT.
+Write all four steps.
+
+Question 4:
+Write a complete CRUD cycle for a student named 'Rafi Islam':
+INSERT → SELECT → UPDATE gpa to 3.80 → SELECT again → DELETE → SELECT to confirm deletion.
+All steps in sequence.

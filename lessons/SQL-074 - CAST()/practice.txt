@@ -1,0 +1,16 @@
+Lesson: SQL-074 — CAST()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to convert gpa to a CHAR type using CAST(gpa AS CHAR). Display student_id and gpa_text.
+
+Question 2:
+Write a query to cast student_id to CHAR and concatenate with student_code: CONCAT(CAST(student_id AS CHAR), ' - ', student_code). Label it "Full ID".
+
+Question 3:
+The reporting system needs GPA displayed as text with 2 decimal places. Use CAST(gpa AS DECIMAL(4,2)) to re-format, then CAST to CHAR. Display student_code, first_name, and formatted GPA.
+
+Question 4:
+Write a query to cast date_of_birth to display only the year: CAST(YEAR(date_of_birth) AS CHAR). Then calculate age as CAST(FLOOR(DATEDIFF(CURRENT_DATE, date_of_birth)/365) AS CHAR) as "Age". Display student_code and age.

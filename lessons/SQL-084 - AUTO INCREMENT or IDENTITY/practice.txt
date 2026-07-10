@@ -1,0 +1,16 @@
+Lesson: SQL-084 — AUTO INCREMENT or IDENTITY
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT query to display all student_id values in order. AUTO_INCREMENT ensures they are sequential integers.
+
+Question 2:
+Write a CREATE TABLE for lecture_attendance with: log_id INT PRIMARY KEY AUTO_INCREMENT, student_id INT NOT NULL, lecture_date DATE NOT NULL, status VARCHAR(20) DEFAULT 'Present'. The log_id is auto-generated.
+
+Question 3:
+The library system needs auto-generated book IDs. Write a CREATE TABLE for book_loans: loan_id INT PRIMARY KEY AUTO_INCREMENT, student_id INT, book_isbn VARCHAR(20), loan_date DATE NOT NULL, return_date DATE.
+
+Question 4:
+Write an INSERT statement that does NOT specify the AUTO_INCREMENT column (student_id equivalent) — let it auto-generate. Then write SELECT to verify the new row got an auto-generated ID.

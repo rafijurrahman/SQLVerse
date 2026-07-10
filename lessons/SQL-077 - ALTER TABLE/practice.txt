@@ -1,0 +1,19 @@
+Lesson: SQL-077 — ALTER TABLE
+================================
+
+Practice Questions
+
+Question 1:
+Write an ALTER TABLE statement to add a column called address (VARCHAR(200)) to the students table.
+
+Question 2:
+Write an ALTER TABLE to add two columns at once: nationality (VARCHAR(50) NOT NULL DEFAULT 'Bangladeshi') and blood_group (VARCHAR(5)).
+
+Question 3:
+The university wants to track student emergency contacts. Write ALTER TABLE students ADD COLUMN emergency_contact VARCHAR(100) and ADD COLUMN emergency_phone VARCHAR(20).
+
+Question 4:
+Write three ALTER TABLE statements:
+(A) Add column linkedin_profile (VARCHAR(200)).
+(B) Modify column phone to VARCHAR(25) (use MODIFY in MySQL).
+(C) Rename column enrollment_status to status (use CHANGE in MySQL or RENAME COLUMN in newer versions).

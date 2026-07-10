@@ -1,0 +1,18 @@
+Lesson: SQL-C015 — DELETE vs TRUNCATE
+================================
+
+Practice Questions
+
+Question 1:
+Write a DELETE statement to remove a specific student: DELETE FROM students WHERE student_id = 3. Contrast with TRUNCATE which removes ALL rows.
+
+Question 2:
+Write a DELETE to remove all Inactive students: DELETE FROM students WHERE enrollment_status = 'Inactive'. Then explain: TRUNCATE would delete ALL students without a WHERE clause option.
+
+Question 3:
+(A) Write DELETE FROM enrollments WHERE grade IS NULL — removes only ungraded enrollments.
+(B) Write TRUNCATE TABLE enrollments — removes ALL enrollment records at once.
+Show both and explain when to use each.
+
+Question 4:
+Write a query to first count rows before: SELECT COUNT(*) FROM enrollments. Then write DELETE FROM enrollments WHERE student_id = 3. Then count again. Explain why TRUNCATE is faster for large tables but DELETE is safer for partial removal.

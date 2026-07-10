@@ -1,0 +1,19 @@
+Lesson: SQL-C014 — PRIMARY KEY vs UNIQUE
+================================
+
+Practice Questions
+
+Question 1:
+Write queries to demonstrate:
+(A) PRIMARY KEY: SELECT student_id FROM students WHERE student_id = 1 (unique, NOT NULL).
+(B) UNIQUE: SELECT email FROM students WHERE email = 'rahim.u@uni.edu' (unique, CAN be NULL).
+
+Question 2:
+Write a CREATE TABLE showing both: a PRIMARY KEY on id and a UNIQUE on email:
+CREATE TABLE example (id INT PRIMARY KEY, email VARCHAR(100) UNIQUE, name VARCHAR(50)).
+
+Question 3:
+Explain through CREATE TABLE design: a students table has PRIMARY KEY (student_id) for internal lookups and UNIQUE (email) for external identification. Write the table definition showing both.
+
+Question 4:
+Write a query to check: can NULL be inserted into a UNIQUE column? The answer is yes (only one NULL allowed in standard SQL). Write a SELECT to find students where email IS NULL — showing UNIQUE allows NULL but PRIMARY KEY does not.

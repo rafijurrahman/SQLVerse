@@ -1,0 +1,16 @@
+Lesson: SQL-076 — CREATE TABLE
+================================
+
+Practice Questions
+
+Question 1:
+The students table already exists. Write a CREATE TABLE statement for a new table called courses with: course_id (INT PRIMARY KEY), course_code (VARCHAR(15)), course_name (VARCHAR(100)), credits (INT), department (VARCHAR(50)).
+
+Question 2:
+Write a CREATE TABLE statement for student_contacts with: contact_id (INT PRIMARY KEY AUTO_INCREMENT), student_id (INT NOT NULL), contact_name (VARCHAR(100) NOT NULL), relationship (VARCHAR(50) NOT NULL), phone (VARCHAR(20) NOT NULL).
+
+Question 3:
+The university wants a fee payment tracking table. Write a CREATE TABLE for student_fees: fee_id (INT PK), student_id (INT), fee_type (VARCHAR), amount (DECIMAL(10,2)), due_date (DATE), status (VARCHAR DEFAULT 'Unpaid').
+
+Question 4:
+Write a CREATE TABLE for exam_results with: result_id (INT PK AUTO_INCREMENT), student_id (INT NOT NULL), course_code (VARCHAR(15) NOT NULL), semester (VARCHAR(20) NOT NULL), score (DECIMAL(5,2) NOT NULL CHECK(score BETWEEN 0 AND 100)), grade (VARCHAR(5) NOT NULL).

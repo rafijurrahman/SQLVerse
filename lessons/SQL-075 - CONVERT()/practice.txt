@@ -1,0 +1,16 @@
+Lesson: SQL-075 — CONVERT()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using CONVERT(gpa, CHAR) to display GPA as text. Compare with CAST(gpa AS CHAR).
+
+Question 2:
+Write a query to use CONVERT(student_id, CHAR) and CONVERT(gpa, DECIMAL(4,2)) to reformat the output.
+
+Question 3:
+The transcript system exports numeric values as strings. Use CONVERT to convert gpa, student_id, and YEAR(date_of_birth) all to CHAR type. Display student_code and all three converted values.
+
+Question 4:
+Write a query using both CAST and CONVERT to produce identical results for the same column. Show CAST(gpa AS CHAR) AS "CAST Result" and CONVERT(gpa, CHAR) AS "CONVERT Result" side by side to confirm they are equal.

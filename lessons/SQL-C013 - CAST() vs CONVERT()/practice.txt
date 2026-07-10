@@ -1,0 +1,19 @@
+Lesson: SQL-C013 — CAST() vs CONVERT()
+================================
+
+Practice Questions
+
+Question 1:
+Write two equivalent queries:
+(A) SELECT CAST(gpa AS CHAR) FROM students;
+(B) SELECT CONVERT(gpa, CHAR) FROM students;
+Confirm results are identical.
+
+Question 2:
+CAST uses standard SQL syntax; CONVERT uses MySQL syntax. Write a query that converts gpa to DECIMAL(4,2) using both. Show the results side by side.
+
+Question 3:
+The analytics team needs student IDs as strings for report concatenation. Show CAST(student_id AS CHAR) and CONVERT(student_id, CHAR) as two columns. Confirm they match for all rows.
+
+Question 4:
+Write a query to convert date_of_birth to a formatted year string using CAST(YEAR(date_of_birth) AS CHAR) and CONVERT(YEAR(date_of_birth), CHAR). Display student_code, both versions side by side, and verify they match.

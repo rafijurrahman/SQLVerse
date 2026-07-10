@@ -1,0 +1,16 @@
+Lesson: SQL-082 — CHECK
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT query to verify all students have valid GPA: SELECT * FROM students WHERE gpa < 0 OR gpa > 4.0. Should return 0 rows (CHECK constraint would prevent invalid values).
+
+Question 2:
+Write a CREATE TABLE for student_scores with a CHECK constraint: score DECIMAL(5,2) NOT NULL CHECK (score >= 0 AND score <= 100), grade VARCHAR(5) NOT NULL CHECK (grade IN ('A+', 'A', 'A-', 'B+', 'B', 'B-', 'C', 'D', 'F')).
+
+Question 3:
+The university's system must validate age at enrollment: students must be at least 16. Write a CREATE TABLE for age_verified_students with CHECK (YEAR(CURRENT_DATE) - YEAR(date_of_birth) >= 16).
+
+Question 4:
+Write a query to verify the students table data would pass CHECK validation: WHERE gpa NOT BETWEEN 0 AND 4.0 OR enrollment_status NOT IN ('Active', 'Inactive', 'Graduated'). This simulates what a CHECK constraint would enforce.

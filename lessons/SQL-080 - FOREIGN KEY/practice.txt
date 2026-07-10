@@ -1,0 +1,16 @@
+Lesson: SQL-080 — FOREIGN KEY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all enrollments and show the constraint: SELECT * FROM enrollments. The FOREIGN KEY ensures every student_id in enrollments exists in students.
+
+Question 2:
+Write a JOIN query to display student first_name, course_name, and enrollment status using the FOREIGN KEY relationship.
+
+Question 3:
+The registrar needs an enrollment report. Join students, courses, and enrollments to show: student name, course code, course name, enrollment date, and grade for all completed enrollments.
+
+Question 4:
+Write a query to verify referential integrity: find any enrollment records where student_id doesn't match any students row (should return 0 rows with proper FK). Write: SELECT * FROM enrollments WHERE student_id NOT IN (SELECT student_id FROM students).

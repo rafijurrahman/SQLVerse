@@ -1,0 +1,16 @@
+Lesson: SQL-083 — DEFAULT
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT query to see the current enrollment_status values. Observe that most are 'Active' — this is the DEFAULT at work.
+
+Question 2:
+Write a CREATE TABLE for fee_payments with DEFAULT values: amount DECIMAL(10,2) NOT NULL DEFAULT 0.00, status VARCHAR(20) NOT NULL DEFAULT 'Unpaid', payment_date DATE DEFAULT NULL.
+
+Question 3:
+New student registrations should default to 'Active' status and NULL GPA. Write an INSERT statement for a new student without specifying enrollment_status or gpa — let the DEFAULT handle it.
+
+Question 4:
+Write a query to count students by enrollment_status to verify the DEFAULT is working: SELECT enrollment_status, COUNT(*) FROM students GROUP BY enrollment_status. Then write a CREATE TABLE that uses DEFAULT for multiple columns.

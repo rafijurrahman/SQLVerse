@@ -1,0 +1,16 @@
+Lesson: SQL-081 — UNIQUE
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT query to verify that all email values in the students table are unique: SELECT email, COUNT(*) FROM students GROUP BY email HAVING COUNT(*) > 1. This should return 0 rows.
+
+Question 2:
+Write a CREATE TABLE for student_certificates with: cert_id (INT PK), student_id (INT), cert_number (VARCHAR(20) UNIQUE), issue_date (DATE).
+
+Question 3:
+The university needs unique student email addresses. Write a query to check for duplicates: SELECT email, COUNT(*) as count FROM students GROUP BY email HAVING count > 1. Then explain how the UNIQUE constraint prevents this at the database level.
+
+Question 4:
+Write a CREATE TABLE for national_id_registry with: registry_id (INT PK), student_id (INT UNIQUE NOT NULL), national_id (VARCHAR(20) UNIQUE NOT NULL), issue_date (DATE). The UNIQUE on student_id means one student can only have one national ID.

@@ -1,0 +1,16 @@
+Lesson: SQL-079 — PRIMARY KEY
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT query to retrieve the student with student_id = 3. The PRIMARY KEY ensures this returns exactly one row.
+
+Question 2:
+Write a CREATE TABLE for a departments table with: dept_id INT PRIMARY KEY AUTO_INCREMENT, dept_name VARCHAR(100) NOT NULL UNIQUE, dept_head VARCHAR(100).
+
+Question 3:
+The university is adding a course catalog. Write a CREATE TABLE for courses with a composite-style PRIMARY KEY on (course_code, semester) — or a single surrogate PRIMARY KEY course_id. Show both designs and explain which is better.
+
+Question 4:
+Write a CREATE TABLE that demonstrates PRIMARY KEY uniqueness constraints: create a table, insert two rows with the same PK, and observe the error. (Write the INSERT statements that would cause a duplicate PK error as a comment, then write the correct version.)
