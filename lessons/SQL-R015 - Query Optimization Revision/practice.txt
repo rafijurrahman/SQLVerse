@@ -1,0 +1,16 @@
+Lesson: SQL-R015 — Query Optimization Revision
+================================
+
+Practice Questions
+
+Question 1:
+Review index usage: write a query to find orders placed on a specific date using an index on order_date.
+
+Question 2:
+Optimize a query with a function in the WHERE clause: rewrite WHERE YEAR(order_date) = 2024 to use an index-friendly date range.
+
+Question 3:
+Write a fully optimized query that joins customers and orders, filters by city and status, and uses only specific columns. Verify with EXPLAIN.
+
+Question 4:
+Given a slow query with multiple JOINs and subqueries, write the optimized equivalent using CTEs and indexes, and explain the performance improvements.

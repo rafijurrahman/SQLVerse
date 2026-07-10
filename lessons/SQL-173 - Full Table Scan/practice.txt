@@ -1,0 +1,20 @@
+Lesson: SQL-173 — Full Table Scan
+================================
+
+Practice Questions
+
+Question 1:
+A full table scan reads all rows. Write EXPLAIN SELECT * FROM orders WHERE total_amount > 2000. If no index on total_amount, MySQL does a full table scan (type = ALL).
+
+Question 2:
+Contrast: SELECT * FROM orders WHERE order_id = 1001 (uses PRIMARY KEY index -- fast) vs SELECT * FROM orders WHERE total_amount = 3500 (full scan if no index).
+
+Question 3:
+The nightly report queries: SELECT * FROM orders WHERE total_amount BETWEEN 2000 AND 6000. It's slow because of a full table scan. Create an index on total_amount and re-run EXPLAIN.
+
+Question 4:
+Identify which queries cause full table scans:
+(A) WHERE order_id = 1001 -- index.
+(B) WHERE total_amount > 2000 -- scan (no index).
+(C) WHERE status LIKE '%ompleted' -- scan (leading wildcard).
+Write EXPLAIN for all three and observe the difference.

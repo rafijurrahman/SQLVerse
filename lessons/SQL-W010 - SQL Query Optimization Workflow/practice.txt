@@ -1,0 +1,16 @@
+Lesson: SQL-W010 — SQL Query Optimization Workflow
+================================
+
+Practice Questions
+
+Question 1:
+Explain the standard workflow steps for query optimization in a production database.
+
+Question 2:
+Use EXPLAIN to analyze a query, identify the performance bottleneck (e.g. table scan), and propose a solution.
+
+Question 3:
+A report query grouping sales by customer is slow. Walk through the optimization process: identify columns, create index, verify with EXPLAIN.
+
+Question 4:
+Write a script containing a slow query, the index creation statement, the optimized query, and a comment explaining the performance gains.

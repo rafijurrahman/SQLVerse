@@ -1,0 +1,20 @@
+Lesson: SQL-172 — Reading an Execution Plan
+================================
+
+Practice Questions
+
+Question 1:
+Write EXPLAIN SELECT * FROM orders WHERE status = 'Completed'. Read the type column: 'ALL' means full table scan; 'ref' means index used.
+
+Question 2:
+Run EXPLAIN on a JOIN query: EXPLAIN SELECT c.first_name, o.total_amount FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'Completed'. Observe the execution plan.
+
+Question 3:
+The query is slow: SELECT * FROM orders WHERE status = 'Completed' AND order_date > '2024-02-01'. Write EXPLAIN to diagnose, then create an index to fix it, then EXPLAIN again.
+
+Question 4:
+Write EXPLAIN for three different queries:
+(A) Simple WHERE on PRIMARY KEY.
+(B) WHERE on non-indexed column.
+(C) JOIN query.
+Compare the "type" and "key" columns in EXPLAIN output.

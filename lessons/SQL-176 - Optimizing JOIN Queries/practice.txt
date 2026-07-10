@@ -1,0 +1,22 @@
+Lesson: SQL-176 — Optimizing JOIN Queries
+================================
+
+Practice Questions
+
+Question 1:
+Write an optimized JOIN: ensure both tables have indexes on the JOIN column. Join customers and orders on customer_id (both have it as PK/FK). EXPLAIN the JOIN.
+
+Question 2:
+Filter before joining when possible:
+(A) Less optimal: JOIN first, then filter.
+SELECT c.first_name, o.total_amount FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'Completed'.
+(B) More optimal: same query, but ensure the WHERE is applied efficiently by having an index on orders.status.
+
+Question 3:
+JOIN optimization: use INNER JOIN instead of subquery when joining is more efficient. Rewrite:
+FROM customers WHERE customer_id IN (SELECT customer_id FROM orders WHERE status = 'Completed')
+as an INNER JOIN:
+FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'Completed'.
+
+Question 4:
+Write EXPLAIN for a 3-table JOIN: customers, orders, (with a derived table). Identify which table is the "driving table" and how indexes affect performance. Discuss how to reorder conditions to optimize.

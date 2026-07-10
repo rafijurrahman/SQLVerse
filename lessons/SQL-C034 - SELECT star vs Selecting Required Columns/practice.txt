@@ -1,0 +1,16 @@
+Lesson: SQL-C034 — SELECT star vs Selecting Required Columns
+================================
+
+Practice Questions
+
+Question 1:
+Compare the execution plan of SELECT * vs SELECT order_id, total_amount for orders table.
+
+Question 2:
+Create a composite index on (status, total_amount). Write a query selecting only status and total_amount, and verify if it uses a "Covering Index" scan.
+
+Question 3:
+Explain why selecting only required columns is faster and consumes less network bandwidth when retrieving millions of records.
+
+Question 4:
+Write a query that performs a Join between customers and orders selecting only name and total_amount. Show the EXPLAIN plan and explain the cost difference compared to SELECT *.

@@ -1,0 +1,16 @@
+Lesson: SQL-181 — Optimizing Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to rank orders by total_amount descending using DENSE_RANK().
+
+Question 2:
+Write a CTE that ranks orders by amount, and explain in a comment why filtering on the rank in the outer query is more optimized than using a subquery.
+
+Question 3:
+The finance team wants the top 2 orders per customer. Write an optimized window function query using ROW_NUMBER() in a CTE.
+
+Question 4:
+Explain in a SQL comment how partitioning and sorting in the OVER() clause affect execution time, and how an index on (customer_id, total_amount) would optimize it.

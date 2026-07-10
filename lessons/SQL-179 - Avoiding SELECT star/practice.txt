@@ -1,0 +1,20 @@
+Lesson: SQL-179 — Avoiding SELECT star
+================================
+
+Practice Questions
+
+Question 1:
+Write the unoptimized version: SELECT * FROM orders. Then write the optimized version: SELECT order_id, status, total_amount FROM orders. Less data transferred.
+
+Question 2:
+Covering index benefit: if you SELECT only indexed columns, MySQL can return the result from the index alone without reading the actual table rows.
+SELECT customer_id, status FROM orders WHERE status = 'Completed' (if both columns are indexed).
+
+Question 3:
+The report only needs order_id, customer_id, status, and total_amount. Write the query without SELECT * and explain: (A) less network bandwidth, (B) possible covering index usage, (C) future-proof if columns are added.
+
+Question 4:
+Demonstrate the covering index concept:
+CREATE INDEX idx_covering ON orders(status, total_amount, customer_id).
+Then: SELECT status, total_amount, customer_id FROM orders WHERE status = 'Completed'.
+MySQL reads only the index (covering), not the table. Use EXPLAIN to verify.

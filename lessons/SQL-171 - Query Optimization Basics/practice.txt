@@ -1,0 +1,22 @@
+Lesson: SQL-171 — Query Optimization Basics
+================================
+
+Practice Questions
+
+Question 1:
+Write an optimized query: SELECT only needed columns instead of SELECT *:
+SELECT order_id, status, total_amount FROM orders WHERE status = 'Completed'.
+
+Question 2:
+Compare two equivalent queries:
+(A) SELECT * FROM orders WHERE status = 'Completed' AND total_amount > 2000.
+(B) SELECT order_id, total_amount FROM orders WHERE status = 'Completed' AND total_amount > 2000.
+Version B is faster (less data transferred).
+
+Question 3:
+Write a report query for completed orders in Q1 2024. Use specific columns only, filter early with WHERE, and avoid unnecessary JOINs. Show the optimized query.
+
+Question 4:
+Identify three optimization opportunities in this query:
+SELECT * FROM orders WHERE YEAR(order_date) = 2024 AND status IN ('Completed', 'Shipped').
+Write the optimized version using date range, specific columns, and proper indexing hints.

@@ -1,0 +1,16 @@
+Lesson: SQL-174 — Index Scan vs Table Scan
+================================
+
+Practice Questions
+
+Question 1:
+Create an index on status: CREATE INDEX idx_status ON orders(status). Then EXPLAIN SELECT * FROM orders WHERE status = 'Completed'. Now MySQL uses the index (type = ref or index).
+
+Question 2:
+Create an index on order_date. Write EXPLAIN for a range query: WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31'. Observe type = range with key = idx_date.
+
+Question 3:
+After creating indexes on customer_id and status, run EXPLAIN on: SELECT * FROM orders WHERE customer_id = 1 AND status = 'Completed'. Observe that MySQL uses the most selective index.
+
+Question 4:
+Compare full scan vs index scan performance conceptually: For 1 million rows, scanning ALL rows takes O(n) operations. An index scan on status (4 values) takes O(log n + result_rows). Write a query demonstrating each case with EXPLAIN.

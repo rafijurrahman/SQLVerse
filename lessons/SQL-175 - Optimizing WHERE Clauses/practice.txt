@@ -1,0 +1,26 @@
+Lesson: SQL-175 — Optimizing WHERE Clauses
+================================
+
+Practice Questions
+
+Question 1:
+Write an index-friendly WHERE: WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31' instead of WHERE YEAR(order_date) = 2024. The BETWEEN version uses the index; YEAR() wraps the column and bypasses it.
+
+Question 2:
+Optimize:
+(A) Avoid: WHERE total_amount + 100 > 3600 (function on column).
+(B) Use: WHERE total_amount > 3500 (direct comparison).
+Write both and explain which is index-friendly.
+
+Question 3:
+The status column has an index. Write the optimal WHERE:
+Good: WHERE status = 'Completed'.
+Bad: WHERE UPPER(status) = 'COMPLETED' (function wraps column, bypasses index).
+Write both queries and explain the difference.
+
+Question 4:
+Rewrite the following optimally:
+(A) WHERE SUBSTRING(status, 1, 4) = 'Comp' -> WHERE status LIKE 'Comp%'.
+(B) WHERE order_id + 0 = 1001 -> WHERE order_id = 1001.
+(C) WHERE YEAR(order_date) = 2024 -> WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31'.
+Write all optimized versions.

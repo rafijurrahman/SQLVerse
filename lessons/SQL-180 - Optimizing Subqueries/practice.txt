@@ -1,0 +1,26 @@
+Lesson: SQL-180 — Optimizing Subqueries
+================================
+
+Practice Questions
+
+Question 1:
+Convert a correlated subquery to a JOIN (usually faster):
+Subquery: SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM orders WHERE status = 'Completed').
+JOIN: SELECT DISTINCT c.* FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.status = 'Completed'.
+
+Question 2:
+Non-correlated subqueries are executed once (efficient). Correlated subqueries run once per outer row (slow). Demonstrate:
+(A) Non-correlated: WHERE total_amount > (SELECT AVG(total_amount) FROM orders) -- runs once.
+(B) Correlated: WHERE total_amount > (SELECT AVG(total_amount) FROM orders WHERE customer_id = o.customer_id) -- runs per row.
+
+Question 3:
+Convert a slow correlated subquery to a JOIN:
+Slow: SELECT c.first_name, (SELECT COUNT(*) FROM orders WHERE customer_id = c.customer_id) AS cnt FROM customers c.
+Fast: SELECT c.first_name, COUNT(o.order_id) AS cnt FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id.
+
+Question 4:
+Write three versions of the same query (find customers with orders above average):
+(A) Correlated subquery (slow).
+(B) Non-correlated subquery (better).
+(C) JOIN with HAVING (often best).
+Use EXPLAIN on each to compare access methods.

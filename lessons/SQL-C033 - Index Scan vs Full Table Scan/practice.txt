@@ -1,0 +1,16 @@
+Lesson: SQL-C033 — Index Scan vs Full Table Scan
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all orders with status = 'Completed'. Run EXPLAIN and verify if it does a Full Table Scan.
+
+Question 2:
+Create an index on the status column, run the same query with EXPLAIN, and verify if it performs an Index Scan.
+
+Question 3:
+The marketing team wants to analyze high-value orders (total_amount > 5000). Compare the execution plans before and after adding an index on total_amount.
+
+Question 4:
+Explain in a SQL comment when a database optimizer chooses a Full Table Scan over an Index Scan, even if an index is available on the filtered column.

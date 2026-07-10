@@ -1,0 +1,19 @@
+Lesson: SQL-177 — Optimizing GROUP BY Queries
+================================
+
+Practice Questions
+
+Question 1:
+Write an optimized GROUP BY: filter BEFORE grouping with WHERE to reduce the dataset: WHERE status = 'Completed' GROUP BY customer_id. This is faster than grouping all rows then filtering.
+
+Question 2:
+Create an index on status. Then: SELECT status, COUNT(*) FROM orders GROUP BY status. With the index, MySQL can use a "loose index scan" for GROUP BY on indexed columns.
+
+Question 3:
+The monthly revenue query: SELECT MONTH(order_date), SUM(total_amount) FROM orders GROUP BY MONTH(order_date). Optimize by filtering to the year first: WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31'.
+
+Question 4:
+Compare two GROUP BY queries:
+(A) GROUP BY on non-indexed column: GROUP BY total_amount (many unique values).
+(B) GROUP BY on indexed, low-cardinality column: GROUP BY status (4 values).
+Write EXPLAIN for both and observe the difference.

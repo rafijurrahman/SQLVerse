@@ -1,0 +1,20 @@
+Lesson: SQL-178 — Optimizing ORDER BY Queries
+================================
+
+Practice Questions
+
+Question 1:
+Write ORDER BY on the PRIMARY KEY (already indexed, free sort): SELECT * FROM orders ORDER BY order_id. Fast because InnoDB stores data in PK order.
+
+Question 2:
+Create an index on order_date. Then: SELECT * FROM orders ORDER BY order_date -- uses the index for sorting, avoids filesort.
+
+Question 3:
+The dashboard sorts orders by total_amount DESC. Without an index, MySQL does a filesort (slow on large tables). Create CREATE INDEX idx_amount ON orders(total_amount). Then EXPLAIN SELECT * FROM orders ORDER BY total_amount DESC.
+
+Question 4:
+Demonstrate index-optimized ORDER BY:
+(A) ORDER BY order_id (PK -- no filesort).
+(B) ORDER BY status (index on status -- uses index).
+(C) ORDER BY total_amount (no index -- filesort).
+Write EXPLAIN for all three.
