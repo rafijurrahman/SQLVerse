@@ -1,0 +1,16 @@
+Lesson: SQL-002 — WHERE
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all products where is_active = 1.
+
+Question 2:
+Write a query to retrieve all products in the 'Electronics' category.
+
+Question 3:
+The inventory team wants a list of currently active Electronics products that cost more than 500. Write the query.
+
+Question 4:
+Write a query to find all active products (is_active = 1) that are either in the 'Furniture' category or have a price above 2000.

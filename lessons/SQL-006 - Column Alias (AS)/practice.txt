@@ -1,0 +1,16 @@
+Lesson: SQL-006 — Column Alias (AS)
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display product_name as "Product", brand as "Brand", and price as "Price" from the products table.
+
+Question 2:
+Write a query to calculate profit per unit (price - cost_price) and display it as "Profit". Include product_name and brand.
+
+Question 3:
+Finance needs a pricing report. Display product_name as "Item Name", price as "Retail Price", cost_price as "Cost", and calculate (price - cost_price) as "Gross Profit".
+
+Question 4:
+Write a query to display product_name as "Product Name", category as "Department", and calculate a discounted price (price * 0.90) as "Sale Price" for all products.

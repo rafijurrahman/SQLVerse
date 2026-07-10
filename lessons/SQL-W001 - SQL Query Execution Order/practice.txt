@@ -1,0 +1,16 @@
+Lesson: SQL-W001 — SQL Query Execution Order
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all completed orders (status = 'Completed') from the orders table.
+
+Question 2:
+Write a query to count the number of completed orders per city. Use GROUP BY city and WHERE status = 'Completed'.
+
+Question 3:
+The operations team wants a summary of completed orders by city, but only for cities with more than one completed order. Write a query using FROM → WHERE → GROUP BY → HAVING → ORDER BY (order by total orders descending).
+
+Question 4:
+Write a query that follows the full SQL execution order: retrieve order_id, city, and total_amount from orders, filter for Completed orders in 2024, group by city, filter groups where total revenue > 5000, and order by total revenue descending.

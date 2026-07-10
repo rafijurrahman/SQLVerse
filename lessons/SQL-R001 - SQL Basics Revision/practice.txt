@@ -1,0 +1,23 @@
+Lesson: SQL-R001 — SQL Basics Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write three separate queries:
+(A) Display all products where price > 500.
+(B) Display all customers from 'Dhaka'.
+(C) Display all Completed orders.
+
+Question 2:
+Write a query to find Electronics products priced between 500 and 3000. Sort by price ascending.
+Then write a query to find customers whose phone IS NULL.
+
+Question 3:
+The operations manager needs three reports:
+(A) Top 3 most expensive products.
+(B) Customers who have a phone number and are from Dhaka.
+(C) All Completed orders from January 2024 (order_date BETWEEN '2024-01-01' AND '2024-01-31').
+
+Question 4:
+Write a query using DISTINCT to find all unique cities in the customers table. Then write a query to find all orders with total_amount > 2000 that are NOT Cancelled.

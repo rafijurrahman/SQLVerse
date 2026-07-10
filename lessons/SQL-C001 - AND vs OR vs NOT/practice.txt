@@ -1,0 +1,22 @@
+Lesson: SQL-C001 — AND vs OR vs NOT
+================================
+
+Practice Questions
+
+Question 1:
+Write one query using AND to find active products (is_active = 1) in the 'Electronics' category.
+Then write another query using OR to find products that are either in 'Electronics' OR 'Furniture'.
+
+Question 2:
+Write a query using NOT to find all products that are NOT in the 'Stationery' category.
+Then write a query to find products that are NOT active (is_active = 0).
+
+Question 3:
+A store needs to run three different filters on their product table:
+(A) Find active Furniture products above 5000.
+(B) Find products from Logitech OR Sony.
+(C) Find all products that are NOT out of stock (stock > 0) AND NOT inactive.
+Write one separate query for each filter.
+
+Question 4:
+Write a query to find active products (is_active = 1) that are either in 'Electronics' OR 'Furniture' but NOT from the brand 'Walton'.

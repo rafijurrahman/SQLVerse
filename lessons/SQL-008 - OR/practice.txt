@@ -1,0 +1,16 @@
+Lesson: SQL-008 — OR
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all products that are in the 'Electronics' OR 'Furniture' category.
+
+Question 2:
+Write a query to find all products from the brand 'Walton' OR 'Navana'.
+
+Question 3:
+The marketing team wants to run a campaign for premium products. Retrieve all products that cost more than 5000 OR belong to the 'Electronics' category with a price above 2000.
+
+Question 4:
+Write a query to find products where the brand is 'Logitech' OR the brand is 'Sony'. Display product_name, brand, and price, sorted by price descending.

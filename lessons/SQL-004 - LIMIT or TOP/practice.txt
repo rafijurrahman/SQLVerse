@@ -1,0 +1,16 @@
+Lesson: SQL-004 — LIMIT or TOP
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve the first 5 products from the products table.
+
+Question 2:
+Write a query to find the top 3 most expensive products.
+
+Question 3:
+The sales director wants to see the top 5 best-selling products (highest units_sold). Write the query to display product_name, brand, and units_sold.
+
+Question 4:
+Write a query to find the 3 cheapest Electronics products. Display product_name, brand, and price.

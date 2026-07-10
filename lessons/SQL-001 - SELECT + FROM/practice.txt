@@ -1,0 +1,16 @@
+Lesson: SQL-001 — SELECT + FROM
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all columns and all rows from the products table.
+
+Question 2:
+Write a query to display only product_name, brand, and price from the products table.
+
+Question 3:
+The store manager needs a full product catalog report for a board meeting. Write a query to retrieve every product with all its details.
+
+Question 4:
+Write a query to display product_name, category, and price. Rename price as "Selling Price" using a column alias.

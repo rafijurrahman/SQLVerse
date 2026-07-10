@@ -1,0 +1,16 @@
+Lesson: SQL-016 — IS NOT NULL
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all customers who have a phone number (phone IS NOT NULL).
+
+Question 2:
+Write a query to find all customers who have both a valid email AND a valid phone number.
+
+Question 3:
+The marketing team wants to send SMS campaigns to customers with verified phone numbers and known cities. Write a query to find customers where both phone IS NOT NULL and city IS NOT NULL.
+
+Question 4:
+Write a query to find customers who have complete contact information: email IS NOT NULL AND phone IS NOT NULL AND city IS NOT NULL. Display all their details and count the total using a COUNT(*) as a second query.

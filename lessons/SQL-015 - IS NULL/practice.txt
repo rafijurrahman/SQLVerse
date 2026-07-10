@@ -1,0 +1,16 @@
+Lesson: SQL-015 — IS NULL
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all customers whose phone number is NULL.
+
+Question 2:
+Write a query to find all customers whose email is NULL AND whose phone is also NULL.
+
+Question 3:
+The customer support team needs to identify incomplete customer profiles. Find all customers who are missing either an email OR a phone number (or both). Display customer_id, first_name, last_name, email, and phone.
+
+Question 4:
+Write a query to find all customers who have a missing city OR a missing email. Count how many such customers exist by wrapping your query in a subquery: SELECT COUNT(*) FROM (...) AS incomplete.

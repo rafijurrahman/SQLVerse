@@ -1,0 +1,16 @@
+Lesson: SQL-007 — AND
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all active products (is_active = 1) in the Electronics category.
+
+Question 2:
+Write a query to find all active Electronics products with a price greater than 1000.
+
+Question 3:
+The store wants to promote in-stock, active Electronics products priced under 2000. Write a query to find products meeting all three conditions: is_active = 1, category = 'Electronics', price < 2000.
+
+Question 4:
+Write a query to find all active products from the brand 'Logitech' or 'Sony' that have a price above 500. Use AND to ensure products are active.

@@ -1,0 +1,16 @@
+Lesson: SQL-011 — BETWEEN
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all products with a price between 500 and 3000 (inclusive).
+
+Question 2:
+Write a query to find all products with stock between 50 and 250 (inclusive).
+
+Question 3:
+The finance team wants to review mid-range products for a promotional discount campaign. Find all products priced between 300 and 1500 and display product_name, brand, and price.
+
+Question 4:
+Write a query to find Electronics products priced between 600 and 2000. Display product_name, brand, and price sorted by price ascending.

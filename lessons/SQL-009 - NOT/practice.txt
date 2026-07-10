@@ -1,0 +1,16 @@
+Lesson: SQL-009 — NOT
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all products that are NOT in the 'Electronics' category.
+
+Question 2:
+Write a query to find all products where the brand is NOT 'Walton'.
+
+Question 3:
+The store wants to view all non-furniture items with stock greater than 50. Write a query using NOT to exclude the 'Furniture' category, and add the stock condition.
+
+Question 4:
+Write a query to find all products that are NOT from 'Navana' and NOT in the 'Stationery' category, with a price above 500.

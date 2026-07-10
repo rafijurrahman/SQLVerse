@@ -1,0 +1,21 @@
+Lesson: SQL-C002 — LIKE vs IN
+================================
+
+Practice Questions
+
+Question 1:
+Write one query using LIKE to find customers whose city starts with 'D'.
+Then write another query using IN to find customers in ('Dhaka', 'Sylhet', 'Barisal').
+
+Question 2:
+Write a query using LIKE to find customers whose email contains '@email.com'.
+Then write a query using IN to find customers whose first_name is in ('Rahim', 'Karim', 'Milon').
+
+Question 3:
+The store wants to filter customers in two ways:
+(A) Using LIKE: find all customers from cities that start with 'Ch'.
+(B) Using IN: find all customers from these exact cities: 'Dhaka', 'Chittagong', 'Khulna'.
+Write both queries and compare the results.
+
+Question 4:
+When should you use LIKE instead of IN? Write a query using LIKE to find customers whose last_name contains 'man'. Then explain (in a comment) why IN cannot be used here.

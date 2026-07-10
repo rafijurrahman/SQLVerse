@@ -1,0 +1,16 @@
+Lesson: SQL-014 — Wildcard (_)
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all customers whose first_name has exactly 4 characters (use four underscores: LIKE '____').
+
+Question 2:
+Write a query to find all customers whose first_name starts with 'R' and has exactly 4 characters total.
+
+Question 3:
+The store wants to find all customers with exactly 2-character first names. Write a query using the _ wildcard to identify them.
+
+Question 4:
+Write a query to find customers whose first_name starts with any letter and ends with 'a', with exactly 4 characters total. Display first_name, last_name, and city.

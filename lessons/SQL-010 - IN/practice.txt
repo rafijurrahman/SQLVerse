@@ -1,0 +1,16 @@
+Lesson: SQL-010 — IN
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all products where category is in ('Electronics', 'Stationery').
+
+Question 2:
+Write a query to find all products from brands in the list ('Sony', 'Logitech', 'HP').
+
+Question 3:
+The procurement team needs to reorder supplies for only three departments: Electronics, Electrical, and Furniture. Write a query using IN to retrieve all products from those categories.
+
+Question 4:
+Write a query to find products that do NOT belong to any of these categories: 'Stationery', 'Decor'. Display product_name, brand, category, and price. Sort by category.

@@ -1,0 +1,16 @@
+Lesson: SQL-013 — Wildcard (%)
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all customers whose first_name starts with 'R'.
+
+Question 2:
+Write a query to find all customers whose first_name ends with 'a'.
+
+Question 3:
+The marketing team wants to identify customers from cities that start with 'Dh'. Write a LIKE query with % to find those customers.
+
+Question 4:
+Write a query to find all customers whose email contains 'shop.com' AND whose first_name starts with either 'R' or 'S'. Hint: Use two separate queries with LIKE and combine your understanding.

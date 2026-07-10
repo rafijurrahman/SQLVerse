@@ -1,0 +1,16 @@
+Lesson: SQL-005 — DISTINCT
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all unique brand names from the products table.
+
+Question 2:
+Write a query to retrieve all unique combinations of brand and category.
+
+Question 3:
+The procurement manager wants to know how many different product categories are stocked in the store. Write a query to list all unique categories.
+
+Question 4:
+Write a query to find all unique brands that sell Electronics products.

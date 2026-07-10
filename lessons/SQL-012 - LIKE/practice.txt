@@ -1,0 +1,16 @@
+Lesson: SQL-012 — LIKE
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find all customers whose last_name is exactly 'Rahman'.
+
+Question 2:
+Write a query to find all customers whose email contains 'rahman'.
+
+Question 3:
+The CRM team wants to send a campaign to all customers in cities that contain the word 'Dha'. Write a LIKE query to find those customers.
+
+Question 4:
+Write a query to find all customers whose first_name OR last_name contains 'Rah'. Display first_name, last_name, email, and city.

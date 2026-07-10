@@ -1,0 +1,16 @@
+Lesson: SQL-003 — ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to retrieve all products sorted by price from lowest to highest.
+
+Question 2:
+Write a query to retrieve all products sorted by category alphabetically, and within each category sorted by price from highest to lowest.
+
+Question 3:
+The purchasing manager wants to see the product list ordered by stock level ascending so they can quickly identify items that need restocking.
+
+Question 4:
+Write a query to display product_name, brand, and price for all products. Sort the results by brand name alphabetically (A to Z), and for the same brand, sort by price from highest to lowest.
