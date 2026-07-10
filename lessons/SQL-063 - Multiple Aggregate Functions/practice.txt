@@ -1,0 +1,16 @@
+Lesson: SQL-063 — Multiple Aggregate Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate COUNT(*), SUM(quantity), and AVG(unit_price) all in one query, grouped by category.
+
+Question 2:
+Write a query to display per store: COUNT(*) as "Items", SUM(quantity) as "Units Sold", SUM(quantity * unit_price) as "Revenue", AVG(unit_price) as "Avg Price".
+
+Question 3:
+Management needs a comprehensive category performance dashboard. For each category show: item count, total quantity, total revenue, average price, min price, and max price in one query.
+
+Question 4:
+Write a query combining all aggregates for each store: COUNT(*), SUM revenue, AVG revenue per item, MIN unit_price, MAX unit_price. Filter using HAVING where total revenue > 3000.

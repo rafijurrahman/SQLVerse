@@ -1,0 +1,16 @@
+Lesson: SQL-064 — GROUP BY with ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate total revenue per category and sort by total revenue descending.
+
+Question 2:
+Write a query to count items per store per category, sorted by store (ascending) and count (descending).
+
+Question 3:
+Display the top-performing stores: group by store, calculate total revenue, and show the results sorted by revenue (highest first), then by item count (highest first) as a tiebreaker.
+
+Question 4:
+Write a query to calculate total revenue per category and sort by category name alphabetically. Then write a second version sorted by revenue descending. Observe how ORDER BY controls the result presentation.

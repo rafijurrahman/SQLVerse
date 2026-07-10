@@ -1,0 +1,16 @@
+Lesson: SQL-066 — HAVING Common Mistakes
+================================
+
+Practice Questions
+
+Question 1:
+Write a correct query: find categories with more than 3 items sold using HAVING COUNT(*) > 3 (not WHERE COUNT(*) > 3).
+
+Question 2:
+Demonstrate that WHERE cannot filter aggregates. Write the correct version of finding stores with total revenue > 5000 using HAVING, not WHERE.
+
+Question 3:
+The analyst wants categories with average price above 500. Write the correct query: GROUP BY category HAVING AVG(unit_price) > 500. Do NOT use WHERE AVG(unit_price) > 500.
+
+Question 4:
+Write a query using both WHERE and HAVING correctly: WHERE to filter items from 'Dhaka Store' or 'CTG Store', GROUP BY category, HAVING to filter groups where SUM(quantity * unit_price) > 3000. Demonstrate understanding of which filter goes where.

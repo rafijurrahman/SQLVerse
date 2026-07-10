@@ -1,0 +1,16 @@
+Lesson: SQL-060 — AVG() with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate the average unit_price per category using AVG(unit_price). Group by category.
+
+Question 2:
+Write a query to calculate the average quantity per order: AVG(quantity) grouped by order_id.
+
+Question 3:
+Pricing analysts want to know the average selling price per store. Write a query to display store and AVG(unit_price) as "Avg Unit Price". Sort by average price descending.
+
+Question 4:
+Write a query to find stores where the average item revenue (AVG of quantity * unit_price) is above 1000. Use GROUP BY and HAVING. Display store and the average revenue rounded to 2 decimal places.

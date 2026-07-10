@@ -1,0 +1,23 @@
+Lesson: SQL-C010 — COUNT vs SUM vs AVG
+================================
+
+Practice Questions
+
+Question 1:
+Write three separate queries:
+(A) COUNT(*) from order_items — total rows.
+(B) SUM(quantity) — total units sold.
+(C) AVG(unit_price) — average unit price.
+
+Question 2:
+Write a single query to show all three: COUNT(*), SUM(quantity * unit_price), and AVG(unit_price) grouped by category.
+
+Question 3:
+Finance needs to understand the difference in reporting:
+(A) COUNT tells you HOW MANY orders.
+(B) SUM tells you TOTAL value.
+(C) AVG tells you TYPICAL value.
+Write one query per metric, grouped by store.
+
+Question 4:
+Write a query to find stores where COUNT(*) > 3 AND AVG(unit_price) > 500 AND SUM(quantity * unit_price) > 5000. Use all three in HAVING.

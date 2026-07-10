@@ -1,0 +1,16 @@
+Lesson: SQL-058 — COUNT() with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to count the number of line items per order_id using COUNT(*).
+
+Question 2:
+Write a query to count distinct products per store using COUNT(DISTINCT product_name). Group by store.
+
+Question 3:
+The operations manager wants to know how many individual order lines each store processed. Display store and COUNT(*) as "Total Line Items". Sort descending.
+
+Question 4:
+Write a query to count items per store per category. Group by store and category. Filter using HAVING to show only combinations with COUNT(*) > 1. Display store, category, and item count.

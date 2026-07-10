@@ -1,0 +1,16 @@
+Lesson: SQL-056 — GROUP BY Multiple Columns
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to group by both store and category. Show the count of items in each group.
+
+Question 2:
+Write a query to calculate total revenue (SUM of quantity * unit_price) grouped by store and category. Sort by store, then by revenue descending.
+
+Question 3:
+The regional sales director needs a store-by-category breakdown. Display store, category, total quantity, and total revenue. Sort by store, then by total revenue descending.
+
+Question 4:
+Write a query grouped by store and category showing total revenue, total cost, and gross profit (revenue - cost). Filter to show only store-category combinations where gross profit > 2000.

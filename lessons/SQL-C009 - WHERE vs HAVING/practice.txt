@@ -1,0 +1,22 @@
+Lesson: SQL-C009 — WHERE vs HAVING
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries:
+(A) Use WHERE to filter only Electronics items, then calculate total revenue.
+(B) Use HAVING to filter categories where total revenue > 5000.
+
+Question 2:
+(A) WHERE filters rows BEFORE grouping. Write a query filtering where unit_price > 500, then group by category.
+(B) HAVING filters groups AFTER aggregation. Write a query grouping by category, then filter where SUM(quantity * unit_price) > 3000.
+
+Question 3:
+The analyst wants two reports:
+(A) Revenue from Electronics only (use WHERE).
+(B) Categories that generated more than 4000 in revenue (use HAVING).
+Write both queries.
+
+Question 4:
+Write a query that uses BOTH WHERE and HAVING: filter only items from 'Dhaka Store' using WHERE, then group by category, then use HAVING to show categories with revenue > 3000.

@@ -1,0 +1,16 @@
+Lesson: SQL-055 — GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to count the total number of items sold per category using COUNT(*) and GROUP BY category.
+
+Question 2:
+Write a query to calculate total revenue per category: SUM(quantity * unit_price) as "Total Revenue". Group by category.
+
+Question 3:
+Management wants a category performance report. For each category, calculate total quantity sold, total revenue, and total cost. Sort by total revenue descending.
+
+Question 4:
+Write a query to calculate the profit margin per category: SUM(quantity * (unit_price - cost_price)) / SUM(quantity * unit_price) * 100 as "Profit Margin %". Round to 2 decimal places. Sort descending.

@@ -1,0 +1,16 @@
+Lesson: SQL-057 — HAVING
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find categories where total revenue exceeds 5000 using HAVING SUM(quantity * unit_price) > 5000.
+
+Question 2:
+Write a query to find stores with more than 4 items sold: HAVING COUNT(*) > 4. Group by store.
+
+Question 3:
+Management wants to identify high-performing store-category combinations. Write a query grouped by store and category where total revenue (SUM of quantity * unit_price) exceeds 3000. Sort by revenue descending.
+
+Question 4:
+Write a query to find categories where total quantity sold > 5 AND average unit_price > 300. Use HAVING with two conditions. Display category, total quantity, and average price.

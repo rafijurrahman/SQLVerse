@@ -1,0 +1,16 @@
+Lesson: SQL-062 — MAX() with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the maximum price per category: MAX(price) grouped by category.
+
+Question 2:
+Write a query to find the maximum stock per brand: MAX(stock) grouped by brand.
+
+Question 3:
+Sales wants to showcase the premium product in each category. Display category, MAX(price) as "Premium Price", sorted by premium price descending.
+
+Question 4:
+Write a query to find categories where the MAX price is more than double the MIN price (MAX(price) > MIN(price) * 2). Display category, min price, and max price.

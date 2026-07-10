@@ -1,0 +1,16 @@
+Lesson: SQL-061 — MIN() with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the minimum price per category using MIN(price) and GROUP BY category.
+
+Question 2:
+Write a query to find the minimum stock per brand using MIN(stock). Group by brand.
+
+Question 3:
+The purchasing team wants the cheapest product in each category. Display category, MIN(price) as "Cheapest Price", and ORDER BY cheapest price ascending.
+
+Question 4:
+Write a query to find the cheapest product per category by joining back to the products table: WHERE price = (SELECT MIN(price) FROM products p2 WHERE p2.category = products.category). Display product_name, category, and price.

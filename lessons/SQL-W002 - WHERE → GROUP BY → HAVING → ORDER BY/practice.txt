@@ -1,0 +1,21 @@
+Lesson: SQL-W002 — WHERE → GROUP BY → HAVING → ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query showing the full pipeline:
+FROM order_items → GROUP BY category → SELECT category and total revenue.
+
+Question 2:
+Write a query that uses WHERE before GROUP BY:
+(A) Filter: WHERE store = 'Dhaka Store'
+(B) Then: GROUP BY category
+(C) Then: SELECT category, SUM(quantity * unit_price) as revenue.
+
+Question 3:
+Demonstrate the complete ORDER:
+FROM → WHERE (store = 'Dhaka Store' OR store = 'CTG Store') → GROUP BY category → HAVING (total revenue > 2000) → SELECT → ORDER BY revenue DESC.
+
+Question 4:
+Write a query that applies all 6 clauses in correct execution order: FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY. Filter non-Furniture items, group by category, show groups with revenue > 1000, display category and revenue, sort by revenue descending.

@@ -1,0 +1,16 @@
+Lesson: SQL-059 — SUM() with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate total quantity sold per category: SUM(quantity) grouped by category.
+
+Question 2:
+Write a query to calculate total revenue per store: SUM(quantity * unit_price) grouped by store.
+
+Question 3:
+Finance needs a store revenue summary. For each store, show total revenue (SUM of quantity * unit_price), sorted by revenue descending.
+
+Question 4:
+Write a query to calculate total revenue and total cost per category. Display category, total revenue, total cost, and total profit. Sort by total profit descending.

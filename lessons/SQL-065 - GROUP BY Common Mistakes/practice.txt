@@ -1,0 +1,16 @@
+Lesson: SQL-065 — GROUP BY Common Mistakes
+================================
+
+Practice Questions
+
+Question 1:
+Write a correct GROUP BY query: SELECT category, SUM(quantity * unit_price) FROM order_items GROUP BY category. This avoids the common mistake of selecting non-aggregated columns without GROUP BY.
+
+Question 2:
+Identify the error: If someone writes SELECT store, category, SUM(revenue) FROM items GROUP BY store — what is missing from GROUP BY? Write the corrected version: GROUP BY store, category.
+
+Question 3:
+Write a correct query: calculate total revenue per store, where the total is calculated correctly as SUM(quantity * unit_price) NOT just SUM(unit_price). Show category, store, and correct total revenue.
+
+Question 4:
+Write a query using GROUP BY store and category, with a HAVING clause that references the alias "total_rev" — note that standard SQL requires repeating the expression in HAVING: HAVING SUM(quantity * unit_price) > 2000, not HAVING total_rev > 2000. Write the correct version.
