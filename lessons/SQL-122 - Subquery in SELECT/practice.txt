@@ -1,0 +1,21 @@
+Lesson: SQL-122 — Subquery in SELECT
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELECT subquery to show each customer's name and the total number of orders they placed:
+SELECT first_name, (SELECT COUNT(*) FROM orders o WHERE o.customer_id = c.customer_id) AS order_count
+FROM customers c.
+
+Question 2:
+Write a SELECT subquery to display each customer's name and their highest order amount:
+SELECT first_name, (SELECT MAX(total_amount) FROM orders o WHERE o.customer_id = c.customer_id) AS max_order
+FROM customers c.
+
+Question 3:
+CRM needs a customer dashboard. Display: customer name, city, customer_type, and their total spending:
+(SELECT SUM(total_amount) FROM orders WHERE customer_id = c.customer_id) AS total_spent.
+
+Question 4:
+Display each customer with: name, total orders, total spent, and average order value -- all using scalar subqueries in the SELECT clause.

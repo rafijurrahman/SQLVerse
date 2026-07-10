@@ -1,0 +1,21 @@
+Lesson: SQL-124 — Nested Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write a nested (two-level) subquery to find customers from cities that have more than 2 customers:
+WHERE city IN (SELECT city FROM customers GROUP BY city HAVING COUNT(*) > 2).
+
+Question 2:
+Write a two-level nested subquery: find orders from customers who are Premium type:
+WHERE customer_id IN (SELECT customer_id FROM customers WHERE customer_type IN (SELECT customer_type FROM customers WHERE city = 'Dhaka' GROUP BY customer_type HAVING COUNT(*) > 1)).
+
+Question 3:
+Find the customers who placed orders above the average order amount of Premium customers:
+WHERE total_amount > (SELECT AVG(total_amount) FROM orders WHERE customer_id IN (SELECT customer_id FROM customers WHERE customer_type = 'Premium')).
+
+Question 4:
+Write a three-level nested subquery: find customers whose city has at least one VIP customer AND who have placed at least one order:
+WHERE city IN (SELECT city FROM customers WHERE customer_type = 'VIP')
+AND customer_id IN (SELECT customer_id FROM orders WHERE total_amount > 5000).

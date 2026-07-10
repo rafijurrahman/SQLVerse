@@ -1,0 +1,25 @@
+Lesson: SQL-C023 — Subquery vs JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Find customers with orders using:
+(A) JOIN: INNER JOIN customers ON orders.customer_id = customers.customer_id.
+(B) Subquery: WHERE customer_id IN (SELECT customer_id FROM orders).
+
+Question 2:
+Find total spending per customer using:
+(A) JOIN + GROUP BY: JOIN orders, GROUP BY customer_id, SUM(total_amount).
+(B) Correlated subquery in SELECT: (SELECT SUM FROM orders WHERE customer_id = c.customer_id).
+
+Question 3:
+Find the top-spending customer:
+(A) JOIN + GROUP BY + ORDER BY + LIMIT 1.
+(B) Subquery: WHERE customer_id = (SELECT customer_id FROM orders GROUP BY customer_id ORDER BY SUM(total_amount) DESC LIMIT 1).
+
+Question 4:
+Find customers who spent above average:
+(A) JOIN approach.
+(B) Subquery approach.
+Write both and compare. JOINs are often faster but subqueries can be more readable.

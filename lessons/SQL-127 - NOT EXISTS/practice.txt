@@ -1,0 +1,21 @@
+Lesson: SQL-127 — NOT EXISTS
+================================
+
+Practice Questions
+
+Question 1:
+Write a NOT EXISTS query to find customers who have NEVER placed any order:
+SELECT * FROM customers c WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id).
+
+Question 2:
+Write a NOT EXISTS query to find customers who have never placed a Cancelled order:
+WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id AND o.status = 'Cancelled').
+
+Question 3:
+The marketing team wants to target customers who have never placed a VIP-tier order (above 8000).
+Use NOT EXISTS: WHERE NOT EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id AND total_amount > 8000).
+
+Question 4:
+Write a query to find customers who have placed orders but have NO Completed orders:
+WHERE EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id)
+AND NOT EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id AND status = 'Completed').

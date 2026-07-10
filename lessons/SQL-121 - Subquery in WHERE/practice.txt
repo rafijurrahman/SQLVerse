@@ -1,0 +1,20 @@
+Lesson: SQL-121 — Subquery in WHERE
+================================
+
+Practice Questions
+
+Question 1:
+Write a WHERE subquery to find all orders with amount above average:
+WHERE total_amount > (SELECT AVG(total_amount) FROM orders).
+
+Question 2:
+Write a WHERE subquery to find all customers who have placed at least one order:
+WHERE customer_id IN (SELECT customer_id FROM orders).
+
+Question 3:
+The sales team wants to find Premium customers who have also placed a Completed order.
+Write: WHERE customer_type = 'Premium' AND customer_id IN (SELECT customer_id FROM orders WHERE status = 'Completed').
+
+Question 4:
+Write a WHERE subquery to find customers whose total spending (summed across all orders) exceeds 5000:
+WHERE customer_id IN (SELECT customer_id FROM orders GROUP BY customer_id HAVING SUM(total_amount) > 5000).

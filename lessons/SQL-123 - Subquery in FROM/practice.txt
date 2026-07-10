@@ -1,0 +1,24 @@
+Lesson: SQL-123 — Subquery in FROM
+================================
+
+Practice Questions
+
+Question 1:
+Write a FROM subquery (derived table) to calculate order count per customer, then filter:
+SELECT * FROM (SELECT customer_id, COUNT(*) AS order_count FROM orders GROUP BY customer_id) AS sub
+WHERE order_count > 1.
+
+Question 2:
+Use a FROM subquery to find customers with above-average total spending:
+SELECT * FROM (SELECT customer_id, SUM(total_amount) AS total FROM orders GROUP BY customer_id) AS spend
+WHERE total > (SELECT AVG(total_amount) FROM orders).
+
+Question 3:
+The analyst needs a "customer segment" report. Use a FROM subquery to first aggregate orders, then join with customers:
+SELECT c.first_name, sub.order_count, sub.total_spent
+FROM customers c
+JOIN (SELECT customer_id, COUNT(*) AS order_count, SUM(total_amount) AS total_spent FROM orders GROUP BY customer_id) AS sub
+ON c.customer_id = sub.customer_id.
+
+Question 4:
+Write a FROM subquery that finds the top 3 customers by spending, then joins back to customers to get their full details. Display name, city, customer_type, and total spending.

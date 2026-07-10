@@ -1,0 +1,23 @@
+Lesson: SQL-W006 — How SQL Executes a Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write a simple subquery and trace the execution order:
+(1) Inner query executes first: SELECT AVG(total_amount) FROM orders.
+(2) Outer query uses the result: WHERE total_amount > [avg result].
+
+Question 2:
+Write a FROM subquery and trace: the derived table (subquery in FROM) executes first, then the outer SELECT filters it.
+Show: SELECT * FROM (SELECT customer_id, SUM(total_amount) AS spend FROM orders GROUP BY customer_id) AS sub WHERE spend > 3000.
+
+Question 3:
+Write a correlated subquery and trace: for each row in the outer query, the inner query runs once with the current row's value.
+Show the execution for EXISTS: how it checks each customer against orders.
+
+Question 4:
+Write a nested two-level subquery and trace:
+Outer -> Middle -> Inner execution order.
+Find customers from cities where VIP customers exist:
+Innermost: find VIP customer cities. Middle: filter customers by those cities. Outer: add more conditions.

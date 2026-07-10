@@ -1,0 +1,21 @@
+Lesson: SQL-126 — EXISTS
+================================
+
+Practice Questions
+
+Question 1:
+Write an EXISTS query to find customers who have placed at least one order:
+SELECT * FROM customers c WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id).
+
+Question 2:
+Write an EXISTS query to find customers who have at least one Completed order:
+WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id AND o.status = 'Completed').
+
+Question 3:
+The CRM team wants to identify engaged customers. Find all customers who have:
+(A) At least one Completed order above 3000.
+Use EXISTS: WHERE EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id AND status = 'Completed' AND total_amount > 3000).
+
+Question 4:
+Write a query combining EXISTS with other conditions: find Premium customers who have at least one Completed order AND are from Dhaka:
+WHERE customer_type = 'Premium' AND city = 'Dhaka' AND EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id AND status = 'Completed').

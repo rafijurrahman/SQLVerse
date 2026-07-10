@@ -1,0 +1,25 @@
+Lesson: SQL-R010 — Subquery Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write four subquery types:
+(A) Scalar: SELECT (SELECT COUNT(*) FROM orders).
+(B) WHERE IN: customers with orders above 3000.
+(C) EXISTS: customers with Completed orders.
+(D) NOT EXISTS: customers without any orders.
+
+Question 2:
+Write a FROM subquery (derived table) to get total spending per customer, then join to customers and filter for spending > 5000.
+
+Question 3:
+CRM complete analysis:
+(A) Find VIP customers and their order count (SELECT subquery).
+(B) Find Premium customers who have never cancelled (NOT EXISTS).
+(C) Find customers with above-average spending (WHERE + aggregate subquery).
+
+Question 4:
+Write a correlated subquery to rank customers by spending without using ROW_NUMBER():
+For each customer, count how many customers have HIGHER total spending. That count + 1 = their rank.
+Display customer name and rank.

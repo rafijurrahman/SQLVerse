@@ -1,0 +1,21 @@
+Lesson: SQL-119 — Introduction to Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write a simple subquery to find customers who live in the same city as customer_id 1:
+SELECT * FROM customers WHERE city = (SELECT city FROM customers WHERE customer_id = 1).
+
+Question 2:
+Write a subquery to find all orders where total_amount is above the average order amount:
+WHERE total_amount > (SELECT AVG(total_amount) FROM orders).
+
+Question 3:
+The CRM team wants to find customers who have placed at least one order above 5000.
+Write a subquery: WHERE customer_id IN (SELECT customer_id FROM orders WHERE total_amount > 5000).
+
+Question 4:
+Write a subquery to find the customer who placed the highest single order.
+Use: WHERE total_amount = (SELECT MAX(total_amount) FROM orders).
+Display customer name and order amount.

@@ -1,0 +1,20 @@
+Lesson: SQL-120 — Scalar Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write a scalar subquery that returns one value: SELECT (SELECT COUNT(*) FROM orders) AS total_orders.
+
+Question 2:
+Write a query that compares each order's amount to the overall average using a scalar subquery:
+SELECT order_id, total_amount, (SELECT AVG(total_amount) FROM orders) AS avg_amount FROM orders.
+
+Question 3:
+Display each customer's name alongside the total number of orders in the database:
+SELECT first_name, last_name, (SELECT COUNT(*) FROM orders) AS total_company_orders FROM customers.
+
+Question 4:
+Write a query to show each order's total_amount and the difference from the maximum order:
+SELECT order_id, total_amount, (SELECT MAX(total_amount) FROM orders) - total_amount AS gap_from_max FROM orders.
+Sort by gap ascending.

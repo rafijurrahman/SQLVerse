@@ -1,0 +1,24 @@
+Lesson: SQL-C022 — EXISTS vs IN
+================================
+
+Practice Questions
+
+Question 1:
+Write two equivalent queries:
+(A) WHERE customer_id IN (SELECT customer_id FROM orders).
+(B) WHERE EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id).
+Both should return customers with orders.
+
+Question 2:
+Compare performance concept: IN retrieves a list first, EXISTS stops at first match.
+For large datasets, EXISTS is often faster. Write both for finding Premium customers with Completed orders.
+
+Question 3:
+(A) Use IN: find customers in the list of those with high orders:
+WHERE customer_id IN (SELECT customer_id FROM orders WHERE total_amount > 5000).
+(B) Use EXISTS: same result with a correlated query.
+Write both.
+
+Question 4:
+Write NOT IN vs NOT EXISTS to find customers without orders. Explain in a comment: NOT IN fails if subquery returns NULL; NOT EXISTS is safer.
+Write the safer version using NOT EXISTS.

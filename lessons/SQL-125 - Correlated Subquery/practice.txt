@@ -1,0 +1,22 @@
+Lesson: SQL-125 — Correlated Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write a correlated subquery to find customers who have placed at least one order:
+SELECT * FROM customers c WHERE (SELECT COUNT(*) FROM orders o WHERE o.customer_id = c.customer_id) > 0.
+
+Question 2:
+Write a correlated subquery to find customers whose latest order was a Completed status:
+WHERE (SELECT status FROM orders o WHERE o.customer_id = c.customer_id ORDER BY order_date DESC LIMIT 1) = 'Completed'.
+
+Question 3:
+Find customers whose most recent order amount is above their own average order amount:
+WHERE (SELECT total_amount FROM orders o WHERE o.customer_id = c.customer_id ORDER BY order_date DESC LIMIT 1)
+> (SELECT AVG(total_amount) FROM orders o2 WHERE o2.customer_id = c.customer_id).
+
+Question 4:
+Write a correlated subquery to rank customers by their total spending without using window functions:
+SELECT first_name, (SELECT COUNT(DISTINCT customer_id) FROM orders o2 WHERE (SELECT SUM(total_amount) FROM orders WHERE customer_id = o2.customer_id) >= (SELECT SUM(total_amount) FROM orders WHERE customer_id = c.customer_id)) AS rank
+FROM customers c WHERE customer_id IN (SELECT DISTINCT customer_id FROM orders).
