@@ -1,0 +1,16 @@
+Lesson: SQL-167 — Non Clustered Index
+================================
+
+Practice Questions
+
+Question 1:
+Write CREATE INDEX idx_status ON orders(status) -- this creates a non-clustered index. Then: SELECT * FROM orders WHERE status = 'Completed'.
+
+Question 2:
+Write CREATE INDEX idx_date ON orders(order_date). This non-clustered index helps date-range queries: SELECT * FROM orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31'.
+
+Question 3:
+The support team frequently searches by email. Write CREATE INDEX idx_email ON orders(email). Then: SELECT * FROM orders WHERE email = 'r@shop.com'. Explain how the non-clustered index helps.
+
+Question 4:
+Write multiple non-clustered indexes and discuss: CREATE INDEX idx_status, idx_date, idx_customer. Then write a query using all three columns. Explain that MySQL picks the most selective index.

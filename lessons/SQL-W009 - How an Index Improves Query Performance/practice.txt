@@ -1,0 +1,23 @@
+Lesson: SQL-W009 — How an Index Improves Query Performance
+================================
+
+Practice Questions
+
+Question 1:
+Step 1: Write a slow query: SELECT * FROM orders WHERE status = 'Completed' AND order_date > '2024-02-01'.
+Step 2: Create index: CREATE INDEX idx_status_date ON orders(status, order_date).
+Step 3: Run the same query and compare.
+
+Question 2:
+Full workflow:
+(1) EXPLAIN SELECT * FROM orders WHERE customer_id = 1 (before index).
+(2) CREATE INDEX idx_customer ON orders(customer_id).
+(3) EXPLAIN SELECT * FROM orders WHERE customer_id = 1 (after index).
+Write all steps.
+
+Question 3:
+Database tuning workflow: identify the most frequent query, create an appropriate index, verify with EXPLAIN, then monitor.
+Write: (1) Identify slow query, (2) CREATE INDEX, (3) Verify with EXPLAIN, (4) DROP INDEX if not helpful.
+
+Question 4:
+Write a complete index audit: SHOW INDEX FROM orders to see existing indexes. Create a new composite index. Verify with SHOW INDEX. Run EXPLAIN on a query. Then DROP INDEX to roll back.

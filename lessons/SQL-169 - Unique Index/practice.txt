@@ -1,0 +1,16 @@
+Lesson: SQL-169 — Unique Index
+================================
+
+Practice Questions
+
+Question 1:
+Write CREATE UNIQUE INDEX idx_email_unique ON orders(email). This prevents duplicate emails in the orders table.
+
+Question 2:
+Demonstrate: after creating UNIQUE INDEX on email, try INSERT with a duplicate email to observe the constraint. Then SELECT to verify no duplicates exist.
+
+Question 3:
+The business requires each email to appear at most once in the orders table (one order per email). Create a UNIQUE INDEX and write a SELECT to verify uniqueness: SELECT email, COUNT(*) FROM orders GROUP BY email HAVING COUNT(*) > 1.
+
+Question 4:
+Compare: UNIQUE constraint vs UNIQUE INDEX. Both enforce uniqueness. Write: ALTER TABLE orders ADD CONSTRAINT uq_email UNIQUE (email) as the constraint version, and CREATE UNIQUE INDEX as the index version. Discuss when to use each.

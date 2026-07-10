@@ -1,0 +1,16 @@
+Lesson: SQL-166 — Clustered Index
+================================
+
+Practice Questions
+
+Question 1:
+A PRIMARY KEY automatically creates a clustered index in MySQL InnoDB. Query the PRIMARY KEY: SELECT * FROM orders WHERE order_id = 1001. This uses the clustered index.
+
+Question 2:
+Write a range query on the PRIMARY KEY: SELECT * FROM orders WHERE order_id BETWEEN 1003 AND 1007. InnoDB reads these rows sequentially due to the clustered index.
+
+Question 3:
+The clustered index on order_id determines physical row order. Explain: ORDER BY order_id is efficient. Write SELECT * FROM orders ORDER BY order_id and note that no extra sort is needed.
+
+Question 4:
+Demonstrate clustered vs non-clustered: SELECT * FROM orders WHERE order_id = 1005 (clustered -- fast) vs SELECT * FROM orders WHERE status = 'Completed' (non-clustered status lookup). Write EXPLAIN for both.

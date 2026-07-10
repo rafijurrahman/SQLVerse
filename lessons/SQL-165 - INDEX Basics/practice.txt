@@ -1,0 +1,16 @@
+Lesson: SQL-165 — INDEX Basics
+================================
+
+Practice Questions
+
+Question 1:
+Write a CREATE INDEX on the status column: CREATE INDEX idx_status ON orders(status). Then query it: SELECT * FROM orders WHERE status = 'Completed'.
+
+Question 2:
+Write a CREATE INDEX on customer_id: CREATE INDEX idx_customer ON orders(customer_id). Explain how this speeds up: SELECT * FROM orders WHERE customer_id = 1.
+
+Question 3:
+The most frequent query is filtering by status. Create an index on status, then write the query that benefits from it. Use EXPLAIN SELECT * FROM orders WHERE status = 'Completed'.
+
+Question 4:
+Write three CREATE INDEX statements: on status, on order_date, and on customer_id. Then write one query that uses all three columns in WHERE. Which index does MySQL choose to use?

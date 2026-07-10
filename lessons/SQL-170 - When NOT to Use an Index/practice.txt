@@ -1,0 +1,19 @@
+Lesson: SQL-170 — When NOT to Use an Index
+================================
+
+Practice Questions
+
+Question 1:
+Indexes don't help with leading wildcard: SELECT * FROM orders WHERE email LIKE '%shop.com'. EXPLAIN shows full table scan. Write the query and observe.
+
+Question 2:
+Indexes on low-cardinality columns (like status with only 4 values) may not be used. MySQL might prefer a full table scan. Write EXPLAIN SELECT * FROM orders WHERE status = 'Completed' and observe.
+
+Question 3:
+Overindexing slows INSERTs/UPDATEs. Write a scenario: if you have 5 indexes on the orders table, each INSERT must update all 5 index structures. Discuss the trade-off with a design example.
+
+Question 4:
+Demonstrate when indexes are NOT used:
+(A) Functions on indexed columns: WHERE YEAR(order_date) = 2024 vs WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31'.
+(B) NOT IN, NOT LIKE bypass indexes.
+Write both versions and explain which is index-friendly.

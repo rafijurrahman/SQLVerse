@@ -1,0 +1,16 @@
+Lesson: SQL-168 — Composite Index
+================================
+
+Practice Questions
+
+Question 1:
+Write a composite index on (customer_id, status): CREATE INDEX idx_customer_status ON orders(customer_id, status). Then: SELECT * FROM orders WHERE customer_id = 1 AND status = 'Completed'.
+
+Question 2:
+Composite indexes work for left-prefix queries: CREATE INDEX idx_status_date ON orders(status, order_date). Works for: WHERE status = 'Completed', WHERE status = 'Completed' AND order_date = '2024-01-05'. Does NOT help: WHERE order_date = '2024-01-05' alone.
+
+Question 3:
+The most common query is: WHERE status = 'Completed' AND order_date BETWEEN X AND Y. Create a composite index for this: CREATE INDEX idx_status_date ON orders(status, order_date). Write the optimized query.
+
+Question 4:
+Create a three-column composite index: CREATE INDEX idx_cust_status_date ON orders(customer_id, status, order_date). Write queries that DO and DO NOT benefit from this index, demonstrating the left-prefix rule.

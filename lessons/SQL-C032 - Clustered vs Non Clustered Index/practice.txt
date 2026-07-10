@@ -1,0 +1,21 @@
+Lesson: SQL-C032 — Clustered vs Non Clustered Index
+================================
+
+Practice Questions
+
+Question 1:
+Clustered (PRIMARY KEY): SELECT * FROM orders WHERE order_id = 1001.
+Non-clustered: SELECT * FROM orders WHERE status = 'Completed'.
+Write EXPLAIN for both to see the difference.
+
+Question 2:
+There can be only ONE clustered index per table (it defines physical order). Multiple non-clustered indexes are allowed.
+Create three non-clustered indexes and verify: CREATE INDEX on status, order_date, email.
+
+Question 3:
+Clustered index query (fast): SELECT * FROM orders WHERE order_id BETWEEN 1001 AND 1005.
+Non-clustered lookup (still fast with index): SELECT * FROM orders WHERE email = 'r@shop.com'.
+Write EXPLAIN for both and compare access methods.
+
+Question 4:
+Write a design decision: when would you change the PRIMARY KEY to optimize reads? If queries mostly filter by customer_id, a clustered index on customer_id would be faster. Demonstrate the concept with: SELECT * FROM orders WHERE customer_id = 1 ORDER BY order_date.

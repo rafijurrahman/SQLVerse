@@ -1,0 +1,21 @@
+Lesson: SQL-R014 — Index Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write four index operations:
+(A) CREATE INDEX on customer_id.
+(B) CREATE INDEX on order_date.
+(C) CREATE UNIQUE INDEX on email.
+(D) SHOW INDEX FROM orders to verify.
+
+Question 2:
+Write a composite index for the most common business query: WHERE status = 'Completed' AND order_date BETWEEN X AND Y.
+Then EXPLAIN the query to verify index usage.
+
+Question 3:
+Index audit: which columns are most filtered in WHERE clauses? Create indexes for: customer_id, status, order_date. Write the three CREATE INDEX statements. Then write a query using all three.
+
+Question 4:
+Write a full index review: (1) List all queries that filter orders. (2) Create optimal indexes. (3) Identify which indexes might be redundant. (4) DROP redundant indexes. Write all statements.
