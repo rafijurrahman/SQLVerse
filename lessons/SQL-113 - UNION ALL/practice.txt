@@ -1,0 +1,16 @@
+Lesson: SQL-113 — UNION ALL
+================================
+
+Practice Questions
+
+Question 1:
+Write a UNION ALL combining tracking_number from domestic_shipments and international_shipments. UNION ALL keeps ALL rows including duplicates.
+
+Question 2:
+Write UNION ALL on both tables with a source label: SELECT tracking_number, 'Domestic' AS source FROM domestic_shipments UNION ALL SELECT tracking_number, 'International' FROM international_shipments.
+
+Question 3:
+The operations team needs to count total shipments including all copies. Use UNION ALL to combine domestic and international. Count total rows vs UNION (which removes duplicates). Compare results.
+
+Question 4:
+Write UNION ALL across all three tables (domestic, international, returned). Calculate total weight processed: wrap in a subquery and SUM(weight_kg). This requires all weight_kg columns to be in UNION ALL.

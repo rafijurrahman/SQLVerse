@@ -1,0 +1,21 @@
+Lesson: SQL-R009 — Set Operators Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write three queries:
+(A) UNION: combine domestic and international, deduplicated.
+(B) UNION ALL: combine domestic and international, all rows.
+(C) Show the row count difference.
+
+Question 2:
+Simulate INTERSECT: find tracking numbers in both domestic_shipments and returned_shipments. Then simulate EXCEPT: find domestic shipments NOT in returned.
+
+Question 3:
+Complete logistics report:
+(A) All delivered shipments from all tables (UNION for unique).
+(B) Count total shipments per source (UNION ALL with label, GROUP BY source).
+
+Question 4:
+Write a comprehensive query using UNION ALL across all 5 tables (domestic, international, returned, warehouse_dhaka, warehouse_ctg) with a source label. Calculate total parcels and total weight by source in a subquery.

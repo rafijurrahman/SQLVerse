@@ -1,0 +1,16 @@
+Lesson: SQL-118 — UNION Common Mistakes
+================================
+
+Practice Questions
+
+Question 1:
+Common mistake: different column counts in UNION. The correct version requires same number of columns in all SELECT statements. Write a correct UNION with matching columns.
+
+Question 2:
+Common mistake: placing ORDER BY inside the first SELECT. Write the wrong version (conceptually) and the correct version with ORDER BY at the end.
+
+Question 3:
+A developer writes UNION with mismatched data types: selecting weight_kg (DECIMAL) from one table and city (VARCHAR) from another in the same position. Write the corrected query with matching column types.
+
+Question 4:
+Write a correct UNION that requires NULL padding: domestic_shipments doesn't have origin_country, international_shipments does. Simulate by adding NULL AS origin_country in the domestic SELECT, and the actual column in international SELECT.

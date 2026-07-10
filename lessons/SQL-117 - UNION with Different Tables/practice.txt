@@ -1,0 +1,16 @@
+Lesson: SQL-117 — UNION with Different Tables
+================================
+
+Practice Questions
+
+Question 1:
+Write a UNION combining warehouses_dhaka and warehouses_ctg: SELECT tracking_no, city, weight_kg, arrival_date FROM warehouses_dhaka UNION ALL SELECT tracking_no, city, weight_kg, arrival_date FROM warehouses_ctg.
+
+Question 2:
+Write a UNION to create a combined warehouse inventory report from both warehouses. Include city, tracking_no, and arrival_date. Sort by arrival_date.
+
+Question 3:
+The warehouse manager needs consolidated inventory from both Dhaka and Chittagong warehouses. Write a UNION ALL combining both tables with a city label. Calculate total weight from all warehouses using a subquery.
+
+Question 4:
+Write a UNION combining domestic_shipments, international_shipments, and warehouses_dhaka into a single report. Select common columns: tracking number (or tracking_no), weight_kg, and source label. Show total count and weight by source.

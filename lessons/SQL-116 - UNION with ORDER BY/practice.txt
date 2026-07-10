@@ -1,0 +1,16 @@
+Lesson: SQL-116 — UNION with ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a UNION of domestic and international tracking numbers, then ORDER BY tracking_number. The ORDER BY must be at the END of the UNION, not inside each SELECT.
+
+Question 2:
+Write a UNION with a source label, then ORDER BY source, shipment_date: SELECT ..., 'Domestic' AS source FROM domestic_shipments UNION SELECT ..., 'International' AS source FROM international_shipments ORDER BY source, shipment_date.
+
+Question 3:
+The dispatch team needs all delivered shipments (from both tables) sorted by date. Write a UNION of delivered shipments, ordered by shipment_date ascending.
+
+Question 4:
+Write a UNION of all three shipment tables with a label. Order by status (Delivered first, In Transit second, Returned last) using ORDER BY CASE WHEN status = 'Delivered' THEN 1 WHEN status = 'In Transit' THEN 2 ELSE 3 END.

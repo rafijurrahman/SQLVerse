@@ -1,0 +1,18 @@
+Lesson: SQL-C021 — UNION vs UNION ALL
+================================
+
+Practice Questions
+
+Question 1:
+Write both UNION and UNION ALL between domestic_shipments and international_shipments tracking numbers. Count the rows. UNION should have fewer due to duplicate removal.
+
+Question 2:
+Write UNION and UNION ALL for Delivered shipments from both tables. Observe if BD-1001 (which appears twice in domestic) affects the count.
+
+Question 3:
+(A) Use UNION when you need a unique list of tracking numbers across all shipments.
+(B) Use UNION ALL when you need to count total shipment events including repeats.
+Write both and explain the difference in row counts.
+
+Question 4:
+Write a query to demonstrate: SELECT COUNT(*) FROM (UNION version) vs SELECT COUNT(*) FROM (UNION ALL version). Show the difference in numbers clearly.

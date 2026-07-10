@@ -1,0 +1,16 @@
+Lesson: SQL-115 — EXCEPT
+================================
+
+Practice Questions
+
+Question 1:
+MySQL uses NOT IN to simulate EXCEPT. Find domestic_shipments that are NOT in returned_shipments: SELECT tracking_number FROM domestic_shipments WHERE tracking_number NOT IN (SELECT tracking_number FROM returned_shipments).
+
+Question 2:
+Simulate EXCEPT to find international shipments that were NOT returned: tracking numbers in international but NOT in returned. Display tracking_number, status.
+
+Question 3:
+The audit team needs to find shipments that were delivered without incident. Use EXCEPT simulation: all Delivered domestic shipments minus those that later appeared in returned_shipments.
+
+Question 4:
+Simulate EXCEPT using LEFT JOIN with NULL check: SELECT d.tracking_number FROM domestic_shipments d LEFT JOIN returned_shipments r ON d.tracking_number = r.tracking_number WHERE r.tracking_number IS NULL. Compare with NOT IN version.

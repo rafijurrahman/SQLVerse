@@ -1,0 +1,16 @@
+Lesson: SQL-114 — INTERSECT
+================================
+
+Practice Questions
+
+Question 1:
+MySQL doesn't support INTERSECT directly. Simulate with INNER JOIN: find tracking_numbers that appear in BOTH domestic and returned shipments. Use JOIN or IN subquery.
+
+Question 2:
+Write an INTERSECT simulation: SELECT tracking_number FROM domestic_shipments WHERE tracking_number IN (SELECT tracking_number FROM returned_shipments). These are domestics that were returned.
+
+Question 3:
+The returns team needs to find which domestic shipments ended up as returned. Write an INTERSECT simulation to find tracking numbers common to both tables. Display the returned reason too (join back to returned_shipments).
+
+Question 4:
+Simulate INTERSECT for weight_kg values that appear in both warehouses_dhaka and warehouses_ctg tables. Find common weights: SELECT weight_kg FROM warehouses_dhaka WHERE weight_kg IN (SELECT weight_kg FROM warehouses_ctg).

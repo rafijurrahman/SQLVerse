@@ -1,0 +1,16 @@
+Lesson: SQL-112 — UNION
+================================
+
+Practice Questions
+
+Question 1:
+Write a UNION to combine tracking_number and shipment_date from domestic_shipments and international_shipments. UNION removes duplicates.
+
+Question 2:
+Write a UNION to combine all Delivered shipments from both tables. Display tracking_number, status, and shipment_date. Note: tracking_number BD-1001 appears twice in domestic — UNION removes one.
+
+Question 3:
+The logistics dashboard needs a combined view of all shipments. Write a UNION query that selects tracking_number, weight_kg, status, and shipment_date from both domestic and international tables. Add a label column 'Domestic' / 'International'.
+
+Question 4:
+Write a UNION combining domestic, international, and returned shipments. Select tracking_number, weight_kg, status from all three tables. UNION removes duplicates — verify by checking if BD-1001 appears multiple times.
