@@ -1,0 +1,16 @@
+Lesson: SQL-070 — CASE with Aggregate Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to count the number of High, Medium, and Low risk transactions using CASE inside COUNT: COUNT(CASE WHEN risk_level = 'High' THEN 1 END) as "High Risk Count".
+
+Question 2:
+Write a query to calculate total credit and total debit amounts in one row: SUM(CASE WHEN transaction_type = 'Credit' THEN amount ELSE 0 END) as "Total Credits".
+
+Question 3:
+The risk team needs a pivot summary: For each account_id, show total Credit amount, total Debit amount, and total High-risk transaction amount — all in one row.
+
+Question 4:
+Write a query to count transactions by risk level per account: GROUP BY account_id, and use CASE-based counting for each risk level in separate columns. Show account_id, high_risk_count, medium_risk_count, low_risk_count.

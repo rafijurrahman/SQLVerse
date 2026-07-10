@@ -1,0 +1,24 @@
+Lesson: SQL-R006 — Conditional Expressions Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write a query joining accounts and customers to display:
+- customer_id, first_name, last_name
+- account_type, balance
+- CASE balance tier: 'High' (>=100000), 'Medium' (>=10000), 'Low' (else)
+
+Question 2:
+Write a query to show each account with:
+- COALESCE(email, 'N/A') as "Email"
+- IFNULL(phone, 'N/A') as "Phone"
+- CASE status: 'Active' → 'Open', 'Frozen' → 'Locked', else → 'Closed'
+
+Question 3:
+The compliance team needs a risk report. Join transactions with accounts. For each transaction, show:
+- account_number, amount, transaction_type, risk_level
+- CASE: High risk + Debit > 50000 → 'CRITICAL ALERT', High risk → 'WARNING', else → 'OK'
+
+Question 4:
+Write a query using CASE in ORDER BY to sort transactions: CRITICAL first, WARNING second, OK last. Use the CASE expression from Question 3 directly inside ORDER BY.

@@ -1,0 +1,16 @@
+Lesson: SQL-071 — COALESCE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each customer's email using COALESCE(email, 'No Email Provided'). Show customer_id and the result.
+
+Question 2:
+Write a query to display each customer's best contact: COALESCE(email, phone, 'No Contact') as "Best Contact".
+
+Question 3:
+The bank's communication system needs a primary contact for each customer. Use COALESCE to show the first available from: email, then phone. Label it "Primary Contact". Display customer_id, first_name, and primary contact.
+
+Question 4:
+Write a query to use COALESCE to handle both NULL email and NULL phone: COALESCE(CONCAT('Email: ', email), CONCAT('Phone: ', phone), 'No Contact Available') as "Contact Info". Display all customer details.

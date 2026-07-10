@@ -1,0 +1,16 @@
+Lesson: SQL-073 — IFNULL() or ISNULL()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each customer's phone with IFNULL(phone, 'N/A'). Display customer_id, first_name, and the result.
+
+Question 2:
+Write a query to display email using IFNULL(email, 'Not Registered') and phone using IFNULL(phone, 'Not Registered'). Show all customer details.
+
+Question 3:
+The bank's customer profile page must never show NULL to users. Write a query to display: IFNULL(email, 'Not Provided') as "Email", IFNULL(phone, 'Not Provided') as "Phone", IFNULL(city, 'Unknown') as "City".
+
+Question 4:
+Write a query that uses IFNULL together with CONCAT to build a display string: IFNULL(CONCAT(first_name, ' - ', email), CONCAT(first_name, ' (No Email)')) as "Profile". Display for all customers.

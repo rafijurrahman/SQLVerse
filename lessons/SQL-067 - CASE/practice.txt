@@ -1,0 +1,20 @@
+Lesson: SQL-067 — CASE
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to categorize account balances using CASE:
+- >= 100000: 'High Balance'
+- >= 10000:  'Medium Balance'
+- else:      'Low Balance'
+Label it "Balance Category".
+
+Question 2:
+Write a query to assign a label to each account status using CASE WHEN status = 'Active' THEN 'Open' WHEN status = 'Frozen' THEN 'Locked' ELSE 'Closed' END as "Account State".
+
+Question 3:
+The bank wants to classify customers for marketing: Verified customers with balance > 100000 are 'Premium', Verified with balance > 10000 are 'Standard', others are 'Basic'. Join accounts and customers, use CASE.
+
+Question 4:
+Write a query to use CASE in ORDER BY: sort accounts so Active comes first, Frozen second, Inactive last. Display account_number, status, and balance.

@@ -1,0 +1,16 @@
+Lesson: SQL-072 — NULLIF()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to apply NULLIF(balance, 0) so that accounts with zero balance return NULL. Display account_id and the result.
+
+Question 2:
+Write a query to calculate the ratio of balance to a division, using NULLIF to avoid division by zero: balance / NULLIF(balance, 0). Display account_id and the ratio.
+
+Question 3:
+The analytics team is calculating monthly transaction averages but wants to avoid division-by-zero errors. Use NULLIF(COUNT(*), 0) as the denominator in a revenue calculation.
+
+Question 4:
+Write a query to find accounts where NULLIF(balance, 0) IS NULL — these are zero-balance accounts. Display account_number, account_type, and balance.

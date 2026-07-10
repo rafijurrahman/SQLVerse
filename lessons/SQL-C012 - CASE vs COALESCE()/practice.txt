@@ -1,0 +1,19 @@
+Lesson: SQL-C012 — CASE vs COALESCE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using CASE to handle NULL balance: CASE WHEN balance IS NULL THEN 0 ELSE balance END.
+Then write the same using COALESCE(balance, 0).
+
+Question 2:
+Write a query using CASE to classify balance as 'Zero', 'Low' (< 10000), or 'High' (>= 10000). This is something COALESCE cannot do. Demonstrate CASE's power over COALESCE for conditional logic.
+
+Question 3:
+(A) Use COALESCE to replace NULL email: simpler, cleaner.
+(B) Use CASE to replace NULL AND apply business logic: if kyc_status = 'Rejected', show 'Blocked' instead.
+Write both queries on the customers table.
+
+Question 4:
+Write a query combining CASE and COALESCE: use COALESCE for NULL replacement, then wrap in CASE for tier classification: CASE WHEN COALESCE(balance, 0) > 100000 THEN 'Premium' WHEN COALESCE(balance, 0) > 10000 THEN 'Standard' ELSE 'Basic' END as "Customer Tier".

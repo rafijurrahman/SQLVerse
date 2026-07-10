@@ -1,0 +1,16 @@
+Lesson: SQL-069 — CASE in ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to sort accounts: Active first, then Frozen, then Inactive, using CASE in ORDER BY.
+
+Question 2:
+Write a query to sort transactions by priority: High risk first, Medium second, Low last. Use CASE in ORDER BY.
+
+Question 3:
+The bank wants to review accounts in priority order: Frozen accounts first (need immediate attention), then Inactive, then Active. Write the query using CASE in ORDER BY.
+
+Question 4:
+Write a query to sort accounts by a combination: first by status priority (Frozen first), then by balance descending within each status group. Display account_number, status, and balance.

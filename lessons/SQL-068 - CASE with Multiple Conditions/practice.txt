@@ -1,0 +1,21 @@
+Lesson: SQL-068 — CASE with Multiple Conditions
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to classify transactions by type and amount using CASE with multiple WHEN conditions:
+- Credit > 100000: 'Large Credit'
+- Credit > 10000:  'Medium Credit'
+- Credit else:     'Small Credit'
+- Debit > 50000:   'Large Debit'
+- else:            'Small Debit'
+
+Question 2:
+Write a query to categorize transactions by risk_level AND transaction_type. High-risk debits get 'ALERT', high-risk credits get 'REVIEW', others get 'NORMAL'. Label it "Action Required".
+
+Question 3:
+The compliance team needs a transaction audit. Classify each transaction using CASE on both risk_level and amount: High risk + amount > 100000 = 'CRITICAL', High risk = 'WARNING', else = 'NORMAL'.
+
+Question 4:
+Write a query using CASE in a WHERE-like manner: count transactions per action category (use CASE in SELECT, then wrap in a subquery to GROUP BY the label). Display category label and count.

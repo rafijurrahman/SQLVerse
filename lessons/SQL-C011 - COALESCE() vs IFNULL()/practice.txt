@@ -1,0 +1,21 @@
+Lesson: SQL-C011 — COALESCE() vs IFNULL()
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries producing the same result:
+(A) IFNULL(email, 'No Email')
+(B) COALESCE(email, 'No Email')
+Confirm both return the same output.
+
+Question 2:
+COALESCE accepts multiple arguments. Write a query using COALESCE(email, phone, 'No Contact') to pick the first non-NULL value. Then write IFNULL which only takes 2 arguments. Show the difference.
+
+Question 3:
+(A) Use IFNULL for simple NULL replacement: replace missing phone with 'N/A'.
+(B) Use COALESCE for cascading fallback: try email first, then phone, then 'No Contact'.
+Write both queries on the customers table.
+
+Question 4:
+Write a query showing side-by-side comparison: IFNULL(email, 'none') as "IFNULL Result" and COALESCE(email, phone, 'none') as "COALESCE Result". Display for all customers and observe which approach returns more useful data.
