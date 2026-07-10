@@ -1,0 +1,16 @@
+Lesson: SQL-043 — CURRENT_TIMESTAMP
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display CURRENT_TIMESTAMP as "Server Time" alongside appointment_id and patient_name.
+
+Question 2:
+Write a query to display appointment_id, patient_name, appointment_date, appointment_time, and CURRENT_TIMESTAMP as "Report Generated At".
+
+Question 3:
+A hospital audit report needs a timestamp showing when the report was generated. Write a query to display all completed appointments and include CURRENT_TIMESTAMP as "Audit Time".
+
+Question 4:
+Write a query to display appointment_id, patient_name, and the combined appointment datetime (using CONCAT of date and time) vs CURRENT_TIMESTAMP. Show CURRENT_TIMESTAMP as "Now".

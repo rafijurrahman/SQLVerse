@@ -1,0 +1,16 @@
+Lesson: SQL-044 — NOW()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display NOW() as "Current DateTime" along with all columns from appointments.
+
+Question 2:
+Write a query to find appointments where appointment_date < DATE(NOW()). These are past appointments.
+
+Question 3:
+The system wants to log when a report was run. Write a query to select all scheduled appointments and include NOW() as "Report Run At". Display patient_name, doctor_name, appointment_date.
+
+Question 4:
+Write a query to show the difference in days between NOW() and appointment_date: DATEDIFF(NOW(), appointment_date) as "Days Since Appointment". Show patient_name, appointment_date, and days since. Sort by days since ascending.

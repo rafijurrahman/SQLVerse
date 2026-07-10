@@ -1,0 +1,16 @@
+Lesson: SQL-046 — MONTH()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the month from admission_date: MONTH(admission_date). Display admission_id, patient_name, and the month number.
+
+Question 2:
+Write a query to count admissions per month using GROUP BY MONTH(admission_date). Order by month.
+
+Question 3:
+The hospital management wants to know which month had the most admissions in 2024. Write a query grouped by MONTH(admission_date) with COUNT(*) and ORDER BY count descending. Limit to 1.
+
+Question 4:
+Write a query to display patient_name, MONTH(admission_date) as "Admission Month", and MONTH(discharge_date) as "Discharge Month" for all discharged patients. Filter to show patients whose discharge month is different from admission month.

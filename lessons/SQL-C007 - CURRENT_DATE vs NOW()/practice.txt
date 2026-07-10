@@ -1,0 +1,22 @@
+Lesson: SQL-C007 — CURRENT_DATE vs NOW()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display CURRENT_DATE and NOW() side by side. Observe the difference in output.
+
+Question 2:
+Write two queries:
+(A) Find appointments where appointment_date = CURRENT_DATE.
+(B) Find appointments where appointment_date >= DATE(NOW()).
+Compare the results.
+
+Question 3:
+The receptionist needs to find today's appointments using both methods. Write:
+(A) Using CURRENT_DATE: appointment_date = CURRENT_DATE.
+(B) Using NOW(): appointment_date = DATE(NOW()).
+Show patient_name and appointment_time.
+
+Question 4:
+Write a query to display appointment_id, CURRENT_DATE as "Date Only", NOW() as "DateTime", and the difference: TIMEDIFF(NOW(), CURRENT_DATE) would not work. Instead explain what each function returns and use CURRENT_TIMESTAMP to display the full datetime.

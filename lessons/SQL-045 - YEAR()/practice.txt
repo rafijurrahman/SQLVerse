@@ -1,0 +1,16 @@
+Lesson: SQL-045 — YEAR()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the year from admission_date using YEAR(admission_date). Display admission_id, patient_name, and the year.
+
+Question 2:
+Write a query to count total admissions per year using GROUP BY YEAR(admission_date).
+
+Question 3:
+The hospital wants all admissions from 2024. Write a query using YEAR(admission_date) = 2024 to filter and display patient_name, ward, and admission_date.
+
+Question 4:
+Write a query to display YEAR(admission_date) as "Year", YEAR(discharge_date) as "Discharge Year", and check if they are in the same year. Filter to show only admissions where the patient was discharged in the same year they were admitted.

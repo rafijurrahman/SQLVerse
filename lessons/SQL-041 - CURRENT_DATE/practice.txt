@@ -1,0 +1,16 @@
+Lesson: SQL-041 — CURRENT_DATE
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display CURRENT_DATE alongside all appointment records.
+
+Question 2:
+Write a query to find all appointments where appointment_date is before CURRENT_DATE (past appointments).
+
+Question 3:
+The hospital receptionist needs to find all upcoming appointments (appointment_date >= CURRENT_DATE). Write the query and display patient_name, doctor_name, and appointment_date.
+
+Question 4:
+Write a query to calculate how many days ago each appointment occurred: DATEDIFF(CURRENT_DATE, appointment_date) as "Days Ago". Only show completed appointments. Sort by days ago ascending.

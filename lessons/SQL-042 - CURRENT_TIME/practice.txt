@@ -1,0 +1,16 @@
+Lesson: SQL-042 — CURRENT_TIME
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display CURRENT_TIME alongside all appointment records.
+
+Question 2:
+Write a query to compare each appointment_time with CURRENT_TIME to see which appointments today would be in the past or future.
+
+Question 3:
+The hospital wants to see appointments scheduled in the morning (appointment_time < '12:00:00'). Write a query to display those appointments.
+
+Question 4:
+Write a query to display appointment_id, patient_name, appointment_time, CURRENT_TIME as "Now", and TIMEDIFF(appointment_time, '09:00:00') as "Time After 9AM". Sort by appointment_time.

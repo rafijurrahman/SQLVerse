@@ -1,0 +1,16 @@
+Lesson: SQL-047 — DAY()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the day from admission_date using DAY(admission_date). Label it "Admission Day".
+
+Question 2:
+Write a query to find all patients admitted on the 1st through 10th of any month: DAY(admission_date) BETWEEN 1 AND 10.
+
+Question 3:
+The operations team wants to see admissions that happened on weekends. Use DAY(admission_date) and DAYOFWEEK(admission_date) = 1 (Sunday) OR DAYOFWEEK(admission_date) = 7 (Saturday). Display patient_name and admission_date.
+
+Question 4:
+Write a query to display patient_name, DAY(admission_date) as "Admit Day", DAY(discharge_date) as "Discharge Day", and their difference as "Days Difference" for all discharged patients.

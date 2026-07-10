@@ -1,0 +1,16 @@
+Lesson: SQL-051 — DATE_ADD()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to add 7 days to each appointment_date using DATE_ADD(appointment_date, INTERVAL 7 DAY). Label it "Follow Up Date".
+
+Question 2:
+Write a query to add 1 month to appointment_date for all Completed appointments. Label it "Next Checkup".
+
+Question 3:
+After each appointment, patients need a follow-up 14 days later. Write a query to display patient_name, appointment_date, and DATE_ADD(appointment_date, INTERVAL 14 DAY) as "Follow Up Date" for all Completed appointments.
+
+Question 4:
+Write a query to add different intervals based on specialty: Cardiology → 30 days, others → 14 days. Use a CASE inside DATE_ADD: DATE_ADD(appointment_date, INTERVAL CASE WHEN specialty='Cardiology' THEN 30 ELSE 14 END DAY) as "Next Visit".

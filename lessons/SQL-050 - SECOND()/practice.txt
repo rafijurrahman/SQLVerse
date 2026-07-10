@@ -1,0 +1,16 @@
+Lesson: SQL-050 — SECOND()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the second from appointment_time: SECOND(appointment_time). Label it "Appointment Second".
+
+Question 2:
+Write a query to display appointment_id, appointment_time, HOUR(appointment_time), MINUTE(appointment_time), and SECOND(appointment_time) for all appointments.
+
+Question 3:
+The audit team wants to verify that all appointments were set without seconds (SECOND = 0). Write a query to find any appointments where SECOND(appointment_time) != 0.
+
+Question 4:
+Write a query to reconstruct the time components of each appointment: display HOUR, MINUTE, SECOND, and also format the appointment time as HH:MM:SS using TIME_FORMAT(appointment_time, '%H:%i:%s') as "Formatted Time".

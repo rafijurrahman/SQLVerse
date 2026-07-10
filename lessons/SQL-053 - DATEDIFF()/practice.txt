@@ -1,0 +1,16 @@
+Lesson: SQL-053 — DATEDIFF()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to calculate how many days each patient stayed in the hospital: DATEDIFF(discharge_date, admission_date) as "Days Stayed". Only include discharged patients.
+
+Question 2:
+Write a query to find patients who stayed more than 6 days. Display patient_name, ward, and days stayed.
+
+Question 3:
+The billing department calculates charges by the number of days stayed. Write a query to display patient_name, ward, DATEDIFF(discharge_date, admission_date) as "Length of Stay", and estimate the ward cost assuming 2000 BDT per day.
+
+Question 4:
+Write a query to find the average length of stay per ward using AVG(DATEDIFF(discharge_date, admission_date)). Only include discharged patients. Group by ward, order by average days descending.

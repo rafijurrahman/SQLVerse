@@ -1,0 +1,26 @@
+Lesson: SQL-R004 — Date Functions Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write a query on appointments to display:
+- YEAR(appointment_date), MONTH(appointment_date), DAY(appointment_date)
+- DATE_FORMAT(appointment_date, '%d %M %Y') as "Formatted Date"
+
+Question 2:
+Write a query on admissions to calculate:
+- DATEDIFF(discharge_date, admission_date) as "Days Stayed"
+- DATE_ADD(discharge_date, INTERVAL 14 DAY) as "Follow Up Date"
+Only show discharged patients (discharge_date IS NOT NULL).
+
+Question 3:
+The hospital needs a combined date report. From appointments, find all Completed appointments in Q1 2024 (Jan–Mar). Display patient_name, MONTH(appointment_date) as "Month", HOUR(appointment_time) as "Hour".
+
+Question 4:
+From admissions, write a query to:
+- Calculate length of stay: DATEDIFF(discharge_date, admission_date)
+- Group by ward
+- Show AVG length of stay per ward
+- Only include discharged patients
+- Sort by average stay descending

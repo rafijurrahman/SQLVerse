@@ -1,0 +1,16 @@
+Lesson: SQL-052 — DATE_SUB()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to subtract 7 days from each appointment_date: DATE_SUB(appointment_date, INTERVAL 7 DAY). Label it "Previous Week".
+
+Question 2:
+Write a query to find all appointments where appointment_date is within the last 90 days from a reference date of '2024-05-02': appointment_date >= DATE_SUB('2024-05-02', INTERVAL 90 DAY).
+
+Question 3:
+The hospital sends appointment reminders 3 days before. Write a query to show what the reminder date would be for each upcoming (Scheduled) appointment: DATE_SUB(appointment_date, INTERVAL 3 DAY) as "Reminder Date".
+
+Question 4:
+Write a query to display patient_name, appointment_date, DATE_SUB(appointment_date, INTERVAL 1 MONTH) as "1 Month Before", and DATE_ADD(appointment_date, INTERVAL 1 MONTH) as "1 Month After". Sort by appointment_date.

@@ -1,0 +1,16 @@
+Lesson: SQL-048 — HOUR()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the hour from appointment_time: HOUR(appointment_time). Label it "Appointment Hour".
+
+Question 2:
+Write a query to count appointments per hour using GROUP BY HOUR(appointment_time). Order by hour.
+
+Question 3:
+The hospital wants to identify peak appointment hours. Write a query to display HOUR(appointment_time) as "Hour" and COUNT(*) as "Total Appointments", grouped by hour, sorted by count descending.
+
+Question 4:
+Write a query to classify appointments as Morning (HOUR < 12) or Afternoon (HOUR >= 12) using a CASE expression: CASE WHEN HOUR(appointment_time) < 12 THEN 'Morning' ELSE 'Afternoon' END as "Shift". Count appointments per shift.

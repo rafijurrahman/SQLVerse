@@ -1,0 +1,20 @@
+Lesson: SQL-C008 — DATE_ADD() vs DATE_SUB()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to show for each appointment:
+- DATE_ADD(appointment_date, INTERVAL 7 DAY) as "One Week Later"
+- DATE_SUB(appointment_date, INTERVAL 7 DAY) as "One Week Earlier"
+
+Question 2:
+Write a query to find appointments scheduled between 14 days before and 14 days after '2024-03-10': appointment_date BETWEEN DATE_SUB('2024-03-10', INTERVAL 14 DAY) AND DATE_ADD('2024-03-10', INTERVAL 14 DAY).
+
+Question 3:
+(A) Upcoming reminder: Use DATE_SUB to find appointments within 3 days: appointment_date BETWEEN CURRENT_DATE AND DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY).
+(B) Past follow-up: Use DATE_ADD on past appointments to calculate the follow-up date.
+Write both queries.
+
+Question 4:
+Write a query to display patient_name, appointment_date, DATE_ADD(appointment_date, INTERVAL 30 DAY) as "30 Days Later", DATE_SUB(appointment_date, INTERVAL 30 DAY) as "30 Days Earlier". Filter appointments in Q1 2024 (January–March 2024).
