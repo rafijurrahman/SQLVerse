@@ -1,0 +1,16 @@
+Lesson: SQL-091 — INNER JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write an INNER JOIN between customers and orders on customer_id. Display customer first_name, last_name, and order_id.
+
+Question 2:
+Write an INNER JOIN to show customer name, order_date, status, and total_amount. Filter for Completed orders.
+
+Question 3:
+The sales team needs a customer order report. Join customers and orders, show first_name, last_name, total orders placed (hint: need GROUP BY for this), and total amount spent. Display only customers who have placed orders.
+
+Question 4:
+Write a three-table INNER JOIN: customers → orders → order_items. Display customer name, order_id, product_id, quantity, and unit_price. Filter for orders placed in January 2024.

@@ -1,0 +1,16 @@
+Lesson: SQL-105 — Joining Four Tables
+================================
+
+Practice Questions
+
+Question 1:
+Write a JOIN connecting customers → orders → order_items → products → payments (4-5 tables). Show customer name, product name, and payment method.
+
+Question 2:
+Join all available tables: customers, orders, order_items, products, payments. Show a comprehensive order detail row: customer name, product, quantity, unit price, payment method.
+
+Question 3:
+Full order fulfillment report: Join customers → orders → order_items → products. Show customer name, order_date, product_name, category, quantity, unit_price, and (quantity * unit_price) as line total. Filter for Completed orders.
+
+Question 4:
+Join customers → orders → order_items → products. For each product category, calculate: total quantity sold, total revenue, number of unique customers who bought it. Group by category. Sort by revenue descending.

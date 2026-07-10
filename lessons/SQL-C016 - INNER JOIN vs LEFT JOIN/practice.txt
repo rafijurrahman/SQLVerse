@@ -1,0 +1,21 @@
+Lesson: SQL-C016 — INNER JOIN vs LEFT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write INNER JOIN between customers and orders. Count how many rows result.
+Write LEFT JOIN between customers and orders. Count how many rows result.
+Observe the difference.
+
+Question 2:
+INNER JOIN returns only matched rows. LEFT JOIN returns all left-table rows.
+Write both joins and filter to show the rows that appear in LEFT JOIN but NOT in INNER JOIN (WHERE orders.order_id IS NULL).
+
+Question 3:
+(A) Marketing needs customers WITH orders: use INNER JOIN.
+(B) Marketing needs ALL customers including those without orders: use LEFT JOIN.
+Write both queries showing customer name, order_id, and total_amount.
+
+Question 4:
+Write a query to verify: LEFT JOIN row count = INNER JOIN row count + unmatched customer count. Write all three counts and verify the math.

@@ -1,0 +1,16 @@
+Lesson: SQL-102 — Multiple INNER JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a JOIN connecting customers → orders → payments. Show customer name, order_id, and payment method.
+
+Question 2:
+Write a three-table JOIN: customers, orders, payments. Filter for Completed payment status. Show customer name, order_id, amount, and method.
+
+Question 3:
+Finance reconciliation: Join customers → orders → payments. Show customer name, order_date, order total_amount, payment amount, and payment method. Only include fully paid orders (payment status = 'Completed').
+
+Question 4:
+Write a four-table JOIN: customers → orders → order_items → products. Show customer name, product_name, quantity, unit_price, and total line value. Sort by total line value descending.

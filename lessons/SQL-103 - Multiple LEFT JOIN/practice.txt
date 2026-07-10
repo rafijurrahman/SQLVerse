@@ -1,0 +1,16 @@
+Lesson: SQL-103 — Multiple LEFT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write LEFT JOIN: customers → orders → reviews. Show all customers, their orders (if any), and reviews (if any).
+
+Question 2:
+Write a query to find customers who placed orders but have NOT written reviews. Use LEFT JOIN customers → orders, then LEFT JOIN reviews, filter WHERE reviews.review_id IS NULL.
+
+Question 3:
+The customer experience team wants a full picture: customer name, number of orders, and number of reviews. Use LEFT JOINs to include all customers even if they have neither. Group by customer.
+
+Question 4:
+Write a LEFT JOIN chain: customers → orders → reviews. Calculate average rating per customer using AVG(rating). Include customers with no reviews (AVG = NULL). Sort by average rating descending.

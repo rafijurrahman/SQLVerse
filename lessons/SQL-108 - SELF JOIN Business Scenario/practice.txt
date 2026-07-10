@@ -1,0 +1,16 @@
+Lesson: SQL-108 — SELF JOIN Business Scenario
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELF JOIN to display the reporting hierarchy: employee → their manager → their manager's manager (three levels). Display employee name, manager name.
+
+Question 2:
+Write a SELF JOIN to find all employees who report directly to the HR Head (manager_id = 2). Display their name, job_title, and salary.
+
+Question 3:
+The org structure report needs all managers listed with their direct report count. Write a SELF JOIN, GROUP BY manager, and COUNT direct reports.
+
+Question 4:
+Write a SELF JOIN to find all "peer" employees — employees who share the same manager. Display employee name, peer name, and shared manager. Avoid duplicates using e1.employee_id < e2.employee_id.

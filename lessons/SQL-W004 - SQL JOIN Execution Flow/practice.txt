@@ -1,0 +1,16 @@
+Lesson: SQL-W004 — SQL JOIN Execution Flow
+================================
+
+Practice Questions
+
+Question 1:
+Write a JOIN and explain the execution order: FROM → (JOIN applied) → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. Write a simple join demonstrating this.
+
+Question 2:
+Write a query with all clauses: FROM customers LEFT JOIN orders → WHERE city = 'Dhaka' → GROUP BY customer_id → HAVING COUNT > 0 → SELECT name, count → ORDER BY count DESC.
+
+Question 3:
+Join customers and orders. Apply: WHERE (before join effect), GROUP BY customer, HAVING (total > 1000), ORDER BY total DESC. Write the complete query showing proper execution order.
+
+Question 4:
+Write a query with WHERE applied to both tables: customers WHERE joined_date > '2023-01-01', orders WHERE status = 'Completed'. Show how the JOIN filters interact with individual table filters.

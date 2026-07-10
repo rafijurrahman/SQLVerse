@@ -1,0 +1,20 @@
+Lesson: SQL-R008 — JOIN Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write four separate JOIN queries:
+(A) INNER JOIN customers × orders.
+(B) LEFT JOIN to find customers without orders.
+(C) Three-table JOIN: customers, orders, order_items.
+(D) SELF JOIN: customers joined to themselves on city to find city-mates.
+
+Question 2:
+Write a comprehensive query: Join all 5 tables. Show customer name, product name, quantity, unit price, and payment method for all Completed and paid orders.
+
+Question 3:
+Full sales report: Join customers, orders, order_items, products. Show customer name, product category, total quantity bought, and total spent per category. Group by customer and category.
+
+Question 4:
+Write a LEFT JOIN to produce a complete customer summary: name, city, order count (0 if none), total spent (0 if none), and average order value. Include all 5 customers even those without orders.

@@ -1,0 +1,16 @@
+Lesson: SQL-111 — LEFT JOIN Common Mistakes
+================================
+
+Practice Questions
+
+Question 1:
+Common mistake: Using WHERE to filter right-side columns in a LEFT JOIN converts it to INNER JOIN. Demonstrate: LEFT JOIN orders ON ... WHERE orders.status = 'Completed' loses NULL rows. Write the correct version using AND in ON clause or subquery.
+
+Question 2:
+Write the WRONG version: LEFT JOIN that accidentally becomes INNER JOIN due to WHERE. Then write the CORRECT version using ON for the condition.
+
+Question 3:
+Find customers who have either no orders OR only Cancelled orders. Show the incorrect approach (WHERE misuse) and the correct approach (using HAVING or subquery).
+
+Question 4:
+Write a LEFT JOIN that correctly filters the right table's data while still keeping all left-side rows: move the filter condition from WHERE to ON: JOIN orders ON c.customer_id = o.customer_id AND o.status = 'Completed'. Show all customers, with only completed orders shown.

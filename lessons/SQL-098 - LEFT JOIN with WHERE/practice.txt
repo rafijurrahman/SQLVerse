@@ -1,0 +1,16 @@
+Lesson: SQL-098 — LEFT JOIN with WHERE
+================================
+
+Practice Questions
+
+Question 1:
+Write a LEFT JOIN between customers and orders, then add WHERE orders.customer_id IS NULL to find customers with no orders.
+
+Question 2:
+Write a LEFT JOIN between customers and orders, filter WHERE status = 'Completed' OR orders.order_id IS NULL. This shows customers with completed orders OR no orders.
+
+Question 3:
+Find customers who have never placed an order, along with customers from Dhaka who have completed orders. Use LEFT JOIN + WHERE to combine both conditions.
+
+Question 4:
+Write a LEFT JOIN where the WHERE clause is placed correctly (after JOIN, not in ON clause). Observe the difference between: ON (orders.status = 'Completed') vs WHERE orders.status = 'Completed'. Write both versions.

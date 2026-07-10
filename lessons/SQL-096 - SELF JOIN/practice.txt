@@ -1,0 +1,16 @@
+Lesson: SQL-096 — SELF JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELF JOIN on the employees table to pair each employee with their manager: JOIN employees AS manager ON employee.manager_id = manager.employee_id. Display employee first_name and manager first_name.
+
+Question 2:
+Write a SELF JOIN to display employee name, job_title, and their manager's name and job_title side by side.
+
+Question 3:
+HR wants an org chart report. Write a SELF JOIN to show each employee's name, department, salary, and their direct manager's name. Include employees without managers (CEO) using LEFT JOIN.
+
+Question 4:
+Write a SELF JOIN to find all employees who earn more than their manager: employee.salary > manager.salary. Display employee name, salary, manager name, and manager salary.

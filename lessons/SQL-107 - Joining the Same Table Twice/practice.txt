@@ -1,0 +1,16 @@
+Lesson: SQL-107 — Joining the Same Table Twice
+================================
+
+Practice Questions
+
+Question 1:
+Write a SELF JOIN: FROM employees AS e LEFT JOIN employees AS m ON e.manager_id = m.employee_id. Display all employees with their manager's name (NULL for CEO).
+
+Question 2:
+Write a SELF JOIN to show employees grouped under each manager. Display manager name, employee name, and department.
+
+Question 3:
+HR wants a complete org chart. Write a SELF JOIN showing each employee's name, their manager's name, and both their salaries. Include employees with no manager.
+
+Question 4:
+Write a SELF JOIN to find all employees who work in the same department as their manager. Display employee name, manager name, and department.

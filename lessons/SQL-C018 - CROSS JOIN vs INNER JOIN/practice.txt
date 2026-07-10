@@ -1,0 +1,17 @@
+Lesson: SQL-C018 — CROSS JOIN vs INNER JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write CROSS JOIN between products (3 rows) and stores (3 rows). Result: 9 rows (3×3). Then write INNER JOIN that produces fewer rows (requires a matching column).
+
+Question 2:
+CROSS JOIN has no ON condition. INNER JOIN requires ON. Write CROSS JOIN products × stores showing all combinations. Then add a hypothetical ON condition to show the difference.
+
+Question 3:
+(A) Use CROSS JOIN to generate a complete product catalog for all stores.
+(B) Explain when INNER JOIN would be used instead (when there's a relationship).
+
+Question 4:
+Write a CROSS JOIN and count the result (3 × 3 = 9). Then add a WHERE clause to filter specific combinations: WHERE stores.region = 'Central'. Show how WHERE reduces CROSS JOIN output.

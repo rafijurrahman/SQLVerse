@@ -1,0 +1,16 @@
+Lesson: SQL-110 — INNER JOIN Common Mistakes
+================================
+
+Practice Questions
+
+Question 1:
+Demonstrate a common mistake: writing a JOIN without the ON clause (which becomes a CROSS JOIN). Write the wrong version and the correct INNER JOIN version.
+
+Question 2:
+Another common mistake: joining on the wrong column. Write a query with the correct JOIN: ON c.customer_id = o.customer_id (not ON c.city = o.status). Show what happens with wrong vs correct ON.
+
+Question 3:
+A developer wrote: SELECT * FROM customers, orders WHERE customer_id = customer_id. This creates ambiguity. Write the correct version using explicit table references: c.customer_id = o.customer_id.
+
+Question 4:
+Write a corrected version of a query that has wrong INNER JOIN logic (selecting columns from a joined table that don't exist). Show the correct version using proper aliases and explicit column references.

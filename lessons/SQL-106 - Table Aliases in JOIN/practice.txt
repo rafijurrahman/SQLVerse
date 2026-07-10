@@ -1,0 +1,16 @@
+Lesson: SQL-106 — Table Aliases in JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a JOIN between customers and orders using aliases: FROM customers AS c JOIN orders AS o ON c.customer_id = o.customer_id. Display c.first_name, o.order_id.
+
+Question 2:
+Write a three-table JOIN using short aliases: c (customers), o (orders), oi (order_items). Display c.first_name, o.order_date, oi.quantity, oi.unit_price.
+
+Question 3:
+Write a query with table aliases for all 5 tables: c=customers, o=orders, oi=order_items, p=products, py=payments. Display customer name, product name, and payment method using short aliases throughout.
+
+Question 4:
+Write a self-join using aliases (employees table from SQL-096 concept): use aliases to join the same table twice — e.emp_id, e.first_name as "Employee", m.first_name as "Manager". (Use the customers table and join to itself as a reference exercise.)

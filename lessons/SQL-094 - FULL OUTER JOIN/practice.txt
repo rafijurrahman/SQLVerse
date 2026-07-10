@@ -1,0 +1,16 @@
+Lesson: SQL-094 — FULL OUTER JOIN
+================================
+
+Practice Questions
+
+Question 1:
+MySQL does not support FULL OUTER JOIN directly. Write the equivalent using UNION of LEFT JOIN and RIGHT JOIN between customers and orders.
+
+Question 2:
+Write a FULL OUTER JOIN simulation: LEFT JOIN UNION ALL RIGHT JOIN WHERE left.id IS NULL. Show all customers (including those without orders) AND all orders (including those without customers).
+
+Question 3:
+The data quality team needs to find ALL unmatched records: customers without orders AND orders without customers. Write the FULL OUTER JOIN simulation and filter for rows where either side is NULL.
+
+Question 4:
+Write a complete FULL OUTER JOIN simulation that shows: customer_id (or order's customer_id), customer name, order_id, and a flag 'Has Order' / 'No Order' / 'No Customer'. Use CASE for the flag.

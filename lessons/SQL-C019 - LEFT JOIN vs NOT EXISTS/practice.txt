@@ -1,0 +1,20 @@
+Lesson: SQL-C019 — LEFT JOIN vs NOT EXISTS
+================================
+
+Practice Questions
+
+Question 1:
+Write two equivalent queries to find customers without orders:
+(A) LEFT JOIN WHERE order_id IS NULL.
+(B) WHERE NOT EXISTS (SELECT 1 FROM orders WHERE orders.customer_id = customers.customer_id).
+
+Question 2:
+Compare performance concept: LEFT JOIN scans and returns NULL for non-matches. NOT EXISTS stops at first match. Write both queries and compare the structure.
+
+Question 3:
+Find customers who have never placed a Completed order:
+(A) Using LEFT JOIN: JOIN orders ON ... WHERE status = 'Completed' IS NULL.
+(B) Using NOT EXISTS: NOT EXISTS (SELECT 1 FROM orders WHERE customer_id = c.customer_id AND status = 'Completed').
+
+Question 4:
+Write both approaches for finding products never ordered: LEFT JOIN products → order_items and NOT EXISTS version. Verify both return the same result.

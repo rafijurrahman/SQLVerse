@@ -1,0 +1,16 @@
+Lesson: SQL-W005 — FROM → JOIN → WHERE → GROUP BY → HAVING → ORDER BY
+================================
+
+Practice Questions
+
+Question 1:
+Write a simple JOIN that you can trace step by step: FROM → JOIN → WHERE → SELECT → ORDER BY. Show each clause in order.
+
+Question 2:
+Write a multi-table query tracing all clauses: FROM customers c JOIN orders o ON ... JOIN order_items oi ON ... WHERE o.status = 'Completed' GROUP BY c.customer_id HAVING SUM(oi.quantity) > 2 SELECT c.first_name, SUM ORDER BY total DESC.
+
+Question 3:
+Complete business query: Find Dhaka customers with 2+ completed orders totaling over 5000. Show name, order count, and total. Write with all 7 execution steps labeled in comments.
+
+Question 4:
+Write the most complex query you can using: 3 joins, WHERE, GROUP BY, HAVING, and ORDER BY. Show the complete execution flow. Trace what the data looks like after each step in a comment.

@@ -1,0 +1,16 @@
+Lesson: SQL-093 — RIGHT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a RIGHT JOIN between customers and orders to show all orders including those without a matched customer (order_id 1007 has NULL customer_id).
+
+Question 2:
+Write a RIGHT JOIN from customers to orders. Show order_id, order_date, and customer first_name (NULL if no customer matched).
+
+Question 3:
+The audit team wants to find any orders that don't have a valid customer record. Write a RIGHT JOIN from customers to orders, then filter WHERE customers.customer_id IS NULL.
+
+Question 4:
+Write both LEFT JOIN and RIGHT JOIN queries between customers and orders. Observe: LEFT JOIN shows all customers (some without orders), RIGHT JOIN shows all orders (some without customers). Write both.

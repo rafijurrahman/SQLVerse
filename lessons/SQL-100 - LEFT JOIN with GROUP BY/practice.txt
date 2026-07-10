@@ -1,0 +1,16 @@
+Lesson: SQL-100 — LEFT JOIN with GROUP BY
+================================
+
+Practice Questions
+
+Question 1:
+Write an INNER JOIN between customers and orders, then SUM(total_amount) per customer.
+
+Question 2:
+Write a LEFT JOIN to show all customers and their total spending. Customers with no orders show 0 (use COALESCE(SUM(total_amount), 0)).
+
+Question 3:
+Finance needs a customer lifetime value report. Show customer name, city, total orders, total amount spent, and average order value. Sort by total amount descending.
+
+Question 4:
+Write a LEFT JOIN joining customers → orders → order_items. Calculate total units purchased (SUM of quantity) per customer. Include customers with 0 purchases.

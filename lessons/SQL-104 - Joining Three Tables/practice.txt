@@ -1,0 +1,16 @@
+Lesson: SQL-104 — Joining Three Tables
+================================
+
+Practice Questions
+
+Question 1:
+Write an INNER JOIN connecting customers, orders, and products (via order_items). Show customer name, product name, and quantity.
+
+Question 2:
+Write a three-table JOIN: orders → order_items → products. Calculate total revenue per product: SUM(order_items.quantity * order_items.unit_price). Group by product.
+
+Question 3:
+Sales analytics: Join customers → orders → order_items → products. Show customer name, product name, quantity purchased, and total value per line item. Filter for Completed orders.
+
+Question 4:
+Write a three-table JOIN with aggregation: customer, product, total quantity bought, total amount spent on that product. Group by customer_id and product_id. Sort by total amount descending.

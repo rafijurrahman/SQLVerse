@@ -1,0 +1,16 @@
+Lesson: SQL-092 — LEFT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a LEFT JOIN between customers and orders. Display all customers including those with no orders (orders columns will be NULL).
+
+Question 2:
+Write a LEFT JOIN and filter to show ONLY customers who have NO orders: WHERE order_id IS NULL.
+
+Question 3:
+The marketing team wants to target inactive customers who have never placed an order. Write a LEFT JOIN query to find customers without any orders and display their name, email, and city.
+
+Question 4:
+Write a LEFT JOIN to show all customers with their most recent order date using MAX(order_date). Include customers without orders (showing NULL for the date). Group by customer_id.

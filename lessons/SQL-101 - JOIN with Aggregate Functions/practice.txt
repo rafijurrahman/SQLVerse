@@ -1,0 +1,16 @@
+Lesson: SQL-101 — JOIN with Aggregate Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write an INNER JOIN between orders and order_items. Show order_id and SUM(quantity * unit_price) as "Order Total".
+
+Question 2:
+Write a JOIN to show order_id, COUNT(item_id) as "Item Count", SUM(quantity) as "Total Units", SUM(quantity * unit_price) as "Revenue". Group by order_id.
+
+Question 3:
+Operations needs an order summary. Join orders with order_items. For each order: show order_id, order_date, status, number of product lines, and total revenue. Sort by revenue descending.
+
+Question 4:
+Write a JOIN between customers, orders, and order_items. For each customer: show name, total orders, total product lines ordered, and total revenue. Group by customer. Sort by revenue descending.

@@ -1,0 +1,18 @@
+Lesson: SQL-C017 — LEFT JOIN vs RIGHT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a LEFT JOIN (all customers, matched orders) and a RIGHT JOIN (all orders, matched customers). Observe which rows are in each.
+
+Question 2:
+LEFT JOIN from customers to orders = RIGHT JOIN from orders to customers (if you swap the tables). Write both to confirm they produce the same result.
+
+Question 3:
+(A) LEFT JOIN: Find all customers regardless of orders — for customer analytics.
+(B) RIGHT JOIN: Find all orders regardless of valid customer records — for order auditing.
+Write both queries.
+
+Question 4:
+Write a query: can you always convert a RIGHT JOIN into a LEFT JOIN by swapping table order? Write both versions and show they produce identical results.

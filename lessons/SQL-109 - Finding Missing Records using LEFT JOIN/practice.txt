@@ -1,0 +1,16 @@
+Lesson: SQL-109 — Finding Missing Records using LEFT JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a LEFT JOIN between customers and orders, then WHERE orders.order_id IS NULL to find customers who never ordered.
+
+Question 2:
+Write a query using LEFT JOIN and IS NULL to find products that have never appeared in order_items. JOIN products → order_items WHERE order_items.product_id IS NULL.
+
+Question 3:
+The marketing team needs to re-engage dormant customers (those with no orders). Write a LEFT JOIN and find customers without orders. Display their name, email, city, and joined_date.
+
+Question 4:
+Write a query using NOT IN as an alternative to find customers with no orders: SELECT * FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM orders WHERE customer_id IS NOT NULL). Compare with LEFT JOIN approach.

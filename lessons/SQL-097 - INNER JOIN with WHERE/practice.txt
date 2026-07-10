@@ -1,0 +1,16 @@
+Lesson: SQL-097 — INNER JOIN with WHERE
+================================
+
+Practice Questions
+
+Question 1:
+Write an INNER JOIN between customers and orders, then filter WHERE status = 'Completed'.
+
+Question 2:
+Write a JOIN filtering for orders from January 2024: WHERE order_date BETWEEN '2024-01-01' AND '2024-01-31'.
+
+Question 3:
+The sales team wants completed orders from Dhaka customers. Write: JOIN customers and orders, WHERE city = 'Dhaka' AND status = 'Completed'. Show customer name, order_id, and total_amount.
+
+Question 4:
+Write a JOIN with multiple WHERE conditions: customers in 'Dhaka' or 'Chittagong', orders with total_amount > 2000, status = 'Completed'. Sort by total_amount descending.
