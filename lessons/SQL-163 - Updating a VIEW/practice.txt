@@ -1,0 +1,18 @@
+Lesson: SQL-163 — Updating a VIEW
+================================
+
+Practice Questions
+
+Question 1:
+Write CREATE OR REPLACE VIEW high_value_orders AS SELECT * FROM orders WHERE total_amount > 5000. This replaces the old definition.
+
+Question 2:
+Write ALTER VIEW (if supported) or CREATE OR REPLACE VIEW to update a view to add a new column or change the filter.
+
+Question 3:
+The business raised the high-value threshold from 3000 to 5000. Update the view: CREATE OR REPLACE VIEW high_value_orders AS SELECT * FROM orders WHERE total_amount > 5000. Verify the change.
+
+Question 4:
+Write a CREATE OR REPLACE VIEW that adds a computed column:
+CREATE OR REPLACE VIEW orders_with_tax AS SELECT *, ROUND(total_amount * 1.15, 2) AS total_with_tax FROM orders.
+Query the view to show all orders with their tax-inclusive amount.

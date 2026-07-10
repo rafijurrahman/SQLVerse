@@ -1,0 +1,22 @@
+Lesson: SQL-C031 — VIEW vs TABLE
+================================
+
+Practice Questions
+
+Question 1:
+Write a query on the base table: SELECT * FROM orders. Then create a view and query it: CREATE VIEW order_view AS SELECT * FROM orders; SELECT * FROM order_view. Both return the same data.
+
+Question 2:
+Key difference: Views are virtual (no stored data); tables store data physically.
+Show: updating the orders table changes what order_view returns.
+INSERT INTO orders VALUES (1011, 1, '2024-05-10', 'Pending', 2500.00).
+Then SELECT * FROM order_view to see the new row.
+
+Question 3:
+Use case comparison:
+(A) Table: stores customer orders permanently.
+(B) View: provides a pre-filtered "completed orders only" window without duplicating data.
+Create view completed_only and query it.
+
+Question 4:
+Write a view that hides sensitive columns: CREATE VIEW public_orders AS SELECT order_id, status, total_amount FROM orders (no customer_id). This demonstrates views as a security/abstraction layer.

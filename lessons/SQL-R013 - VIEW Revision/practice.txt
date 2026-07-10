@@ -1,0 +1,25 @@
+Lesson: SQL-R013 — VIEW Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write four view operations:
+(A) CREATE VIEW customer_order_summary.
+(B) SELECT from it.
+(C) CREATE OR REPLACE with an updated definition.
+(D) DROP VIEW IF EXISTS.
+
+Question 2:
+Create a complex view joining 3 tables: customers, orders, and a derived column (order count per customer).
+Then query the view with a WHERE and ORDER BY.
+
+Question 3:
+Create two business views:
+(A) active_customers: customers who placed at least one Completed order.
+(B) monthly_revenue: SUM of orders grouped by MONTH(order_date).
+Write both CREATE VIEW statements and query each.
+
+Question 4:
+Create a view that uses a window function: CREATE VIEW orders_ranked AS SELECT *, RANK() OVER (PARTITION BY customer_id ORDER BY total_amount DESC) AS spending_rank FROM orders.
+Query to show each customer's top-ranked order.

@@ -1,0 +1,23 @@
+Lesson: SQL-164 — Dropping a VIEW
+================================
+
+Practice Questions
+
+Question 1:
+Write DROP VIEW IF EXISTS high_value_orders. The IF EXISTS prevents an error if the view doesn't exist.
+
+Question 2:
+Write the workflow: CREATE VIEW temp_report AS ..., then use it, then DROP VIEW IF EXISTS temp_report.
+
+Question 3:
+Quarterly cleanup: drop all temporary reporting views that are no longer needed.
+Write DROP VIEW IF EXISTS for three views: quarterly_summary, temp_export, customer_report.
+
+Question 4:
+Write the full view lifecycle:
+(1) CREATE VIEW.
+(2) SELECT from it.
+(3) CREATE OR REPLACE with updates.
+(4) SELECT again.
+(5) DROP VIEW IF EXISTS.
+Demonstrate the complete lifecycle.

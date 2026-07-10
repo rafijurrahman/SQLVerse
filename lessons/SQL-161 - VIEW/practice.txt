@@ -1,0 +1,22 @@
+Lesson: SQL-161 — VIEW
+================================
+
+Practice Questions
+
+Question 1:
+Create a view called customer_orders that joins customers and orders:
+CREATE VIEW customer_orders AS SELECT c.customer_id, CONCAT(c.first_name,' ',c.last_name) AS name, o.order_id, o.total_amount, o.status FROM customers c JOIN orders o ON c.customer_id = o.customer_id.
+Then: SELECT * FROM customer_orders.
+
+Question 2:
+Create a view for completed orders only:
+CREATE VIEW completed_orders AS SELECT * FROM orders WHERE status = 'Completed'.
+Query it: SELECT * FROM completed_orders WHERE total_amount > 2000.
+
+Question 3:
+The reporting team needs a pre-built view for the order summary. Create view order_summary with: order_id, customer name, total_amount, status, order_date. Then query the top 5 orders by amount.
+
+Question 4:
+Create a view that includes aggregations:
+CREATE VIEW customer_stats AS SELECT customer_id, COUNT(*) AS order_count, SUM(total_amount) AS total_spent, AVG(total_amount) AS avg_order FROM orders GROUP BY customer_id.
+Query it to find customers with total_spent > 5000.

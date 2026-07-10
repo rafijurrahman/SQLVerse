@@ -1,0 +1,20 @@
+Lesson: SQL-162 — CREATE VIEW
+================================
+
+Practice Questions
+
+Question 1:
+Write CREATE VIEW dhaka_customers AS SELECT * FROM customers WHERE city = 'Dhaka'. Then SELECT * FROM dhaka_customers.
+
+Question 2:
+Write CREATE VIEW high_value_orders AS SELECT * FROM orders WHERE total_amount > 3000. Then query it with additional filters.
+
+Question 3:
+Create a view for the sales dashboard: CREATE VIEW sales_dashboard AS SELECT o.order_id, CONCAT(c.first_name,' ',c.last_name) AS customer, o.total_amount, o.status, o.order_date, c.city FROM orders o JOIN customers c ON o.customer_id = c.customer_id.
+Query the view to show Completed orders from Dhaka.
+
+Question 4:
+Create two views:
+(A) premium_customers: customers with total spending > 5000.
+(B) recent_orders: orders from the last 3 months of data.
+Write both CREATE VIEW statements and query each.
