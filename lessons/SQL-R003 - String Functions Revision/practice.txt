@@ -1,0 +1,27 @@
+Lesson: SQL-R003 — String Functions Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display:
+- UPPER(first_name) as "First (Upper)"
+- LOWER(last_name) as "Last (Lower)"
+- LENGTH(email) as "Email Length"
+
+Question 2:
+Write a query to display:
+- CONCAT(first_name, ' ', last_name) as "Full Name"
+- LEFT(employee_code, 3) as "Prefix"
+- RIGHT(employee_code, 3) as "Seq"
+- SUBSTRING(email, 1, LOCATE('@', email)-1) as "Username"
+
+Question 3:
+HR needs a complete employee data cleanup report. Write a query to show:
+- employee_id
+- TRIM(UPPER(CONCAT(first_name, ' ', last_name))) as "Cleaned Name"
+- LOWER(REPLACE(email, '@company.com', '@corp.com')) as "New Email"
+- LPAD(CAST(employee_id AS CHAR), 5, '0') as "Padded ID"
+
+Question 4:
+Write a query to find all employees where the LENGTH of their full name (first + space + last) is greater than 12 characters. Display full name and its length. Sort by length descending.

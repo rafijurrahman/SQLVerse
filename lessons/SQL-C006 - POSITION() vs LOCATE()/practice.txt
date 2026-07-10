@@ -1,0 +1,21 @@
+Lesson: SQL-C006 — POSITION() vs LOCATE()
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries that produce the same result:
+(A) SELECT POSITION('@' IN email) FROM employees;
+(B) SELECT LOCATE('@', email) FROM employees;
+Confirm both produce identical results.
+
+Question 2:
+Write a query using LOCATE() to find the position of the first dot in email. Then find its domain part using SUBSTRING starting from that position.
+
+Question 3:
+HR wants to find employees whose email domain (after '@') contains 'company'. Use LOCATE('company', email, LOCATE('@', email)) > 0 to filter. Display employee_id and email.
+
+Question 4:
+Write a query to compare POSITION and LOCATE results side by side:
+SELECT email, POSITION('.' IN email) AS pos_result, LOCATE('.', email) AS loc_result FROM employees.
+Confirm they are always equal.

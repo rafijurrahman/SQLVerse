@@ -1,0 +1,16 @@
+Lesson: SQL-038 — REVERSE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to reverse the first_name of each employee using REVERSE(first_name). Label it "Reversed Name".
+
+Question 2:
+Write a query to reverse the employee_code: REVERSE(employee_code). Display employee_id, employee_code, and the reversed code.
+
+Question 3:
+The security team uses reversed names as temporary passwords during onboarding. Write a query to display employee_id, first_name, and LOWER(REVERSE(first_name)) as "Temp Password".
+
+Question 4:
+Write a query to check if any first_name is a palindrome: WHERE first_name = REVERSE(first_name). Display those employees. If none exist, write the query anyway to demonstrate the concept.

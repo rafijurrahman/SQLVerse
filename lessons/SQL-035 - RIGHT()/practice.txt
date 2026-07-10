@@ -1,0 +1,16 @@
+Lesson: SQL-035 — RIGHT()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the last 3 characters of employee_code using RIGHT(employee_code, 3). Label it "Seq Number".
+
+Question 2:
+Write a query to extract the domain from email: RIGHT(email, LENGTH(email) - LOCATE('@', email)). Label it "Email Domain". Display employee_id and domain.
+
+Question 3:
+The payroll system identifies employees by the last 4 digits of their phone number. Write a query to display employee_id, first_name, and RIGHT(phone, 4) as "Last 4 Digits".
+
+Question 4:
+Write a query to extract the numeric suffix from employee_code using RIGHT(employee_code, 3) and cast it to an integer to find employees with a sequence number greater than 5: CAST(RIGHT(employee_code, 3) AS UNSIGNED) > 5.

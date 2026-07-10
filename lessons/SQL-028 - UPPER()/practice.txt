@@ -1,0 +1,16 @@
+Lesson: SQL-028 — UPPER()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display all employee first_name values converted to uppercase using UPPER().
+
+Question 2:
+Write a query to display employee_id, UPPER(first_name) as "First Name", UPPER(last_name) as "Last Name", and department.
+
+Question 3:
+The HR system requires all job titles to be stored in uppercase for the official directory. Write a query to display employee_id and UPPER(job_title) as "Official Title".
+
+Question 4:
+Write a query to display the full name in uppercase format: UPPER(CONCAT(first_name, ' ', last_name)) as "FULL NAME". Filter to show only employees in the 'IT' or 'Finance' department.

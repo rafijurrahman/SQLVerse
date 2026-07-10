@@ -1,0 +1,16 @@
+Lesson: SQL-032 — REPLACE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to replace the word 'Manager' with 'Lead' in all job titles using REPLACE(job_title, 'Manager', 'Lead'). Label it "Updated Title".
+
+Question 2:
+Write a query to replace '@company.com' with '@corp.com' in all email addresses. Display employee_id and the updated email as "New Email".
+
+Question 3:
+The company is rebranding. All job titles with 'Executive' should be renamed to 'Specialist'. Write a query to display employee_id, original job_title, and REPLACE(job_title, 'Executive', 'Specialist') as "New Title".
+
+Question 4:
+Write a query to replace the '-' in employee_code with '/' using REPLACE(employee_code, '-', '/'). Then use LOWER() on the result. Label the final output "Formatted Code".

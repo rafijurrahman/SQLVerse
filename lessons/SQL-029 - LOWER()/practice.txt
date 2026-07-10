@@ -1,0 +1,16 @@
+Lesson: SQL-029 — LOWER()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display all employee email values converted to lowercase using LOWER().
+
+Question 2:
+Write a query to display employee_id, LOWER(first_name) as "first", LOWER(last_name) as "last", and LOWER(email) as "email".
+
+Question 3:
+The IT team needs to normalize all emails to lowercase before importing them into the authentication system. Write a query to display employee_id and LOWER(email) as "Normalized Email".
+
+Question 4:
+Write a query to display first_name, job_title, and LOWER(department) as "dept_key" for all employees where LOWER(department) is in ('hr', 'it', 'finance'). Sort by dept_key.

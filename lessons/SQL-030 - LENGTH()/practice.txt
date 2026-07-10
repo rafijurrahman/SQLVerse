@@ -1,0 +1,16 @@
+Lesson: SQL-030 — LENGTH()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display each employee's first_name and its length using LENGTH(first_name) as "Name Length".
+
+Question 2:
+Write a query to calculate the total length of the full name: LENGTH(CONCAT(first_name, ' ', last_name)) as "Full Name Length". Include employee_id and the full name.
+
+Question 3:
+The system has a rule that email addresses must not exceed 30 characters. Write a query to find all employees whose email length exceeds 25 characters. Display employee_id, email, and LENGTH(email) as "Email Length".
+
+Question 4:
+Write a query to display employee_id, first_name, and LENGTH(first_name) as "Name Len". Sort by name length descending, then alphabetically by first_name for ties.

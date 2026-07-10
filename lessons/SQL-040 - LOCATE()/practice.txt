@@ -1,0 +1,16 @@
+Lesson: SQL-040 — LOCATE()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the position of '@' in each employee's email using LOCATE('@', email). Label it "At Position".
+
+Question 2:
+Write a query to locate the position of '-' in employee_code using LOCATE('-', employee_code). Display employee_code and "Dash Position".
+
+Question 3:
+HR needs to validate that all emails contain '@company.com'. Use LOCATE('@company.com', email) > 0 to find valid emails. Display employee_id and email.
+
+Question 4:
+Write a query to find the position of the second '.' in email using LOCATE('.', email, LOCATE('.', email) + 1) to search from position after the first dot. Display employee_id, email, and "Second Dot Position".

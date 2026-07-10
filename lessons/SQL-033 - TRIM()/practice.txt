@@ -1,0 +1,16 @@
+Lesson: SQL-033 — TRIM()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to apply TRIM() to the first_name column. Show first_name and TRIM(first_name) side by side.
+
+Question 2:
+Write a query to TRIM both first_name and last_name, then CONCAT them: CONCAT(TRIM(first_name), ' ', TRIM(last_name)) as "Clean Full Name".
+
+Question 3:
+Data was imported with extra spaces in the job_title field. Write a query to clean job_title using TRIM() and display employee_id, original job_title length, and trimmed job_title length to verify no extra spaces exist.
+
+Question 4:
+Write a query to display TRIM(UPPER(first_name)) as "Cleaned Name" and TRIM(LOWER(email)) as "Cleaned Email" for all employees. This simulates data cleaning before a database migration.

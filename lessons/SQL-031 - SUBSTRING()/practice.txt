@@ -1,0 +1,16 @@
+Lesson: SQL-031 — SUBSTRING()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the first 3 characters of each employee's first_name using SUBSTRING(first_name, 1, 3). Label it "Name Code".
+
+Question 2:
+Write a query to extract the numeric part from employee_code. Since codes are like 'EMP-001', extract characters from position 5 with length 3: SUBSTRING(employee_code, 5, 3). Label it "ID Number".
+
+Question 3:
+The IT team needs username prefixes from emails. Extract the part before '@' using SUBSTRING(email, 1, LOCATE('@', email) - 1). Label it "Username". Display employee_id and Username.
+
+Question 4:
+Write a query to extract the department's first 3 letters using SUBSTRING(department, 1, 3) and combine it with the employee's hire year to create a unique code: CONCAT(SUBSTRING(department, 1, 3), '-', YEAR(hire_date)). Label it "Dept Year Code".

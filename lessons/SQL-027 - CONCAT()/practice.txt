@@ -1,0 +1,16 @@
+Lesson: SQL-027 — CONCAT()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to combine first_name and last_name into a single column called "Full Name" using CONCAT().
+
+Question 2:
+Write a query to create an employee display name in the format: "EMP-001: Arif Hossain" using CONCAT(employee_code, ': ', first_name, ' ', last_name). Label it "Display Name".
+
+Question 3:
+HR needs a formatted employee directory. Write a query to display employee_id and a column called "Employee Info" that combines first_name, last_name, and department like: "Arif Hossain (Management)".
+
+Question 4:
+Write a query to create a formal email signature in the format: "first_name last_name | job_title | department". Label it "Email Signature". Sort by department.

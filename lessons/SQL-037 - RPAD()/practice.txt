@@ -1,0 +1,16 @@
+Lesson: SQL-037 — RPAD()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to pad first_name to 15 characters on the right with dots: RPAD(first_name, 15, '.'). Label it "Padded Name".
+
+Question 2:
+Write a query to pad department name to 20 characters with spaces using RPAD(department, 20, ' '), then append the employee count. Display as a formatted report.
+
+Question 3:
+The HR system generates fixed-width reports. Write a query to display RPAD(first_name, 10, ' ') as "First", RPAD(last_name, 10, ' ') as "Last", RPAD(department, 12, ' ') as "Dept" to simulate fixed-width columns.
+
+Question 4:
+Write a query to create a display label: RPAD(CONCAT(first_name, ' ', last_name), 25, '-') as "Name Banner". This pads the full name to 25 characters with dashes. Sort by the padded result.

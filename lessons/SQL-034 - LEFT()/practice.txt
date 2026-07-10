@@ -1,0 +1,16 @@
+Lesson: SQL-034 — LEFT()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to extract the first 3 characters of first_name using LEFT(first_name, 3). Label it "Short Name".
+
+Question 2:
+Write a query to extract the first 3 characters of department to create a dept code: LEFT(department, 3). Display employee_id, department, and "Dept Code".
+
+Question 3:
+The system needs abbreviated employee codes. Write a query to create a short code by combining LEFT(first_name, 2) and LEFT(last_name, 2) in uppercase: UPPER(CONCAT(LEFT(first_name, 2), LEFT(last_name, 2))). Label it "Short Code".
+
+Question 4:
+Write a query to extract LEFT(employee_code, 3) as "Prefix" and verify all employees have the prefix 'EMP'. Display employee_id, employee_code, and the prefix. Filter where the prefix is NOT 'EMP' (should return no rows, confirming data integrity).

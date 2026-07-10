@@ -1,0 +1,16 @@
+Lesson: SQL-039 — POSITION()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to find the position of '@' in each employee's email using POSITION('@' IN email). Label it "At Position".
+
+Question 2:
+Write a query to find the position of '.' in each first_name. Label it "Dot Position" (most names won't have a dot, returning 0).
+
+Question 3:
+IT needs to extract the domain from emails. Use POSITION('@' IN email) to determine where the domain starts. Display employee_id, email, and POSITION('@' IN email) as "Domain Start".
+
+Question 4:
+Write a query to extract the username from email using SUBSTRING and POSITION: SUBSTRING(email, 1, POSITION('@' IN email) - 1) as "Username". Display employee_id and username.

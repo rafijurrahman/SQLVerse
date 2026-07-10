@@ -1,0 +1,16 @@
+Lesson: SQL-036 — LPAD()
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to display employee_id padded to 5 characters on the left with zeros: LPAD(employee_id, 5, '0'). Label it "Padded ID".
+
+Question 2:
+Write a query to pad the numeric part of employee_code to 4 digits: LPAD(RIGHT(employee_code, 3), 4, '0'). Label it "Padded Seq".
+
+Question 3:
+The payroll system requires employee IDs to always be 6 characters wide, left-padded with zeros. Write a query to display employee_id, first_name, and LPAD(CAST(employee_id AS CHAR), 6, '0') as "Payroll ID".
+
+Question 4:
+Write a query to create a formatted badge number using LPAD for both department code and employee sequence: CONCAT(LEFT(department,2), '-', LPAD(RIGHT(employee_code,3), 4, '0')). Label it "Badge Number".

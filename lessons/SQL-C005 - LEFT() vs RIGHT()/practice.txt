@@ -1,0 +1,19 @@
+Lesson: SQL-C005 — LEFT() vs RIGHT()
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries:
+(A) LEFT(employee_code, 3) — extract the prefix.
+(B) RIGHT(employee_code, 3) — extract the sequence number.
+Compare the results.
+
+Question 2:
+Write a query to display LEFT(first_name, 2) as "First 2", RIGHT(last_name, 2) as "Last 2", and combine them as CONCAT(LEFT(first_name,2), RIGHT(last_name,2)) as "Code".
+
+Question 3:
+HR needs to generate logins: take LEFT(first_name, 3) + RIGHT(employee_code, 3) to create a login ID. Display employee_id and "Login ID".
+
+Question 4:
+Write a query to extract LEFT(job_title, 6) as "Title Start" and RIGHT(job_title, 7) as "Title End". Filter employees where LEFT(job_title, 6) = 'Senior' (i.e., Senior-level employees).
