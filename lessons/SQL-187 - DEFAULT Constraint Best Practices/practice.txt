@@ -1,0 +1,16 @@
+Lesson: SQL-187 — DEFAULT Constraint Best Practices
+================================
+
+Practice Questions
+
+Question 1:
+Insert a new student specifying only the required columns and show that the default status 'Active' is automatically applied.
+
+Question 2:
+Create a table library_loans where the loan_date defaults to CURRENT_DATE and return_status defaults to 'Borrowed'.
+
+Question 3:
+The registrar needs a report of students who are currently using the default 'Active' status. Write the query.
+
+Question 4:
+Explain in a SQL comment how default constraints help reduce code redundancy in application-level queries during INSERT operations.

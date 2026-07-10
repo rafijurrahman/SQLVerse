@@ -1,0 +1,26 @@
+Lesson: SQL-C036 — CASCADE vs RESTRICT
+================================
+
+Practice Questions
+
+Question 1:
+CASCADE: child rows auto-deleted/updated when parent changes.
+RESTRICT: prevents parent change if child rows exist.
+Write a SELECT to see which behavior the enrollments table uses:
+SHOW CREATE TABLE enrollments (look for ON DELETE CASCADE and ON DELETE RESTRICT).
+
+Question 2:
+Demonstrate RESTRICT conceptually: try to delete a course that has enrollments:
+DELETE FROM courses WHERE course_id = 101.
+This should fail with a FK RESTRICT error if courses has ON DELETE RESTRICT.
+
+Question 3:
+(A) Use CASCADE for parent-child relationships where child data loses meaning without parent (student deleted -> enrollments deleted).
+(B) Use RESTRICT for reference data that should not be deleted while in use (course cannot be deleted if students are enrolled).
+Write design decisions as CREATE TABLE statements.
+
+Question 4:
+Write a complete test:
+(A) Test CASCADE: delete a student, verify enrollments are gone.
+(B) Test RESTRICT: try to delete a course with enrollments (should fail).
+Write both DELETE statements and SELECT verifications.

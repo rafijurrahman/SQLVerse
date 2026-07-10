@@ -1,0 +1,16 @@
+Lesson: SQL-183 — FOREIGN KEY Best Practices
+================================
+
+Practice Questions
+
+Question 1:
+Write a query that retrieves all enrollments and displays the student's name, demonstrating the foreign key relationship.
+
+Question 2:
+Create a table student_contacts with a foreign key referencing the students table, including ON DELETE CASCADE.
+
+Question 3:
+Explain the business impact of a foreign key constraint when trying to insert an enrollment with a non-existent student_id.
+
+Question 4:
+Write a query to check for any orphaned enrollment records that do not map to any student, showing how foreign keys maintain referential integrity.

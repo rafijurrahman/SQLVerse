@@ -1,0 +1,16 @@
+Lesson: SQL-186 — CHECK Constraint in Real Projects
+================================
+
+Practice Questions
+
+Question 1:
+Identify the CHECK constraint in the students table for GPA and write a query to find any invalid values.
+
+Question 2:
+Create a table exam_scores with CHECK constraints to ensure score is between 0 and 100, and grade is in a valid list ('A', 'B', 'C', 'F').
+
+Question 3:
+The university wants to ensure student emails end with '@uni.edu'. Write a CREATE TABLE statement with a CHECK constraint for this rule.
+
+Question 4:
+Write a query to audit all existing rows in the students table to find any gender values that would violate the CHECK constraint (gender IN ('Male', 'Female', 'Other')).

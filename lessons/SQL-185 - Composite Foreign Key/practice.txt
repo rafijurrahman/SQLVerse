@@ -1,0 +1,16 @@
+Lesson: SQL-185 — Composite Foreign Key
+================================
+
+Practice Questions
+
+Question 1:
+Create a table grade_reports that has a composite foreign key referencing the uq_enroll constraint (student_id, course_id, semester) in the enrollments table.
+
+Question 2:
+Explain how a composite foreign key ensures data integrity across multiple columns compared to individual foreign keys.
+
+Question 3:
+Write a query joining enrollments to a hypothetical table attendance using a composite relationship on student_id and course_id.
+
+Question 4:
+Write a CREATE TABLE statement for class_schedules and show how a composite foreign key can reference a composite primary key in another table.

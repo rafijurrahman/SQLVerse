@@ -1,0 +1,16 @@
+Lesson: SQL-188 — NOT NULL Constraint
+================================
+
+Practice Questions
+
+Question 1:
+Write a query to verify there are no NULL values in the required columns (first_name, last_name, email).
+
+Question 2:
+Create a table course_materials where material_name and upload_date are NOT NULL, but description is nullable.
+
+Question 3:
+Identify which columns in the students table allow NULL values and write a query to find students who have not provided a phone number.
+
+Question 4:
+Write an INSERT statement that deliberately tries to insert a NULL value into a NOT NULL column and explain the expected database behavior.

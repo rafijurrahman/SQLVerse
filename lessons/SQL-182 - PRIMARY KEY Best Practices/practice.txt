@@ -1,0 +1,16 @@
+Lesson: SQL-182 — PRIMARY KEY Best Practices
+================================
+
+Practice Questions
+
+Question 1:
+Identify the primary key of the students table and explain why it is optimized.
+
+Question 2:
+Write a CREATE TABLE statement for a new table called departments using an auto-incrementing integer primary key as best practice.
+
+Question 3:
+Explain the difference between using a natural key (like email) vs a surrogate key (like student_id) as the primary key.
+
+Question 4:
+Write a query to verify that no duplicate student_id values exist in the students table, simulating the primary key constraint check.

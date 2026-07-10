@@ -1,0 +1,29 @@
+Lesson: SQL-W011 — Designing Table Relationships
+================================
+
+Practice Questions
+
+Question 1:
+Write the complete database design workflow for the university schema:
+(1) CREATE TABLE students (PK, unique constraints, defaults, checks).
+(2) CREATE TABLE courses (PK, unique course_code).
+(3) CREATE TABLE enrollments (composite unique, FK to both).
+Write all three.
+
+Question 2:
+Write queries to verify the design:
+(A) Each enrollment references valid student: FK check.
+(B) No duplicate enrollments: UNIQUE check.
+(C) GPA in valid range: CHECK constraint.
+
+Question 3:
+Design a complete workflow:
+(1) Insert a new student.
+(2) Insert a new course.
+(3) Enroll the student in the course.
+(4) Update the grade.
+(5) Verify with SELECT joins.
+Write all DML statements.
+
+Question 4:
+Write the complete normalization design: add a departments table (dept_id PK, dept_name UNIQUE), link courses to departments via FK, then query across all four tables: departments, courses, students, enrollments.

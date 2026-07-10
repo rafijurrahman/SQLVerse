@@ -1,0 +1,16 @@
+Lesson: SQL-190 — ON UPDATE CASCADE
+================================
+
+Practice Questions
+
+Question 1:
+Verify the behavior of ON UPDATE CASCADE by updating a student's student_id in the students table and checking if it updates in the enrollments table.
+
+Question 2:
+Explain in a SQL comment why ON UPDATE CASCADE is useful for natural primary keys compared to surrogate primary keys.
+
+Question 3:
+The registrar renumbers student IDs. Write an UPDATE query changing student_id 1 to 101, and verify that the change propagated to enrollments.
+
+Question 4:
+Write a CREATE TABLE statement with a foreign key constraint having both ON UPDATE CASCADE and ON DELETE SET NULL.

@@ -1,0 +1,29 @@
+Lesson: SQL-R016 — Constraints Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write six constraint verification queries:
+(A) PK uniqueness check (students).
+(B) FK integrity check (enrollments vs students).
+(C) UNIQUE check (email duplicates).
+(D) CHECK violation check (gpa out of range).
+(E) NOT NULL violations.
+(F) DEFAULT values verification.
+
+Question 2:
+Write a complete constraint audit: for each table, write a query to verify all constraints are satisfied. Return 0 rows = all data is valid.
+
+Question 3:
+Before a database migration, run a full data validation:
+(A) No duplicate student emails.
+(B) All enrollments have valid students and courses.
+(C) All GPA values are 0-4.
+(D) All statuses are in valid values.
+Write all four verification queries.
+
+Question 4:
+Design a new table for attendance tracking with all constraint types:
+PRIMARY KEY (AUTO_INCREMENT), FOREIGN KEY to students (CASCADE), UNIQUE on (student_id, lecture_date), CHECK (attendance_status IN values), DEFAULT for status, NOT NULL for date.
+Write the complete CREATE TABLE statement.

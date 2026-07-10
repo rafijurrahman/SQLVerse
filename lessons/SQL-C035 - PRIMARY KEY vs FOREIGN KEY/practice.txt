@@ -1,0 +1,23 @@
+Lesson: SQL-C035 — PRIMARY KEY vs FOREIGN KEY
+================================
+
+Practice Questions
+
+Question 1:
+Write queries to identify PKs and FKs:
+(A) PK: SELECT * FROM students WHERE student_id = 1 (unique, not null, clustered index).
+(B) FK: SELECT * FROM enrollments WHERE student_id = 1 (references students.student_id).
+
+Question 2:
+PK: uniquely identifies each row in a table. FK: references a PK in another table.
+Write a JOIN using the PK-FK relationship: JOIN enrollments ON students.student_id = enrollments.student_id.
+
+Question 3:
+Draw the relationship:
+students.student_id (PK) -- referenced by --> enrollments.student_id (FK).
+Write a query that traverses the relationship: show all students with their enrollment count.
+
+Question 4:
+Write queries to verify both constraints are working:
+(A) PK uniqueness: SELECT student_id, COUNT(*) FROM students GROUP BY student_id HAVING COUNT(*) > 1 (should be 0).
+(B) FK integrity: SELECT * FROM enrollments WHERE student_id NOT IN (SELECT student_id FROM students) (should be 0).

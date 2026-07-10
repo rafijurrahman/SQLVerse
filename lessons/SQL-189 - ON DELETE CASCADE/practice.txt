@@ -1,0 +1,16 @@
+Lesson: SQL-189 — ON DELETE CASCADE
+================================
+
+Practice Questions
+
+Question 1:
+Explain the difference between ON DELETE CASCADE and ON DELETE RESTRICT using the foreign key in the enrollments table.
+
+Question 2:
+Write a query to verify that deleting a student from the students table automatically deletes their corresponding enrollments.
+
+Question 3:
+The university wants to delete course CS103. Explain why the database raises an error due to ON DELETE RESTRICT on the course foreign key.
+
+Question 4:
+Write a transaction script (or sequence of statements) that safely removes a course by first manual-deleting its enrollments or altering the constraint.

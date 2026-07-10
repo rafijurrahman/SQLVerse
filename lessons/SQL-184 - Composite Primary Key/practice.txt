@@ -1,0 +1,16 @@
+Lesson: SQL-184 — Composite Primary Key
+================================
+
+Practice Questions
+
+Question 1:
+Create a table enrollment_archive with a composite primary key on (student_id, course_id, semester).
+
+Question 2:
+Write a query to check if there are any duplicate student-course combinations in a single semester in the enrollments table.
+
+Question 3:
+Explain why a composite primary key is suitable for a many-to-many relationship table like enrollments compared to a surrogate auto-increment key.
+
+Question 4:
+Write a CREATE TABLE statement for student_grades with a composite primary key and discuss how to reference it.
