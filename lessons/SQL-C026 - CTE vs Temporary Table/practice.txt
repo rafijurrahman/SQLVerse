@@ -1,0 +1,25 @@
+Lesson: SQL-C026 — CTE vs Temporary Table
+================================
+
+Practice Questions
+
+Question 1:
+Write a CTE approach:
+WITH cte AS (SELECT region, SUM(revenue) AS total FROM sales GROUP BY region)
+SELECT * FROM cte WHERE total > 3000.
+
+Then write the temp table approach:
+CREATE TEMPORARY TABLE temp_reg AS SELECT region, SUM(revenue) AS total FROM sales GROUP BY region;
+SELECT * FROM temp_reg WHERE total > 3000;
+
+Question 2:
+CTE exists only for one query. Temp table persists for the session.
+Write a CTE for a single-use operation, and explain when a temp table is better for multi-step operations.
+
+Question 3:
+Which to use? Write:
+(A) CTE for a one-time report: monthly revenue summary.
+(B) Temp table for multi-step ETL: create temp, insert data, run multiple queries on it.
+
+Question 4:
+Write a CTE chain (3 CTEs) for a complex analysis. Then convert the middle step to a temp table and show both approaches. Discuss pros and cons in comments.

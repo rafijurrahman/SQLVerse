@@ -1,0 +1,26 @@
+Lesson: SQL-131 — Multiple CTEs
+================================
+
+Practice Questions
+
+Question 1:
+Write two CTEs:
+WITH cte1 AS (SELECT region, SUM(revenue) AS total FROM sales GROUP BY region),
+     cte2 AS (SELECT AVG(total) AS avg_regional FROM cte1)
+SELECT region, total FROM cte1, cte2 WHERE total > avg_regional.
+
+Question 2:
+Write multiple CTEs: first summarize by category, then by region, then join them:
+WITH by_category AS (...), by_region AS (...)
+SELECT ... FROM by_category JOIN by_region ON category = region. (Adapt to match data.)
+
+Question 3:
+Write two CTEs: one for high-revenue sales (above average), one for low-revenue sales (below average).
+Then SELECT from each CTE to compare counts and totals.
+
+Question 4:
+Write three chained CTEs:
+CTE 1: calculate monthly revenue.
+CTE 2: calculate running total from CTE 1.
+CTE 3: calculate month-over-month growth from CTE 2.
+Finally SELECT the full report.

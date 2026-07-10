@@ -1,0 +1,27 @@
+Lesson: SQL-C024 — ANY vs ALL
+================================
+
+Practice Questions
+
+Question 1:
+Write two queries:
+(A) WHERE revenue > ANY (SELECT revenue FROM sales WHERE region = 'Sylhet').
+(B) WHERE revenue > ALL (SELECT revenue FROM sales WHERE region = 'Sylhet').
+Count how many rows each returns.
+
+Question 2:
+ANY means "greater than at least one value" -- equivalent to > MIN().
+ALL means "greater than every value" -- equivalent to > MAX().
+Write both with their MIN/MAX equivalents and confirm they produce the same results.
+
+Question 3:
+Sales targets:
+(A) ANY: sales that beat at least one Stationery sale (low bar).
+(B) ALL: sales that beat every Stationery sale (high bar).
+Display how many records satisfy each condition.
+
+Question 4:
+Write < ANY and < ALL comparisons:
+(A) < ANY: revenue less than the maximum (almost everything).
+(B) < ALL: revenue less than the minimum (very few rows).
+Verify with MIN/MAX equivalents.

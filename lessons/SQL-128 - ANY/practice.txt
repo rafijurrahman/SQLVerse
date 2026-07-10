@@ -1,0 +1,20 @@
+Lesson: SQL-128 — ANY
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using ANY to find sales where revenue is greater than ANY revenue in the 'Stationery' category:
+SELECT * FROM sales WHERE revenue > ANY (SELECT revenue FROM sales WHERE category = 'Stationery').
+
+Question 2:
+Find sales records where units_sold is greater than ANY record in Sylhet:
+WHERE units_sold > ANY (SELECT units_sold FROM sales WHERE region = 'Sylhet').
+
+Question 3:
+The analytics team wants to find Electronics sales that performed better than at least one Stationery sale.
+Use: WHERE category = 'Electronics' AND revenue > ANY (SELECT revenue FROM sales WHERE category = 'Stationery').
+
+Question 4:
+Write a query to find products that had at least one sale higher than ANY sale in the 'Furniture' category.
+Use > ANY with the Furniture subquery. Display product, region, and revenue.

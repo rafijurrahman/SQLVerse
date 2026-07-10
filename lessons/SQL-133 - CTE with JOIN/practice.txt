@@ -1,0 +1,23 @@
+Lesson: SQL-133 — CTE with JOIN
+================================
+
+Practice Questions
+
+Question 1:
+Write a CTE that aggregates sales by product, then JOIN the CTE result with the products table:
+WITH sales_summary AS (SELECT product, SUM(revenue) AS total FROM sales GROUP BY product)
+SELECT p.product_name, p.target_price, ss.total FROM products p JOIN sales_summary ss ON p.product_name = ss.product.
+
+Question 2:
+Write a CTE to calculate profit per product (revenue - cost), then JOIN with products to show target vs actual:
+WITH profit_cte AS (SELECT product, SUM(revenue - cost) AS profit FROM sales GROUP BY product)
+SELECT ... JOIN products ON product_name = product.
+
+Question 3:
+The analytics team wants to compare actual revenue to target price:
+CTE: aggregate actual revenue per product.
+JOIN: compare with products.target_price.
+Show product name, target, actual, and variance (actual - target).
+
+Question 4:
+Write a CTE with a JOIN: first CTE finds top-performing products (revenue above category average), then join back to products to get full product details. Display: product_name, category, actual revenue, and target.

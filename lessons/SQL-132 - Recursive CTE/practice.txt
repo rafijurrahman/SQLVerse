@@ -1,0 +1,28 @@
+Lesson: SQL-132 — Recursive CTE
+================================
+
+Practice Questions
+
+Question 1:
+Write a recursive CTE to traverse the employee hierarchy starting from the CEO (employee_id = 1):
+WITH RECURSIVE org_chart AS (
+    SELECT employee_id, first_name, manager_id, 1 AS level FROM employees WHERE manager_id IS NULL
+    UNION ALL
+    SELECT e.employee_id, e.first_name, e.manager_id, oc.level + 1
+    FROM employees e JOIN org_chart oc ON e.manager_id = oc.employee_id
+)
+SELECT * FROM org_chart ORDER BY level, employee_id.
+
+Question 2:
+Modify the recursive CTE to show each employee's full hierarchy path:
+CONCAT(oc.path, ' -> ', e.first_name) AS path.
+Start with manager's name as path and append each report.
+
+Question 3:
+HR needs the complete org chart with hierarchy level labeled:
+Level 1 = CEO, Level 2 = Heads, Level 3 = Managers, etc.
+Write the recursive CTE and display: level, employee name, department, and manager name.
+
+Question 4:
+Write a recursive CTE to count subordinates at each level under a given manager (employee_id = 2, HR Head).
+Show all employees who report directly or indirectly to Sultana Begum.

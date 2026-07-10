@@ -1,0 +1,26 @@
+Lesson: SQL-R011 — CTE Revision
+================================
+
+Practice Questions
+
+Question 1:
+Write three types of CTEs:
+(A) Simple CTE: aggregate revenue by region.
+(B) Filtered CTE: find only above-average sales.
+(C) Multiple CTEs: region summary + category summary.
+
+Question 2:
+Write a CTE joined with itself (reused twice):
+WITH store_rev AS (SELECT store, SUM(revenue) AS total FROM sales GROUP BY store)
+SELECT s1.store, s1.total, s2.total AS comparison FROM store_rev s1 CROSS JOIN store_rev s2 WHERE s1.store != s2.store AND s1.total > s2.total.
+
+Question 3:
+Full CRM analysis using CTEs:
+CTE 1: revenue and profit by region.
+CTE 2: revenue by category.
+Final SELECT: combine both summaries.
+
+Question 4:
+Write a CTE using window functions to rank stores within each region by revenue:
+WITH store_ranked AS (SELECT store, region, SUM(revenue) AS total, RANK() OVER (PARTITION BY region ORDER BY SUM(revenue) DESC) AS rank FROM sales GROUP BY store, region)
+SELECT * FROM store_ranked WHERE rank = 1.

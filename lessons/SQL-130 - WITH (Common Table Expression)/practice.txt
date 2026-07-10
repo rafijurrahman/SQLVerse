@@ -1,0 +1,26 @@
+Lesson: SQL-130 — WITH (Common Table Expression)
+================================
+
+Practice Questions
+
+Question 1:
+Write a basic CTE to calculate total revenue per region:
+WITH regional_revenue AS (
+    SELECT region, SUM(revenue) AS total_revenue FROM sales GROUP BY region
+)
+SELECT region, total_revenue FROM regional_revenue ORDER BY total_revenue DESC.
+
+Question 2:
+Write a CTE to find above-average revenue sales:
+WITH avg_rev AS (SELECT AVG(revenue) AS avg_val FROM sales)
+SELECT * FROM sales, avg_rev WHERE revenue > avg_val.
+
+Question 3:
+Create a CTE to summarize sales by category, then select from it:
+WITH category_summary AS (
+    SELECT category, COUNT(*) AS sales_count, SUM(revenue) AS total, AVG(revenue) AS avg_rev FROM sales GROUP BY category
+)
+SELECT * FROM category_summary ORDER BY total DESC.
+
+Question 4:
+Write a CTE that calculates profit per sale (revenue - cost), then use the CTE to find the top 5 most profitable sales. Display product, region, revenue, cost, and profit.

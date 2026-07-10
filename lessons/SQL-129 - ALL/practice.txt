@@ -1,0 +1,22 @@
+Lesson: SQL-129 — ALL
+================================
+
+Practice Questions
+
+Question 1:
+Write a query using ALL to find sales where revenue is greater than ALL revenues in the 'Stationery' category:
+SELECT * FROM sales WHERE revenue > ALL (SELECT revenue FROM sales WHERE category = 'Stationery').
+
+Question 2:
+Find all sales where revenue is greater than ALL sales from 'Chittagong':
+WHERE revenue > ALL (SELECT revenue FROM sales WHERE region = 'Chittagong').
+
+Question 3:
+The analytics team wants to find the highest-performing Electronics sales -- those exceeding every Stationery sale.
+Use: WHERE category = 'Electronics' AND revenue > ALL (SELECT revenue FROM sales WHERE category = 'Stationery').
+
+Question 4:
+Write a query comparing > ANY vs > ALL:
+(A) > ANY: revenue beats at least one Furniture sale.
+(B) > ALL: revenue beats every Furniture sale.
+Write both queries and observe how many rows each returns.

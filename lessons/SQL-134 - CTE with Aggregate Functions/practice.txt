@@ -1,0 +1,26 @@
+Lesson: SQL-134 — CTE with Aggregate Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a CTE that calculates total revenue, total cost, and total profit per region:
+WITH region_agg AS (SELECT region, SUM(revenue) AS total_rev, SUM(cost) AS total_cost FROM sales GROUP BY region)
+SELECT *, total_rev - total_cost AS profit FROM region_agg.
+
+Question 2:
+Write a CTE to find the category with the highest average revenue:
+WITH cat_avg AS (SELECT category, AVG(revenue) AS avg_rev FROM sales GROUP BY category)
+SELECT * FROM cat_avg WHERE avg_rev = (SELECT MAX(avg_rev) FROM cat_avg).
+
+Question 3:
+Management needs a KPI dashboard. Write a CTE with all key aggregates:
+total sales count, total revenue, total cost, total profit, average revenue per sale.
+Then SELECT all KPIs from the CTE.
+
+Question 4:
+Write multiple aggregate CTEs and combine:
+CTE 1: revenue by region.
+CTE 2: revenue by category.
+CTE 3: revenue by month (MONTH(sale_date)).
+SELECT all three summaries in sequence.

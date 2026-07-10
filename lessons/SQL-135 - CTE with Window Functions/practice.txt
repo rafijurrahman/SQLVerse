@@ -1,0 +1,22 @@
+Lesson: SQL-135 — CTE with Window Functions
+================================
+
+Practice Questions
+
+Question 1:
+Write a CTE that calculates revenue per region, then use ROW_NUMBER() to rank regions:
+WITH region_rev AS (SELECT region, SUM(revenue) AS total FROM sales GROUP BY region)
+SELECT region, total, ROW_NUMBER() OVER (ORDER BY total DESC) AS rank FROM region_rev.
+
+Question 2:
+Write a CTE to get daily revenue, then add a running total window function:
+WITH daily AS (SELECT sale_date, SUM(revenue) AS daily_rev FROM sales GROUP BY sale_date)
+SELECT sale_date, daily_rev, SUM(daily_rev) OVER (ORDER BY sale_date) AS running_total FROM daily.
+
+Question 3:
+Write a CTE to get monthly revenue per region, then use RANK() to rank regions within each month:
+RANK() OVER (PARTITION BY month ORDER BY revenue DESC).
+
+Question 4:
+Write a CTE to calculate monthly revenue, then use multiple window functions in the outer query:
+ROW_NUMBER(), LAG (previous month revenue), and running total SUM. Display all in one result set.

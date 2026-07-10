@@ -1,0 +1,22 @@
+Lesson: SQL-C025 — CTE vs Subquery
+================================
+
+Practice Questions
+
+Question 1:
+Write the same query two ways -- find above-average revenue sales:
+(A) Using CTE: WITH avg_cte AS (SELECT AVG(revenue) AS avg_val FROM sales) SELECT * FROM sales, avg_cte WHERE revenue > avg_val.
+(B) Using subquery: WHERE revenue > (SELECT AVG(revenue) FROM sales).
+
+Question 2:
+Find top region by revenue:
+(A) CTE approach: define region totals in CTE, then filter.
+(B) Subquery approach: nested SELECT to find max total.
+
+Question 3:
+CTEs improve readability. Write a complex report using CTE (readable) and the equivalent using nested subqueries (less readable). Show the same result both ways.
+
+Question 4:
+CTEs can be referenced multiple times, subqueries cannot. Write a CTE used twice in the same query:
+WITH region_summary AS (...)
+SELECT r1.region, r2.total FROM region_summary r1 JOIN region_summary r2 ON ... (self-reference).

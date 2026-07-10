@@ -1,0 +1,25 @@
+Lesson: SQL-W007 — How a CTE Executes
+================================
+
+Practice Questions
+
+Question 1:
+Write a simple CTE and trace: the CTE definition runs first (like a subquery), then the outer SELECT uses the result.
+Show: WITH cte AS (...) SELECT * FROM cte WHERE condition.
+
+Question 2:
+Write two CTEs and trace execution order: both CTEs are defined first, then the outer query uses them.
+WITH cte1 AS (...), cte2 AS (...) SELECT FROM cte1 JOIN cte2.
+
+Question 3:
+Write a three-step CTE analysis:
+Step 1 (CTE): aggregate sales by region.
+Step 2 (CTE): filter above-average regions.
+Step 3 (outer SELECT): display final results with ranking.
+Trace the execution order in comments.
+
+Question 4:
+Write a recursive CTE and trace the anchor member and recursive member execution:
+Anchor: returns first row (CEO or first sale).
+Recursive: keeps joining until no more rows match.
+Termination: when no new rows are added.
